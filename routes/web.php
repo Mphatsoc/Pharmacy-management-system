@@ -30,7 +30,7 @@ Route::get('/card', [StockController::class, 'drugs'])->name('card');
 Route::get('/stock', [StockController::class, 'meds'])->name('stock');
 Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
 
-
+Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
 Route::get('/notifications', [NotificationsController::class, 'accept'])->name('notifications');
 
 require __DIR__.'/auth.php';

@@ -10,4 +10,8 @@ class NotificationsController extends Controller
     {
         return view('notifications');
     }
+    public function generate()
+    {
+        return view('report');
+    }
 }
