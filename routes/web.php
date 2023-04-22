@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\NotificationsController;
+use App\Http\Controllers\StockController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +19,21 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+
+// Basic routes from their respective controllers to their views
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', [AboutController::class, 'hello'])->name('about');
+Route::get('/user', [UserController::class, 'depo'])->name('user');
+Route::get('/card', [StockController::class, 'drugs'])->name('card');
+Route::get('/stock', [StockController::class, 'meds'])->name('stock');
+Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
+
+
+Route::get('/notifications', [NotificationsController::class, 'accept'])->name('notifications');
+
+//breeze routes
 
 Route::get('/dashboard', function () {
     return view('dashboard');
