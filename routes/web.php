@@ -33,7 +33,15 @@ Route::post('/inventory', [StockController::class, 'store'])->name('inventory.st
 
 Route::get('/notifications', [NotificationsController::class, 'accept'])->name('notifications');
 
-//breeze routes
+require __DIR__.'/auth.php';
+Route::middleware(['auth','role:admin'])->group(function(){
+
+    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+
+});
+
+
+// Breeze routes
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,10 +53,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
-Route::middleware(['auth','role:admin'])->group(function(){
-
-    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
-
-});
 

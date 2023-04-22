@@ -17,6 +17,7 @@
     </x-slot>
 
     <div class="py-12">
+        <!-- Cards showing different meds -->
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
