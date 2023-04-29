@@ -33,6 +33,8 @@ Route::post('/inventory', [StockController::class, 'store'])->name('inventory.st
 Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
 Route::get('/notifications', [NotificationsController::class, 'accept'])->name('notifications');
 
+Route::get('/notify', [NotificationsController::class, 'decline'])->name('notify');
+
 require __DIR__.'/auth.php';
 Route::middleware(['auth','role:admin'])->group(function(){
 

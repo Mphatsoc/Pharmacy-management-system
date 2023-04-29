@@ -14,4 +14,8 @@ class NotificationsController extends Controller
     {
         return view('report');
     }
+    public function decline()
+    {
+        return view('notify');
+    }
 }
