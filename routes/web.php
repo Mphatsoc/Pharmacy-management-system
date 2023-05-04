@@ -35,6 +35,11 @@ Route::get('/notifications', [NotificationsController::class, 'accept'])->name('
 
 Route::get('/notify', [NotificationsController::class, 'decline'])->name('notify');
 
+Route::get('/departments', function () {
+    return view('departments');
+});
+
+
 require __DIR__.'/auth.php';
 Route::middleware(['auth','role:admin'])->group(function(){
 

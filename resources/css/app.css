@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* CSS ONLY for demo purpose */
+.justify-center {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }

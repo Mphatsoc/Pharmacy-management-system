@@ -14,4 +14,5 @@ class StockController extends Controller
     {
         return view('card');
     }
+
 }
