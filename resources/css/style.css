@@ -1,0 +1,19 @@
+.my-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .my-section h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(15, 15, 15);
+  }
+  
+  .my-section p {
+    height: 10vh;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(235, 235, 248);
+  }

@@ -8,6 +8,8 @@
         <title>Pharmacy</title>
         <h1>Welcome to our Pharmacy System</h1>
 
+        <h2>pharmaceutical management system</h2>
+
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -21,11 +23,68 @@
                 font-family: 'Nunito', sans-serif;
                 height: 100%;
                 overflow: hidden;
+<<<<<<< HEAD
+=======
+                background-image: url("'/images/chithuzi.jfif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                margin: 0;
+  /* background-size: cover; */
+  z-index: 1;
+  /* add other CSS properties for your background image here */
+>>>>>>> 1952353cdb1bfb92e68dc397cea1b992e258766c
                 
             }
+            .head h2{
+                font-size: 5px;
+
+            }
+
+            .my-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 250vh;
+  }
+
+
+  .my-section h4 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(15, 15, 15);
+  }
+
+  .my-section h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(15, 15, 15);
+  }
+  
+  .my-section p {
+    height: 32vh;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(235, 235, 248);
+  }
+
+  /* nav {
+  height: 12vh;
+  position: fixed;
+  z-index: 300;
+  /* add other CSS properties for your navbar here */
+
+
+
+
+
         </style>
     </head>
     <body class="antialiased">
+<<<<<<< HEAD
 
         <div style="background-image: url('/images/pharmacy.png'); min-height: 100vh; background-size: cover;background-attachment: fixed;">
             <!-- Your content goes here -->
@@ -33,6 +92,10 @@
           
           
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+=======
+    
+   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+>>>>>>> 1952353cdb1bfb92e68dc397cea1b992e258766c
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -47,5 +110,25 @@
                 </div>
             @endif
 
+<<<<<<< HEAD
             
               
+=======
+    <div style="background-image: url('/images/chithuzi.jfif'); min-height: 100vh; background-size: cover; background-attachement: fixed;">
+            <section class="my-section" class="banner-area" >
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-8 text-center">
+                        <h4 style="text-align: right center;">Caring for better life</h4>
+                        <h1 style="text-align: right center;">Leading the way in medical excellence</h1>
+                        <p style="text-align: justify; line-height: 1.5; text-align: center; width: 75%; margin: 0 auto;">Our pharmaceutical management system is designed to streamline workflows and improve communication between healthcare professionals, ultimately leading to better patient care</p>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+   
+
+    </body>
+</html>
+>>>>>>> 1952353cdb1bfb92e68dc397cea1b992e258766c
