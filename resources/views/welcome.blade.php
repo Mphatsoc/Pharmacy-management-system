@@ -33,7 +33,7 @@
                 
             }
             .head h2{
-                font-size: 2px;
+                font-size: 5px;
 
             }
 
