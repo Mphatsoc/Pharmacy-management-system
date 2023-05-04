@@ -51,7 +51,7 @@
     </form>
 </x-guest-layout> --}}
 
-{-- <x-guest-layout class="bg-green-100">
+<x-guest-layout class="bg-green-100">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -104,7 +104,7 @@
             </div>
         </form>
     </div>
-</x-guest-layout> --}
+</x-guest-layout>
 {{-- 
 <x-guest-layout class="bg-green-100"
 >

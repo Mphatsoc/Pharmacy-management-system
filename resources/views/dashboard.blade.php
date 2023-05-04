@@ -21,13 +21,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
                 <!-- Cards  -->
-            <a href="/riv"> <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> 
+            <a href="/riv"> <div  style = "background-color: lightgreen;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> 
               <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3  class="text-lg font-medium mb-2">RIV</h3>
                         <p>Send RIVs.</p>
                     </div>
                 </div></a>
-                <a href="/notify"><div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <a href="/notify"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3 class="text-lg font-medium mb-2">Notifications</h3>
                         <p>Check Approved/Declined RIVs.</p>
