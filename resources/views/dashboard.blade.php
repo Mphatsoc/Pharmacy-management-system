@@ -1,9 +1,19 @@
 <x-app-layout>
+
+
     <x-slot name="header">
+    
+
         <div class="flex justify-between items-center mb-4">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <button onclick="window.history.back();" class="font-bold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+        Back
+    </button>
+    <br>
+    <br>
+
+            <!-- <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('User') }}
-            </h2>
+            </h2> -->
             <!-- Links in the navigation bar to RIV and Notifications -->
             <a href="/riv" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
                     RIV

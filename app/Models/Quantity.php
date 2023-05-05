@@ -9,4 +9,5 @@ class Quantity extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    
 }
