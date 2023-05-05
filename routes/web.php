@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\InventoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +61,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+//experiment
+
+Route::view('add','quantity');
+Route::post('add',[InventoryController::class, 'addData']);
 

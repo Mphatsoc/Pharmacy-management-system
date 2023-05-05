@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Quantity;
+
+class InventoryController extends Controller
+{
+    function addData(Request $request){
+
+        $quantity = new Quantity;
+        $quantity->date=$request->date;
+        $quantity->quantity_recieved=$request->quantity_recieved;
+        $quantity->quantity_issued=$request->quantity_issued;
+        $quantity->quantity_on_hand=$request->quantity_on_hand;
+        $quantity->losses=$request->losses;
+        $quantity->save();
+
+    }
+}
