@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\RivController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,7 +72,10 @@ Route::get('quantity-list', [InventoryController::class, 'displayData']);
 Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
 
 //riv route
-Route::get('/riv', [RivController::class, 'ask'])->name('riv');
+Route::view('riv','requisition');
+Route::post('riv',[RivController::class, 'storeData']);
+
+
 
 
 
