@@ -8,6 +8,7 @@ use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\RivController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,9 @@ Route::view('add','quantity');
 Route::post('add',[InventoryController::class, 'addData']);
 Route::get('quantity-list', [InventoryController::class, 'displayData']);
 Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
+
+//riv route
+Route::get('/riv', [RivController::class, 'ask'])->name('riv');
 
 
 

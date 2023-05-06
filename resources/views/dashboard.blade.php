@@ -24,7 +24,7 @@
                 <!-- Cards  -->
             <a href="/riv"> <div  style = "background-color: lightgreen;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> 
               <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <h3  class="text-lg font-medium mb-2">RIV</h3>
+                        <h3  class="text-lg font-medium mb-2">Requisition Issue Voucher</h3>
                         <p>Send RIVs.</p>
                     </div>
                 </div></a>
