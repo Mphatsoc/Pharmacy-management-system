@@ -72,10 +72,6 @@
   z-index: 300;
   /* add other CSS properties for your navbar here */
 
-
-
-
-
         </style>
     </head>
     <body class="antialiased">

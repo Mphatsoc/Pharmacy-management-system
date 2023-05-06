@@ -2,12 +2,7 @@
 
     <x-slot name="header">
     <div class="flex justify-between items-center mb-4">
-    <div class="flex items-center mb-4">
-    <a href="{{ url()->previous() }}" class="mr-2">
-        <img src="{{ asset('images/arrow.png') }}" alt="Back" width="30">
-    </a>
-</div>
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Quantity List') }}
         </h2>
         <a href="/stock" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
