@@ -1,6 +1,12 @@
 <x-app-layout>
+
     <x-slot name="header">
     <div class="flex justify-between items-center mb-4">
+    <div class="flex items-center mb-4">
+    <a href="{{ url()->previous() }}" class="mr-2">
+        <img src="{{ asset('images/arrow.png') }}" alt="Back" width="30">
+    </a>
+</div>
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Quantity List') }}
         </h2>

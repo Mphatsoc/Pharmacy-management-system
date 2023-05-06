@@ -4,18 +4,15 @@
     <x-slot name="header">
     
 
-        <div class="flex justify-between items-center mb-4">
-        <button onclick="window.history.back();" class="font-bold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-        Back
-    </button>
-    <br>
-    <br>
+    <div class="flex items-center mb-4">
+    <a href="{{ url()->previous() }}" class="mr-2">
+        <img src="{{ asset('images/arrow.png') }}" alt="Back" width="30">
+    </a>
+</div>
+    
 
-            <!-- <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('User') }}
-            </h2> -->
             <!-- Links in the navigation bar to RIV and Notifications -->
-            <a href="/add" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+            <a href="/riv" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
                     RIV
                 </a>
                 <a href="/notify" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
