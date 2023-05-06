@@ -2,25 +2,24 @@
 
 
     <x-slot name="header">
-    
-
-    <div class="flex items-center mb-4">
+    <div class="flex justify-between items-center mb-4">
+        <div class="flex items-center mb-4">
     <a href="{{ url()->previous() }}" class="mr-2">
         <img src="{{ asset('images/arrow.png') }}" alt="Back" width="30">
     </a>
 </div>
-    
-
-            <!-- Links in the navigation bar to RIV and Notifications -->
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Dashboard') }}
+            </h2>
             <a href="/riv" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    RIV
-                </a>
-                <a href="/notify" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    Notifications
-                </a>
-                <a href="/user" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    About
-                </a>
+                RIV
+            </a>
+            <a href="/notify" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+                Notifications
+            </a>
+            <a href="/user" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+                About
+            </a>
         </div>
     </x-slot>
 
