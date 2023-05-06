@@ -62,7 +62,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-//experiment
+//Routes for stock cards and adding and deleting of data.
 
 Route::view('add','quantity');
 Route::post('add',[InventoryController::class, 'addData']);
@@ -71,5 +71,4 @@ Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('del
 
 
 
-// Route::get('add',[InventoryController::class, 'showData']);
 

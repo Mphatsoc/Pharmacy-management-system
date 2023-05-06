@@ -47,6 +47,16 @@
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Operation
                                 </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="flex justify-between">
+                                <a href="/add"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
+                                  {{ __("Add More data") }}
+                                </div></a>
+
+                               </div>
+                               </th>
+
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
@@ -67,14 +77,16 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         {{ $quantity->losses }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                    <a href="{{ route('delete', ['id' => $quantity->id]) }}">Delete</a>
+                                    <td class="px-4 py-2">
+                                     <a href="{{ route('delete', ['id' => $quantity->id]) }}" 
+                                      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                       Delete</a>
                                     </td>
-
-
+                                </tr>        
                             @endforeach
                         </tbody>
                     </table>
+             
                 </div>
             </div>
         </div>
