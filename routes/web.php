@@ -67,7 +67,9 @@ Route::middleware('auth')->group(function () {
 Route::view('add','quantity');
 Route::post('add',[InventoryController::class, 'addData']);
 Route::get('quantity-list', [InventoryController::class, 'displayData']);
-Route::get('delete', [InventoryController::class, 'deleteData']);
+Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
+
+
 
 // Route::get('add',[InventoryController::class, 'showData']);
 

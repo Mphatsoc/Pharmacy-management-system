@@ -68,7 +68,7 @@
                                         {{ $quantity->losses }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                       <a href="{{ 'delete/' }}">Delete</a>
+                                    <a href="{{ route('delete', ['id' => $quantity->id]) }}">Delete</a>
                                     </td>
 
 

@@ -15,7 +15,7 @@
                 {{ __('User') }}
             </h2> -->
             <!-- Links in the navigation bar to RIV and Notifications -->
-            <a href="/riv" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+            <a href="/add" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
                     RIV
                 </a>
                 <a href="/notify" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
