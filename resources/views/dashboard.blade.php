@@ -24,7 +24,7 @@
                 <!-- Cards  -->
                 <div style="background-color: lightgreen;" class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
   <div class="p-6 text-gray-900 dark:text-gray-100">
-    <h3 class="text-lg font-medium mb-2">Requisition Issue Voucher</h3>
+  <a href="/riv"><h3 class="text-lg font-medium mb-2">Requisition Issue Voucher</h3></a>
     <form>
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="department">
@@ -32,9 +32,9 @@
         </label>
         <select id="department" name="department" class="form-select block w-full mt-1">
           <option value="">Select a department</option>
-          <option value="cardiology">Lab</option>
-          <option value="neurology">Neurology</option>
-          <option value="oncology">Oncology</option>
+          <option value="Laboratory">Laboratory</option>
+          <option value="Radiology">Radiology</option>
+          <option value="Opthalmology">Opthalmology</option>
           <!-- Add more options for other departments as needed -->
         </select>
       </div>
