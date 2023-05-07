@@ -73,7 +73,7 @@
   <br>
   <div class="flex justify-between">
                         <a href="/quantity-list"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
-                            {{ __("Stock") }}
+                            {{ __("Stock Card") }}
 </div></a>
 
   </div>
