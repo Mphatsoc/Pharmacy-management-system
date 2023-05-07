@@ -22,11 +22,18 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
                 <!-- Cards  -->
+<<<<<<< HEAD
             <!-- <a href="/riv"> <div  style = "background-color: lightgreen;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> 
+=======
+
+                
+            <a href="/riv"> <div  style = "background-color: lightgreen;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> 
+>>>>>>> 0bc469f1fdd3ca17bced25bc9d8fc0eacd9b9b7a
               <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3  class="text-lg font-medium mb-2">Requisition Issue Voucher</h3>
                         <p>Send RIVs.</p>
                     </div>
+<<<<<<< HEAD
                 </div></a> -->
                 <div style="background-color: lightgreen;" class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
   <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -57,10 +64,20 @@
   </div>
 </div>
 
+=======
+                </div></a>
+                
+>>>>>>> 0bc469f1fdd3ca17bced25bc9d8fc0eacd9b9b7a
                 <a href="/notify"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3 class="text-lg font-medium mb-2">Notifications</h3>
                         <p>Check Approved/Declined RIVs.</p>
+                    </div>
+                </div></a>
+
+                <a href="/user"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                        <h3 class="text-lg font-medium mb-2">About</h3>
                     </div>
                 </div></a>
            </div>
