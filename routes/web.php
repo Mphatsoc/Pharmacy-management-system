@@ -74,6 +74,8 @@ Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('del
 //riv route
 Route::view('riv','requisition');
 Route::post('riv',[RivController::class, 'storeData']);
+Route::get('riv-list', [RivController::class, 'showData']);
+Route::get('delete/{id}', [RivController::class, 'deleteData'])->name('delete');
 
 
 

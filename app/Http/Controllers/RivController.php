@@ -26,5 +26,19 @@ class RivController extends Controller
     return redirect()->back();
 
     }
+    public function showData()
+    {
+        $issues = Issue::all();
+        return view('riv-list', compact('issues'));
+    }
+    public function deleteData($id)
+    {
+    $issue = Issue::findOrFail($id);
+    $issue->delete();
+
+    Session::flash('success', 'Data deleted successfully!');
+
+    return redirect()->back();
+    }
    
 }

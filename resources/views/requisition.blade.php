@@ -72,7 +72,14 @@
             </div>
 <br><br>
   <div class="col-span-3">
-  <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+  <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+  </div>
+  <br>
+  <div class="flex justify-between">
+                        <a href="/riv-list"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
+                            {{ __("Requisitions") }}
+</div></a>
+
   </div>
 </form>
 </div>
