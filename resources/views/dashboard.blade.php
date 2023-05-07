@@ -22,21 +22,29 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
                 <!-- Cards  -->
-                <a href="/notify"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <h3 class="text-lg font-medium mb-2">Riv</h3>
-                        <p>Check Approved/Declined RIVs.</p>
-                    </div>
+                <div style="background-color: lightgreen;" class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+  <div class="p-6 text-gray-900 dark:text-gray-100">
+    <h3 class="text-lg font-medium mb-2">Requisition Issue Voucher</h3>
+    <form>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="department">
+          Hospital Department:
+        </label>
+        <select id="department" name="department" class="form-select block w-full mt-1">
+          <option value="">Select a department</option>
+          <option value="cardiology">Lab</option>
+          <option value="neurology">Neurology</option>
+          <option value="oncology">Oncology</option>
+          <!-- Add more options for other departments as needed -->
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
                 <a href="/notify"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3 class="text-lg font-medium mb-2">Notifications</h3>
                         <p>Check Approved/Declined RIVs.</p>
-                    </div>
-                </div></a>
-
-                <a href="/user"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <h3 class="text-lg font-medium mb-2">About</h3>
                     </div>
                 </div></a>
            </div>
