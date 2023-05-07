@@ -1,6 +1,7 @@
 <x-app-layout>
 <x-slot name="header">
         <div class="flex justify-between items-center mb-4">
+     
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('Stock card') }}
             </h2>
@@ -68,6 +69,13 @@
 
   <div class="col-span-3">
   <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+  </div>
+  <br>
+  <div class="flex justify-between">
+                        <a href="/quantity-list"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
+                            {{ __("Stock") }}
+</div></a>
+
   </div>
 </form>
 </div>

@@ -8,6 +8,8 @@ use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\RivController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -62,8 +64,19 @@ Route::middleware('auth')->group(function () {
 });
 
 
-//experiment
+//Routes for stock cards and adding and deleting of data.
 
 Route::view('add','quantity');
 Route::post('add',[InventoryController::class, 'addData']);
+Route::get('quantity-list', [InventoryController::class, 'displayData']);
+Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
+
+//riv route
+Route::view('riv','requisition');
+Route::post('riv',[RivController::class, 'storeData']);
+
+
+
+
+
 
