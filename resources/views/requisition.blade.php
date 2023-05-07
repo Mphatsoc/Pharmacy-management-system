@@ -72,7 +72,7 @@
             </div>
 <br><br>
   <div class="col-span-3">
-  <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+  <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
   </div>
 </form>
 </div>
