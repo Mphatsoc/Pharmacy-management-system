@@ -21,26 +21,63 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-                <!-- Cards  -->
-                <div style="background-color: lightgreen;" class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+
+              <!-- Cards  -->
+<div style="background-color: lightgreen;" class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
   <div class="p-6 text-gray-900 dark:text-gray-100">
-  <a href="/riv"><h3 class="text-lg font-medium mb-2">Requisition Issue Voucher</h3></a>
+    <a href="/riv"><h3 class="text-lg font-medium mb-2">Requisition Issue Voucher</h3></a>
     <form>
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="department">
           Hospital Department:
         </label>
         <select id="department" name="department" class="form-select block w-full mt-1">
-          <option value="">Select a department</option>
-          <option value="Laboratory">Laboratory</option>
-          <option value="Radiology">Radiology</option>
-          <option value="Opthalmology">Opthalmology</option>
-          <!-- Add more options for other departments as needed -->
+          <option value="">Choose department</option>
+          <?php
+            // Connect to the database
+            $mysqli = new mysqli("localhost", "root", "", "loginpage");
+
+            // Check for errors
+            if ($mysqli->connect_errno) {
+              echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+              exit();
+            }
+
+            // Query the departments table to get the department names
+            $result = $mysqli->query("SELECT name FROM departments");
+
+            // Loop through the results and add options to the select element
+            while ($row = $result->fetch_assoc()) {
+              echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+            }
+
+            // Close the database connection
+            $mysqli->close();
+          ?>
         </select>
       </div>
     </form>
   </div>
 </div>
+
+<script>
+  // Get the select element
+  const departmentSelect = document.getElementById('department');
+
+  // Add an event listener for when the value changes
+  departmentSelect.addEventListener('change', function() {
+    // Get the selected department
+    const selectedDepartment = departmentSelect.value;
+
+
+if (selectedDepartment) {
+  window.location.href = "/riv";
+}
+
+
+  });
+</script>
+
                 <a href="/notify"><div style="background-color: lightblue;"class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <h3 class="text-lg font-medium mb-2">Notifications</h3>

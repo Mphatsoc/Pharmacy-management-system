@@ -40,5 +40,5 @@ class RivController extends Controller
 
     return redirect()->back();
     }
-   
+
 }
