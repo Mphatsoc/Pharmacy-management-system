@@ -79,10 +79,10 @@
                                         {{ $quantity->losses }}
                                     </td>
                                     <td class="px-4 py-2">
-                                     <a href="{{ route('delete', ['id' => $quantity->id]) }}" 
-                                      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                                       Delete</a>
-                                    </td>
+                                        <a href="{{ route('delete', ['id' => $quantity->id]) }}" 
+                                         class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                          Delete</a>
+                                       </td>
                                 </tr>        
                             @endforeach
                         </tbody>

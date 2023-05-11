@@ -31,7 +31,8 @@ class RivController extends Controller
         $issues = Issue::all();
         return view('riv-list', compact('issues'));
     }
-    public function deleteData($id)
+
+    public function removeData($id)
     {
     $issue = Issue::findOrFail($id);
     $issue->delete();

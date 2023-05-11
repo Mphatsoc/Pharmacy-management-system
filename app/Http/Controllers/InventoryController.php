@@ -32,6 +32,7 @@ class InventoryController extends Controller
         $quantities = Quantity::all();
         return view('quantity-list', compact('quantities'));
     }
+
     public function deleteData($id)
     {
     $quantity = Quantity::findOrFail($id);
