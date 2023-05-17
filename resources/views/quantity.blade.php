@@ -35,8 +35,8 @@
 
   <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
     <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_recieved" class="text-lg font-medium mb-2">Quantity Received:</label>
-  <input type="number" id="quantity_recieved" name="quantity_recieved" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
+  <label for="quantity_received" class="text-lg font-medium mb-2">Quantity Received:</label>
+  <input type="number" id="quantity_received" name="quantity_received" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
   </div>
 </div>
 
