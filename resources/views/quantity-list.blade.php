@@ -30,7 +30,7 @@
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Quantity Received
+                                    quantity_received
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -38,7 +38,7 @@
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Quantity On Hand
+                                    quantity_on_hand
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -61,25 +61,25 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            @foreach($quantities as $quantity)
+                            @foreach($StockCard as $StockCard)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $quantity->date }}
+                                        {{ $StockCard->date }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $quantity->quantity_recieved }}
+                                        {{ $StockCard->quantity_received }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $quantity->quantity_issued }}
+                                        {{ $StockCard->quantity_issued }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $quantity->quantity_on_hand }}
+                                        {{ $StockCard->quantity_on_hand }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $quantity->losses }}
+                                        {{ $StockCard->losses }}
                                     </td>
                                     <td class="px-4 py-2">
-                                     <a href="{{ route('delete', ['id' => $quantity->id]) }}" 
+                                     <a href="{{ route('delete', ['id' => $StockCard->id]) }}" 
                                       class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                                        Delete</a>
                                     </td>

@@ -9,6 +9,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\RivController;
+use App\Http\Controllers\MedicineController;
 
 
 /*
@@ -30,7 +31,9 @@ Route::get('/', function () {
 Route::get('/about', [AboutController::class, 'hello'])->name('about');
 Route::get('/user', [UserController::class, 'depo'])->name('user');
 Route::get('/card', [StockController::class, 'drugs'])->name('card');
-Route::get('/stock', [StockController::class, 'meds'])->name('stock');
+Route::get('/stock', [MedicineController::class, 'displayData'])->name('stock');
+Route::view('/stock/{id}/add', ('quantity'))->name('stock.add');
+Route::post('/stock/{id}/add', [InventoryController::class, 'addData'])->name('stock.add');
 Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
 
 Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
@@ -66,8 +69,8 @@ Route::middleware('auth')->group(function () {
 
 //Routes for stock cards and adding and deleting of data.
 
-Route::view('add','quantity');
-Route::post('add',[InventoryController::class, 'addData']);
+// Route::view('add','quantity');
+// Route::post('add/{id}',[InventoryController::class, 'addData']);
 Route::get('quantity-list', [InventoryController::class, 'displayData']);
 Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
 

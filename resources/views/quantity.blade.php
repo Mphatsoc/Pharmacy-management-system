@@ -20,7 +20,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-<form method="POST" action="add">
+<form method="POST" action="{{ route('stock.add', ['id' => $id]) }}">
 
 @csrf
 
@@ -35,8 +35,8 @@
 
   <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
     <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_recieved" class="text-lg font-medium mb-2">Quantity Received:</label>
-  <input type="number" id="quantity_recieved" name="quantity_recieved" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
+  <label for="quantity_received" class="text-lg font-medium mb-2">Quantity Received:</label>
+  <input type="number" id="quantity_received" name="quantity_received" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
   </div>
 </div>
 
@@ -52,15 +52,15 @@
   <br><br>
   <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
     <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_on_hand" class="text-lg font-medium mb-2">Quantity On Hand:</label>
-  <input type="number" id="quantity_on_hand" name="quantity_on_hand" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
+  <label for="original_quantity_on_hand" class="text-lg font-medium mb-2">Quantity On Hand:</label>
+  <input type="number" id="original_quantity_on_hand" name="original_quantity_on_hand" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
   </div>
 </div>
 
   <br><br>
   <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
     <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="losses" class="text-lg font-medium mb-2">Losses:</label>
+  <label for="losses" class="text-lg font-medium mb-2">losses:</label>
   <input type="number" id="losses" name="losses" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
   </div>
 </div>
