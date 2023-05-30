@@ -16,11 +16,11 @@
                         {{ __('Home') }}
                     </x-nav-link>
                 </div> --}}
-                <div class="flex items-center mb-4">
+                {{-- <div class="flex items-center mb-4">
     <a href="{{ url()->previous() }}" class="mr-2">
         <img src="{{ asset('images/arrow.png') }}" alt="Back" width="30">
     </a>
-</div>
+</div> --}}
             </div>
 
             <!-- Settings Dropdown -->

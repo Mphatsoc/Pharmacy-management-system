@@ -2,6 +2,11 @@
 
     <x-slot name="header">
     <div class="flex justify-between items-center mb-4">
+        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                {{ __('Home') }}
+            </x-nav-link>
+        </div>
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Requisition List') }}
         </h2>
@@ -61,33 +66,33 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            @foreach($issues as $issue)
+                            @foreach($rivs as $riv)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->item_description }}
+                                        {{ $riv->item_description }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->strength }}
+                                        {{ $riv->strength }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->stock_balance }}
+                                        {{ $riv->stock_balance }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->quantity_requested }}
+                                        {{ $riv->quantity_requested }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->quantity_issued_by_pharmacy }}
+                                        {{ $riv->quantity_issued_by_pharmacy }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $issue->quantity_collected_from_pharmacy }}
+                                        {{ $riv->quantity_collected_from_pharmacy }}
                                     </td>
                                     <td class="px-4 py-2">
-                                     <a href="{{ route('delete', ['id' => $issue->id]) }}" 
+                                     <a href="{{ route('remove', ['id' => $riv->id]) }}" 
                                       class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                                        Delete</a>
                                     </td>
                                     <td class="px-4 py-2">
-                                     <a href="{{ route('delete', ['id' => $issue->id]) }}" 
+                                     <a href="" 
                                       class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                                        Send</a>
                                     </td>

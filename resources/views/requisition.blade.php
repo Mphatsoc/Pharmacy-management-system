@@ -2,7 +2,13 @@
 
 
     <x-slot name="header">
+      
     <div class="flex justify-between items-center mb-4">
+      <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            {{ __('Home') }}
+        </x-nav-link>
+    </div>
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('RIV') }}
             </h2>

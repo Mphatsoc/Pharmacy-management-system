@@ -52,6 +52,7 @@ class InventoryController extends Controller
         $StockCard = StockCard::all();
         return view('quantity-list', compact('StockCard'));
     }
+
     public function deleteData($id)
     {
     $quantity = Quantity::findOrFail($id);

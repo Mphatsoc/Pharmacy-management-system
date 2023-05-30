@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Riv;
+use App\Models\Riv;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -31,7 +32,8 @@ class RivController extends Controller
         $Rivs = Riv::all();
         return view('riv-list', compact('rivs'));
     }
-    public function deleteData($id)
+
+    public function removeData($id)
     {
     $Riv = Riv::findOrFail($id);
     $Riv->delete();
