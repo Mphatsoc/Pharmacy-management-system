@@ -72,7 +72,7 @@
   </div>
   <br>
   <div class="flex justify-between">
-                        <a href="/quantity-list"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
+                        <a href="{{ route('stock.card', ['id' => $id]) }}"><div class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600">
                             {{ __("Stock Card") }}
 </div></a>
 

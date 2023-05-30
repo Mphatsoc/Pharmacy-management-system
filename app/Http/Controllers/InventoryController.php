@@ -47,9 +47,11 @@ class InventoryController extends Controller
 
     }
 
-    public function displayData()
-    {
-        $StockCard = StockCard::all();
+    public function displayData($id)
+    { 
+        $medicine = Medicine::findorFail($id);
+        
+        $StockCard = StockCard::where('medicine_name', $medicine->medicine_name)->get();
         return view('quantity-list', compact('StockCard'));
     }
 

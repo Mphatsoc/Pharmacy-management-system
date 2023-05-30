@@ -15,4 +15,9 @@ class StockController extends Controller
         return view('card');
     }
 
+    public function viewStockCard ($medicine_name)
+    {
+
+    }
+
 }
