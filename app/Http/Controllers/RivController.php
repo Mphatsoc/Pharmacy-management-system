@@ -11,6 +11,7 @@ class RivController extends Controller
 {
     function storeData(Request $request){
 
+<<<<<<< HEAD
         $riv = new Riv;
         $riv->item_description=$request->item_description;
         $riv->strength=$request->strength;
@@ -20,6 +21,16 @@ class RivController extends Controller
         $riv->quantity_collected_from_pharmacy=$request->quantity_collected_from_pharmacy;
         $riv->status='In Progress';
         $riv->save();
+=======
+        $Riv = new Riv;
+        $Riv->item_description=$request->item_description;
+        $Riv->strength=$request->strength;
+        $Riv->stock_balance=$request->stock_balance;
+        $Riv->quantity_requested=$request->quantity_requested;
+        $Riv->quantity_Rivd_by_pharmacy=$request->quantity_Rivd_by_pharmacy;
+        $Riv->quantity_collected_from_pharmacy=$request->quantity_collected_from_pharmacy;
+        $Riv->save();
+>>>>>>> 21325e119e5651896e5c426d8069f983ece665c2
 
    
     Session::flash('success', 'Data added successfully!');
@@ -29,7 +40,7 @@ class RivController extends Controller
     }
     public function showData()
     {
-        $rivs = Riv::all();
+        $Rivs = Riv::all();
         return view('riv-list', compact('rivs'));
     }
     public function editData($id){
