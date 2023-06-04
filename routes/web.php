@@ -33,10 +33,7 @@ Route::get('/card', [StockController::class, 'drugs'])->name('card');
 Route::get('/stock', [StockController::class, 'meds'])->name('stock');
 Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
 
-Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
-Route::get('/notifications', [NotificationsController::class, 'accept'])->name('notifications');
 
-Route::get('/notify', [NotificationsController::class, 'decline'])->name('notify');
 
 Route::get('/departments', function () {
     return view('departments');
@@ -75,7 +72,28 @@ Route::get('delete/{id}', [InventoryController::class, 'deleteData'])->name('del
 Route::view('riv','requisition');
 Route::post('riv',[RivController::class, 'storeData']);
 Route::get('riv-list', [RivController::class, 'showData']);
+Route::get('edit/{id}', [RivController::class, 'editData'])->name('edit');
+Route::post('edit', [RivController::class, 'update'])->name('edit');
 Route::get('remove/{id}', [RivController::class, 'removeData'])->name('remove');
+
+
+
+
+
+//notifications
+Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
+Route::get('/notify', [NotificationsController::class, 'decline'])->name('notify');
+Route::get('/show_notifications', [NotificationsController::class, 'note'])->name('show_notifications');
+Route::get('/approved/{id}',[NotificationsController::class, 'approved']);
+Route::get('/declined/{id}',[NotificationsController::class, 'declined']);
+
+
+
+//departments
+Route::post('/update-selected-department', [UserController::class, 'updateSelectedDepartment']);
+Route::get('/fetch-selected-department', [UserController::class, 'fetchSelectedDepartment']);
+
+
 
 
 

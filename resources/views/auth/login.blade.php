@@ -2,8 +2,12 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <div class= "max-w-md mx-auto my-8">
-        <form method="POST" action="{{ route('login') }}" class="bg-white-400 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
+
+    <div style="max-width: 28rem; margin-left: auto; margin-right: auto; margin-top: 2rem; margin-bottom: 2rem;">
+    <a style="color: #9b7cd6; font-weight: bold; font-family: 'Lato', sans-serif; font-size: 34px;">
+                              Pharmacy
+                            </a>
+        <form method="POST" action="{{ route('login') }}" style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1.5rem; padding-bottom: 2rem; margin-bottom: 1rem;">
 
             @csrf
 
@@ -34,17 +38,8 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-between">
                 <div>
-                    @if (Route::has('password.request'))
-                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="{{ route('password.request') }}">
-                            {{ __('Forgot your password?') }}
-                        </a>
-                    @endif
-                </div>
-
-                <div>
-                    <x-primary-button class="ml-3 bg-white-700">
+                    <x-primary-button  style="background-color: #9b7cd6;">
                         {{ __('Log in') }}
                     </x-primary-button>
                 </div>

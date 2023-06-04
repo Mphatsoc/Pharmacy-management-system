@@ -1,21 +1,32 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\Riv;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class NotificationsController extends Controller
 {
-    public function accept()
-    {
-        return view('notifications');
+    public function note(){
+
+        $rivs = Riv::all();
+        return view('show_notifications',  compact('rivs'));
     }
-    public function generate()
+    public function approved($id)
     {
-        return view('report');
+    $riv = Riv::find($id);
+    $riv->status='Approved';
+    $riv->save();
+
+    return redirect()->back();
     }
-    public function decline()
+    public function declined($id)
     {
-        return view('notify');
+    $riv = Riv::find($id);
+    $riv->status='Declined';
+    $riv->save();
+
+    return redirect()->back();
     }
+   
+
 }
