@@ -36,14 +36,24 @@ class InventoryController extends Controller
         $StockCard->date=$request->date;
         $StockCard->quantity_received=$request->quantity_received;
         $StockCard->quantity_issued=$request->quantity_issued;
-        $StockCard->quantity_on_hand=$request->quantity_on_hand;
+        $StockCard->quantity_on_hand=$medicine->quantity_on_hand;
         $StockCard->losses=$request->losses;
         $StockCard->save();
 
    
-    // Session::flash('success', 'Data added successfully!');
+     Session::flash('success', 'Data added successfully!');
 
-    // return redirect()->back();
+     return redirect()->back();
+
+    }
+
+    public function displayQuantity($id){
+        $medicine = Medicine::findorFail($id);
+
+        return view('quantity', [
+            'id' => $id,
+            'medicine' => $medicine,
+        ]);
 
     }
 

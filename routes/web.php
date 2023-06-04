@@ -34,6 +34,7 @@ Route::get('/card', [StockController::class, 'drugs'])->name('card');
 Route::get('/stock', [MedicineController::class, 'displayData'])->name('stock');
 Route::view('/stock/{id}/add', ('quantity'))->name('stock.add'); // quantity list should look like this
 Route::post('/stock/{id}/add', [InventoryController::class, 'addData'])->name('stock.add'); // important
+Route::get('/stock/{id}/add', [InventoryController::class, 'displayQuantity'])->name('stock.add');
 Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
 
 Route::get('/report', [NotificationsController::class, 'generate'])->name('report');

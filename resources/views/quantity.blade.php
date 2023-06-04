@@ -52,7 +52,7 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <label for="original_quantity_on_hand" class="text-lg font-medium mb-2">Quantity On Hand:</label>
-                        <input type="number" id="original_quantity_on_hand" name="original_quantity_on_hand" required class="bg-gray-100 text-gray-900 rounded-lg p-2 w-full">
+                        <input type="number" id="original_quantity_on_hand" name="original_quantity_on_hand" value="{{$medicine->quantity_on_hand}}" required class="bg-gray-100 text-gray-900 rounded-lg p-2 w-full">
                     </div>
                 </div>
 
