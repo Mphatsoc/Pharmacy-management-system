@@ -230,7 +230,7 @@
             <!-- Content -->
             <div style="padding-top: 3rem;">
   <div style="max-width: 64rem; margin: 0 auto;">
-    <form method="POST" action="add" style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
+    <form method="POST" action="{{ route('stock.add', ['id' => $id]) }}" style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
       @csrf
       <div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
         <div style="display: flex; flex-direction: column;">
@@ -256,7 +256,7 @@
       <div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
         <div  style="display: flex; flex-direction: column;">
           <label for="quantity_on_hand" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity On Hand:</label>
-          <input type="number" id="quantity_on_hand" name="quantity_on_hand" required  style="border-radius: 8px; padding: 4px;">
+          <input type="number" id="quantity_on_hand" value="{{$medicine->quantity_on_hand}}" name="quantity_on_hand" required  style="border-radius: 8px; padding: 4px;">
         </div>
       </div>
       <br><br>
