@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html
   lang="en"
@@ -232,38 +231,16 @@
             <div style="padding: 3rem 0;">
   <div style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
     <div style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1rem;">
-      <div style="background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-        <a href="/add" style="text-decoration: none; color: inherit;">
+    @foreach($medicines as $medicine)
+    <div style="background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
+        <a href="{{ route('stock.add', ['id' => $medicine->id]) }}" style="text-decoration: none; color: inherit;">
           <div style="padding: 1.5rem; color: #111827;">
-            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Albendazol</h3>
-            <p style="margin-bottom: 0;">Quantity: 100</p>
+            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">{{ $medicine->medicine_name }}</h3>
+            <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand}}</p>
           </div>
         </a>
       </div>
-      <div style="background-color: lightgreen; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-        <a href="/add" style="text-decoration: none; color: inherit;">
-          <div style="padding: 1.5rem; color: #111827;">
-            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Ampicilin</h3>
-            <p style="margin-bottom: 0;">Quantity: 50</p>
-          </div>
-        </a>
-      </div>
-      <div style="background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-        <a href="/add" style="text-decoration: none; color: inherit;">
-          <div style="padding: 1.5rem; color: #111827;">
-            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">La</h3>
-            <p style="margin-bottom: 0;">Quantity: 80</p>
-          </div>
-        </a>
-      </div>
-      <div style="background-color: lightgreen; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-        <a href="/add" style="text-decoration: none; color: inherit;">
-          <div style="padding: 1.5rem; color: #111827;">
-            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Panadol</h3>
-            <p style="margin-bottom: 0;">Quantity: 120</p>
-          </div>
-        </a>
-      </div>
+      @endforeach
     </div>
   </div>
 </div>
@@ -272,51 +249,6 @@
 
                 </div>
                 </div>
-=======
-<x-app-layout>
-<x-slot name="header">
-        <div class="flex justify-between items-center mb-4">
-        {{--             
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('/admin/dashboard')" :active="request()->routeIs('/admin/dashboard')">
-                    {{ __('Home') }}
-                </x-nav-link>
-            </div> --}}
-        
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Stock') }}
-            </h2>
-            <a href="/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    Stock
-                </a>
-                <a href="/notifications" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    Notifications
-                </a>
-                <a href="/about" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
-                    About
-                </a>
-        </div>
-    </x-slot>
-
-    <div class="py-12 bg-gray-300">
-        <!-- Cards showing different meds -->
-        
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            @foreach($medicines as $medicine)
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <a href="{{ route('stock.add', ['id' => $medicine->id]) }}"><div class="p-6 text-gray-900 dark:text-gray-100">
-                       <h3  class="text-lg font-medium mb-2">{{ $medicine->medicine_name }}</h3>
-                        <p>{{ $medicine->quantity_on_hand}}</p>
-                    </div></a>
-                </div>
-                @endforeach
-         </div>
-    </div>
-    
- </div>
- </x-app-layout>
->>>>>>> 21325e119e5651896e5c426d8069f983ece665c2
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
