@@ -249,12 +249,12 @@
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Quantity Requested
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <!-- <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Quantity Issued By Pharmacy
               </th>
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Quantity Collected From Pharmacy
-              </th>
+              </th> -->
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Status
               </th>
@@ -273,8 +273,8 @@
               <td style="padding: 1rem 0.75rem;">{{ $riv->strength }}</td>
               <td style="padding: 1rem 0.75rem;">{{ $riv->stock_balance }}</td>
               <td style="padding: 1rem 0.75rem;">{{ $riv->quantity_requested }}</td>
-              <td style="padding: 1rem 0.75rem;">{{ $riv->quantity_issued_by_pharmacy }}</td>
-              <td style="padding: 1rem 0.75rem;">{{ $riv->quantity_collected_from_pharmacy }}</td>
+              <!-- <td style="padding: 1rem 0.75rem;">{{ $riv->quantity_issued_by_pharmacy }}</td>
+              <td style="padding: 1rem 0.75rem;">{{ $riv->quantity_collected_from_pharmacy }}</td> -->
               <td style="padding: 1rem 0.75rem; border-radius: 10px; background-color:
     <?php
     if ($riv->status === 'In Progress') {

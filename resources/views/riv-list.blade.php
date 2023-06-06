@@ -237,12 +237,12 @@
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Quantity Requested
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <!-- <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Quantity Issued By Pharmacy
             </th>
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Quantity Collected From Pharmacy
-            </th>
+            </th> -->
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Status
             </th>
@@ -274,7 +274,7 @@
                 {{ $riv->quantity_requested }}
               </div>
             </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
+            <!-- <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
               <div style="margin-left: 0.5rem;">
                 {{ $riv->quantity_issued_by_pharmacy }}
               </div>
@@ -283,7 +283,7 @@
               <div style="margin-left: 0.5rem;">
                 {{ $riv->quantity_collected_from_pharmacy }}
               </div>
-            </td>
+            </td> -->
             <td style="  border-radius: 10px; background-color:
     <?php
     if ($riv->status === 'In Progress') {
