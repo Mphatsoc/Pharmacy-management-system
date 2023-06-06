@@ -148,7 +148,7 @@
             </li>
             
             <li class="menu-item">
-              <a href="" class="menu-link">
+              <a href="/show_stock" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">View Stock</div>
               </a>
@@ -237,6 +237,9 @@
         <table style="width: 100%; border-collapse: collapse;">
           <thead style="background-color: #deeeff;">
             <tr>
+            <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                Date
+              </th>
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Item Description
               </th>
@@ -269,6 +272,7 @@
           <tbody style="background-color: #fff;">
             @foreach($rivs as $riv)
             <tr>
+            <td style="padding: 1rem 0.75rem;">{{ $riv->date}}</td>
               <td style="padding: 1rem 0.75rem;">{{ $riv->item_description }}</td>
               <td style="padding: 1rem 0.75rem;">{{ $riv->strength }}</td>
               <td style="padding: 1rem 0.75rem;">{{ $riv->stock_balance }}</td>

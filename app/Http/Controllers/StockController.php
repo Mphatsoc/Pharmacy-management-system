@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Medicine;
+use App\Models\Quantity;
+use App\Models\StockCard;
 
 class StockController extends Controller
 {
@@ -19,5 +22,13 @@ class StockController extends Controller
     {
 
     }
+    public function show()
+    {
+        $medicines = Medicine::all();
+        return view('show_stock', compact('medicines'));
+    }
+ 
+
+
 
 }

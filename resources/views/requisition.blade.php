@@ -230,6 +230,13 @@
 
              @csrf
 
+             <div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
+        <div style="display: flex; flex-direction: column;">
+          <label for="date" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Date:</label>
+          <input type="date" id="date" name="date" required style="border-radius: 8px; padding: 4px;">
+        </div>
+</div><br><br>
+
              <div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
     <label for="item_description" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Item Description:</label>

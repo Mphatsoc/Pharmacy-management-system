@@ -1,11 +1,11 @@
 <x-app-layout>
-<x-slot name="header">
-        <div class="flex justify-between items-center mb-4">
-     
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Stock card') }}
-            </h2>
-            <a href="/stock" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
+
+    <x-slot name="header">
+    <div class="flex justify-between items-center mb-4">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Quantity List') }}
+        </h2>
+        <a href="/stock" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
                     Stock
                 </a>
                 <a href="/notifications" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
@@ -14,66 +14,73 @@
                 <a href="/about" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition duration-150 ease-in-out">
                     About
                 </a>
-        </div>
+    </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-6 bg-gray-300">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    quantity_received
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Quantity Issued
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    quantity_on_hand
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Losses
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Operation
+                                </th>
 
-<form method="POST" action="add">
-
-@csrf
-
-<div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-    <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="date" class="text-lg font-medium mb-2">Date:</label>
-  <input type="date" id="date" name="date" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
-</div>
-</div>
-
-  <br><br>
-
-  <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-    <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_received" class="text-lg font-medium mb-2">Quantity Received:</label>
-  <input type="number" id="quantity_received" name="quantity_received" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
-  </div>
-</div>
-
-
-  <br><br>
-  <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-    <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_issued" class="text-lg font-medium mb-2">Quantity Issued:</label>
-  <input type="number" id="quantity_issued" name="quantity_issued" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
-  </div>
-</div>
-
-  <br><br>
-  <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-    <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="quantity_on_hand" class="text-lg font-medium mb-2">Quantity On Hand:</label>
-  <input type="number" id="quantity_on_hand" name="quantity_on_hand" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
-  </div>
-</div>
-
-  <br><br>
-  <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-    <div class="p-6 text-gray-900 dark:text-gray-100">
-  <label for="losses" class="text-lg font-medium mb-2">Losses:</label>
-  <input type="number" id="losses" name="losses" required class="bg-gray-100 text-gray-900 rounded-lg p-2">
-  </div>
-</div>
-
-  <br><br>
-
-  <div class="col-span-3">
-  <button type="submit" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
-  </div>
-  <br>
-  </div>
-</form>
-</div>
-</div>
-
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            @foreach($StockCard as $StockCard)
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{ $StockCard->date }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{ $StockCard->quantity_received }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{ $StockCard->quantity_issued }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{ $StockCard->quantity_on_hand }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{ $StockCard->losses }}
+                                    </td>
+                                    <td class="px-4 py-2">
+                                     <a href="{{ route('delete', ['id' => $StockCard->id]) }}" 
+                                      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                       Delete</a>
+                                    </td>
+                                </tr>        
+                            @endforeach
+                        </tbody>
+                    </table>
+             
+                </div>
+            </div>
+        </div>
+    </div>
 </x-app-layout>

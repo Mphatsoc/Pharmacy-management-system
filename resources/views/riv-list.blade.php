@@ -224,7 +224,10 @@
     <div style="padding: 6rem; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid #e5e7eb;">
       <table style="width: 100%; border-collapse: collapse;">
         <thead style="background-color: #deeeff;">
-          <tr>
+        <tr>
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+              Date
+            </th>
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Item Description
             </th>
@@ -254,6 +257,12 @@
         <tbody>
           @foreach($rivs as $riv)
           <tr>
+          <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
+              <div style="margin-left: 0.5rem;">
+                {{ $riv->date }}
+              </div>
+            </td>
+            
             <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
               <div style="margin-left: 0.5rem;">
                 {{ $riv->item_description }}
