@@ -237,19 +237,19 @@
         <table style="width: 100%; border-collapse: collapse;">
           <thead style="background-color: #deeeff;">
             <tr>
-            <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+            <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Date
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Item Description
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Strength
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Stock Balance
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Quantity Requested
               </th>
               <!-- <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
@@ -258,13 +258,13 @@
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Quantity Collected From Pharmacy
               </th> -->
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Status
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Operation
               </th>
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Operation
               </th>
             </tr>

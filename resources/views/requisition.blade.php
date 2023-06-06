@@ -232,14 +232,14 @@
 
              <div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
         <div style="display: flex; flex-direction: column;">
-          <label for="date" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Date:</label>
+          <label for="date" style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Date:</label>
           <input type="date" id="date" name="date" required style="border-radius: 8px; padding: 4px;">
         </div>
 </div><br><br>
 
              <div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
-    <label for="item_description" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Item Description:</label>
+    <label for="item_description" style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Item Description:</label>
     <input type="text" id="item_description" name="item_description" required style="border-radius: 8px; padding: 4px;">
   </div>
 </div>
@@ -249,7 +249,7 @@
 
 <div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
-    <label for="strength" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Strength:</label>
+    <label for="strength" style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Strength:</label>
     <input type="text" id="strength" name="strength" required style="border-radius: 8px; padding: 4px;">
   </div>
 </div>
@@ -258,7 +258,7 @@
 
 <div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
-    <label for="stock_balance" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Stock Balance:</label>
+    <label for="stock_balance" style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Stock Balance:</label>
     <input type="number" id="stock_balance" name="stock_balance" required style="border-radius: 8px; padding: 4px;">
   </div>
 </div>
@@ -267,7 +267,7 @@
 
 <div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
-    <label for="quantity_requested" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Being Requested:</label>
+    <label for="quantity_requested" style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Quantity Being Requested:</label>
     <input type="number" id="quantity_requested" name="quantity_requested" required style="border-radius: 8px; padding: 4px;">
   </div>
 </div>
@@ -292,7 +292,7 @@
 
 <br><br> -->
 <div style="grid-column: span 3;">
-  <button type="submit" style="margin-left: 0.75rem; background-color: #d1f5d0;   border-radius: 5px;">Save</button>
+  <button type="submit" style="margin-left: 0.75rem; background-color: #d1f5d0; font-weight: 800; color: black;  border-radius: 5px;">Save</button>
  
 </div>
 <br>

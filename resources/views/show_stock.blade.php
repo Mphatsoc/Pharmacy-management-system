@@ -228,13 +228,13 @@
 <?php
 // Assuming you have an array of medicines
 $medicines = [
-    ['id' => 1, 'medicine_name' => 'Albendazol'],
-    ['id' => 2, 'medicine_name' => 'Ampicillin'],
-    ['id' => 3, 'medicine_name' => 'LA'],
-    ['id' => 4, 'medicine_name' => 'Panadol'],
+    ['id' => 1, 'medicine_name' => 'Albendazole'],
+    ['id' => 2, 'medicine_name' => 'Ampicillin (Principen)'],
+    ['id' => 3, 'medicine_name' => 'Lumefantrine Artemether (LA)'],
+    ['id' => 4, 'medicine_name' => 'Paracetamol'],
 ];
 ?>
-<div style="padding-top: 3rem; padding-bottom: 3rem;">
+<div style="padding-top: 10rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 
 <!-- Your HTML code -->
@@ -245,7 +245,7 @@ $medicines = [
         <div style="flex: 0 0 calc(33.33% - 1rem); background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; margin: 0.5rem;">
             <a href="{{ route('stock.card', ['id' => $medicine['id']]) }}" style="text-decoration: none; color: inherit;">
                 <div style="padding: 1.5rem; color: #111827;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;"><?php echo $medicine['medicine_name']; ?></h3>
+                    <h3 style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;"><?php echo $medicine['medicine_name']; ?></h3>
                 </div>
             </a>
         </div>

@@ -236,7 +236,7 @@
   <div style="flex: 0 0 calc(33.33% - 1rem); background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; margin: 0.5rem;">
     <a href="{{ route('stock.add', ['id' => $medicine->id]) }}" style="text-decoration: none; color: inherit;">
       <div style="padding: 1.5rem; color: #111827;">
-        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">{{ $medicine->medicine_name }}</h3>
+        <h3 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 0.5rem; color: black;">{{ $medicine->medicine_name }}</h3>
         <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand }}</p>
       </div>
     </a>

@@ -235,7 +235,7 @@
         <div class="d-flex align-items-end row">
           <div class="col-sm-7">
             <div class="card-body">
-              <h5 class="block text-black font-bold mb-4">Requisitions</h5>
+              <h5 style="font-weight: 800; color: black;">Requisitions</h5>
               <p class="mb-4 block text-black font-bold">
                 Check/Update RIV
               </p>
@@ -249,7 +249,7 @@
         <div class="d-flex align-items-end row">
           <div class="col-sm-7">
             <div class="card-body">
-              <h5 class="block text-black font-bold mb-4">Stock</h5>
+              <h5 style="font-weight: 800; color: black;">Stock</h5>
               <p class="mb-4 block text-black font-bold">
                 Check/Update Stock
               </p>

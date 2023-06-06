@@ -225,19 +225,19 @@
       <table style="width: 100%; border-collapse: collapse;">
         <thead style="background-color: #deeeff;">
         <tr>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Date
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Item Description
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Strength
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Stock Balance
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Quantity Requested
             </th>
             <!-- <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
@@ -246,10 +246,10 @@
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Quantity Collected From Pharmacy
             </th> -->
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Status
             </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Operation
             </th>
           </tr>
