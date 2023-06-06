@@ -14,7 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard</title>
+    <title>About</title>
 
     <meta name="description" content="" />
 
@@ -60,7 +60,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="/dashboard" class="app-brand-link">
+            <a href="" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"

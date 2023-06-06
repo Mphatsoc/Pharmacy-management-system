@@ -60,7 +60,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -129,7 +129,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="/dashboard" class="menu-link">
+              <a href="/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -276,7 +276,7 @@
                                         {{ $StockCard->losses }}
                                     </td>
                                     <td style="padding: 0.5rem 0.75rem;">
-                <a href="" style="background-color: #10B981; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
+                <a href="" style="background-color: red; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
               </td>
                                 </tr>        
                             @endforeach
