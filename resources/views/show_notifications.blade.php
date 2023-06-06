@@ -129,7 +129,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="/dashboard" class="menu-link">
+              <a href="/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -153,13 +153,7 @@
                 <div data-i18n="Boxicons">View Stock</div>
               </a>
             </li>
-            <li class="menu-item">
-              <a href="/add" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Add Stock</div>
-              </a>
-            </li>
-           
+    
            
             <li class="menu-item active">
               <a href="/show_notifications" class="menu-link">
