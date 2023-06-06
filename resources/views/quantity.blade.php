@@ -275,7 +275,7 @@
       </div>
       <br><br>
       <div style="display: flex; justify-content: center;">
-        <button type="submit" style="background-color: #d1f5d0; color: black; font-weight: bold; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 0.375rem;">Submit</button>
+        <button type="save" style="background-color: #d1f5d0; color: black; font-weight: bold; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 0.375rem;">Submit</button>
       </div>
       <br>
     </form>
