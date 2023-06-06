@@ -266,7 +266,7 @@
 </div>
 
 <br><br>
-
+<!-- 
 <div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
   <div style="display: flex; flex-direction: column;">
     <label for="quantity_issued_by_pharmacy" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Issued By Pharmacy:</label>
@@ -283,7 +283,7 @@
   </div>
 </div>
 
-<br><br>
+<br><br> -->
 <div style="grid-column: span 3;">
   <button type="submit" style="margin-left: 0.75rem; background-color: #d1f5d0;   border-radius: 5px;">Save</button>
  
