@@ -230,7 +230,7 @@
             <div  style = "margin-top: 5rem; margin-left: 1xa0rem;">
               <div class="row">
                 <div class="col-lg-8 mb-4 order-0">
-                  <div   style="background-color: #d4e9ff;" class="card">
+                  <div   style="background-color: #d4e9ff; width: 75%;" class="card">
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div  class="card-body">
@@ -274,7 +274,7 @@
                 </div>
                 <div class="col-lg-8 mb-4 order-0">
                   <a href="/riv-list">
-                  <div  style="background-color: #d1f5d0;" class="card" >
+                  <div  style="background-color: #d1f5d0; width: 75%;" class="card" >
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
