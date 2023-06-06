@@ -146,6 +146,13 @@
                 <div data-i18n="Basic">Medicines</div>
               </a>
             </li>
+            
+            <li class="menu-item">
+              <a href="" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-crown"></i>
+                <div data-i18n="Boxicons">View Stock</div>
+              </a>
+            </li>
             <li class="menu-item">
               <a href="/add" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
