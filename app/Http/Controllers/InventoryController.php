@@ -75,6 +75,16 @@ class InventoryController extends Controller
     return redirect()->back();
     }
 
+    public function cancelData($id)
+    {
+    $StockCard = StockCard::findOrFail($id);
+    $StockCard->delete();
+
+    Session::flash('success', 'Data deleted successfully!');
+
+    return redirect()->back();
+    }
+
 
     
 

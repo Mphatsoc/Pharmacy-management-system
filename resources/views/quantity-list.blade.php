@@ -276,7 +276,9 @@
                                         {{ $StockCard->losses }}
                                     </td>
                                     <td style="padding: 0.5rem 0.75rem;">
-                <a href="" style="background-color: red; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
+                <a onclick="return confirm('Are You Sure You want to Delete?')" 
+                href="{{ route('cancel', ['id' => $StockCard->id]) }}" 
+                style="background-color: red; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
               </td>
                                 </tr>        
                             @endforeach

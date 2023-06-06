@@ -309,7 +309,8 @@
               </div>
             </td>
             <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-                <a href="{{ route('remove', ['id' => $riv->id]) }}" 
+                <a onclick="return confirm('Are You Sure You want to Delete?')"
+                 href="{{ route('remove', ['id' => $riv->id]) }}" 
                 style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">
                          Delete</a>
                    </td>
