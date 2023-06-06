@@ -229,63 +229,55 @@
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
             <!-- Content -->
 
-            <div class="py-6 bg-gray-300">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
+            <div style="padding-top: 1.5rem;">
+  <div style="max-width: 64rem; margin: 0 auto;">
+    <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
+      <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead style="background-color: #deeeff;">
                             <tr>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     Date
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     quantity_received
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     Quantity Issued
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     quantity_on_hand
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     Losses
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                                     Operation
                                 </th>
 
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
+                        <tbody style="background-color: #fff;">
                             @foreach($StockCard as $StockCard)
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td style="padding: 1rem 0.75rem;">
                                         {{ $StockCard->date }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td style="padding: 1rem 0.75rem;">
                                         {{ $StockCard->quantity_received }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td style="padding: 1rem 0.75rem;">
                                         {{ $StockCard->quantity_issued }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td style="padding: 1rem 0.75rem;">
                                         {{ $StockCard->quantity_on_hand }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td style="padding: 1rem 0.75rem;">
                                         {{ $StockCard->losses }}
                                     </td>
-                                    <td class="px-4 py-2">
-                                     <a href="{{ route('delete', ['id' => $StockCard->id]) }}" 
-                                      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                                       Delete</a>
-                                    </td>
+                                    <td style="padding: 0.5rem 0.75rem;">
+                <a href="" style="background-color: #10B981; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
+              </td>
                                 </tr>        
                             @endforeach
                         </tbody>
