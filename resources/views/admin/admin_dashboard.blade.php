@@ -228,55 +228,39 @@
         <div class="layout-page">
   <div class="content-wrapper">
             <!-- Content -->
-            <div  style = "margin-top: 5rem; margin-left: 1xa0rem;">
-              <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div   style="background-color:white" class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div  class="card-body">
- 
-<div class="col-lg-8 mb-4 order-0">
-                  <a href="/show_notifications">
-                  <div  style="background-color: #d1f5d0;" class="card" >
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="block text-black font-bold mb-4">Requisitions</h5>
-                          <p class="mb-4 block text-black font-bold">
-                            Check/Update RIV
-                          </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                   </a>
-                </div>
-                <div class="col-lg-8 mb-4 order-0">
-                  <a href="/stock">
-                  <div  style="background-color: #d4e9ff;" class="card" >
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="block text-black font-bold mb-4">Stock</h5>
-                          <p class="mb-4 block text-black font-bold">
-                            Check/Update Stock
-                          </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                   </a>
-                </div>
-
-
-
-
-            <!-- Content -->
-
-                </div></div></div></div></div></div></div></div>
+            <div style="margin-top: 5rem; margin-left: 10rem;">
+  <div class="row">
+    <div class="col-lg-8 mb-4 order-0">
+      <div style="background-color: #d1f5d0; width: 100%;" class="card">
+        <div class="d-flex align-items-end row">
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 class="block text-black font-bold mb-4">Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">
+                Check/Update RIV
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 mb-4 order-0">
+      <div style="background-color: #d4e9ff; width: 100%;" class="card">
+        <div class="d-flex align-items-end row">
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 class="block text-black font-bold mb-4">Stock</h5>
+              <p class="mb-4 block text-black font-bold">
+                Check/Update Stock
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
                 </div>
 
     <!-- Core JS -->
