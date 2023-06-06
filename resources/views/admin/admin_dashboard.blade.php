@@ -129,7 +129,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="/dashboard" class="menu-link">
+              <a href="/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -140,16 +140,16 @@
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
             <!-- Cards -->
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="/stock" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic"> Add Stock</div>
+                <div data-i18n="Basic">Medicines</div>
               </a>
             </li>
            
            
             <li class="menu-item">
-              <a href="/show_notificatiions" class="menu-link">
+              <a href="/show_notifications" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">Check Rivs</div>
               </a>
@@ -219,13 +219,58 @@
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div style="padding-top: 3rem; padding-bottom: 3rem;">
-  <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+        <div class="layout-page">
+  <div class="content-wrapper">
             <!-- Content -->
-            
+            <div  style = "margin-top: 5rem; margin-left: 1xa0rem;">
+              <div class="row">
+                <div class="col-lg-8 mb-4 order-0">
+                  <div   style="background-color:white" class="card">
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div  class="card-body">
+ 
+<div class="col-lg-8 mb-4 order-0">
+                  <a href="/show_notifications">
+                  <div  style="background-color: #d1f5d0;" class="card" >
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h5 class="block text-black font-bold mb-4">Requisitions</h5>
+                          <p class="mb-4 block text-black font-bold">
+                            Check/Update RIV
+                          </p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                   </a>
+                </div>
+                <div class="col-lg-8 mb-4 order-0">
+                  <a href="/stock">
+                  <div  style="background-color: #d4e9ff;" class="card" >
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h5 class="block text-black font-bold mb-4">Stock</h5>
+                          <p class="mb-4 block text-black font-bold">
+                            Check/Update Stock
+                          </p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                   </a>
+                </div>
+
+
+
+
             <!-- Content -->
 
-                </div>
+                </div></div></div></div></div></div></div></div>
                 </div>
 
     <!-- Core JS -->

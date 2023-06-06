@@ -36,9 +36,9 @@ class AuthenticatedSessionController extends Controller
             $url = '/dashboard';
         }
 
+
         return redirect()->intended($url);
     }
-
     /**
      * Destroy an authenticated session.
      */
