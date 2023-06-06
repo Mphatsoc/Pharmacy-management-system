@@ -223,27 +223,35 @@
           </ul>
         </aside>
         <!-- / Menu -->
-
-        <!-- Layout container -->
-        <div style="padding-top: 3rem; padding-bottom: 3rem;">
+<!-- Layout container -->
+<div style="padding-top: 3rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
-            <!-- Content -->
-            <div style="padding: 3rem 0;">
-  <div style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
-    <div style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1rem;">
-    @foreach($medicines as $medicine)
-    <div style="background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-        <a href="{{ route('stock.add', ['id' => $medicine->id]) }}" style="text-decoration: none; color: inherit;">
-          <div style="padding: 1.5rem; color: #111827;">
-            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">{{ $medicine->medicine_name }}</h3>
-            <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand}}</p>
-          </div>
-        </a>
+    <!-- Content -->
+    <div style="padding: 3rem 0;">
+      <div style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1rem;">
+        <div style="display: flex; flex-wrap: wrap;">
+        <div style="display: flex; flex-wrap: wrap; margin: -0.5rem;">
+  @foreach($medicines as $medicine)
+  <div style="flex: 0 0 calc(33.33% - 1rem); background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; margin: 0.5rem;">
+    <a href="{{ route('stock.add', ['id' => $medicine->id]) }}" style="text-decoration: none; color: inherit;">
+      <div style="padding: 1.5rem; color: #111827;">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">{{ $medicine->medicine_name }}</h3>
+        <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand }}</p>
       </div>
-      @endforeach
+    </a>
+  </div>
+  @endforeach
+</div>
+
+</div>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
             <!-- Content -->
 
