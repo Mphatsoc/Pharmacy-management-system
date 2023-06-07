@@ -56,9 +56,9 @@
                     </div>
                 </div>
                 <br><br>
-                <div style="display: flex; justify-content: center;">
+                <div style="display: flex; justify-content: left;">
                     <button type="save"
-                        style="background-color: #d1f5d0; color: black; font-weight: bold; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 0.375rem;">Submit</button>
+                        style="background-color: #d1f5d0; color: black; font-weight: bold; font-size: 1rem; padding: 1rem 2rem; border-radius: 0.375rem;">Save</button>
                 </div>
                 <br>
             </form>
