@@ -137,7 +137,7 @@
 
             <!-- Layouts -->
             
-            <!-- Components -->
+            Components
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
             <!-- Cards -->
             <li class="menu-item">
@@ -227,7 +227,13 @@
         <!-- Layout container -->
         <div style="padding-top: 3rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
-            <!-- Content -->
+           
+  
+  
+  
+  
+  
+  <!-- Content -->
 
             <div style="padding-top: 1.5rem;">
   <div style="max-width: 64rem; margin: 0 auto;">

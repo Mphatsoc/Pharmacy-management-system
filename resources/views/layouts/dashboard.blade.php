@@ -7,12 +7,12 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Requisitions</title>
+    <title>Stock</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,26 +22,27 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/theme-default.css') }}"
+        class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ asset('assets/css.demo.css') }}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="{{ 'assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css' }}" />
 
-    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="{{ asset('assests/vendor/libs/apex-charts/apex-charts.css') }}" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
+    <script src="{{ asset('assets/js/helpers.js') }}"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
+    <script src="{{ asset('assets/js/config.js') }}"></script>
 </head>
 
 <body>
@@ -111,7 +112,7 @@
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item">
-                        <a href="/dashboard" class="menu-link">
+                        <a href="/admin/dashboard" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Home</div>
                         </a>
@@ -123,15 +124,20 @@
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
                     <!-- Cards -->
                     <li class="menu-item active">
-                        <a href="/riv" class="menu-link">
+                        <a href="/stock" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Fill Riv</div>
+                            <div data-i18n="Basic">Medicines</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/show_stock" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">View Stock</div>
                         </a>
                     </li>
 
-
                     <li class="menu-item">
-                        <a href="/riv-list" class="menu-link">
+                        <a href="/show_notifications" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
@@ -139,7 +145,7 @@
 
 
                     <li class="menu-item">
-                        <a href="/user" class="menu-link">
+                        <a href="/about" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-support"></i>
                             <div data-i18n="Support">About</div>
                         </a>
@@ -199,140 +205,47 @@
                 </ul>
             </aside>
             <!-- / Menu -->
-
             <!-- Layout container -->
-            <div style="padding-top: 1.5rem; padding-bottom: 3rem;">
-                <div
-                    style="max-width: 80rem; margin-left: 20rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+            <div style="padding-top: 3rem; padding-bottom: 3rem; width: 100%">
+                <div style=" margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
                     <!-- Content -->
-                    <div style="padding-top: 3rem; padding-bottom: 3rem;">
-                        <div style="width: 100%; margin: 0 auto; ">
-                            <div>
-
-                                <form method="POST" action="riv"
-                                    style="width: 80%; margin: auto; background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
-
-                                    @csrf
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="date"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Date:</label>
-                                            <input type="date" id="date" name="date" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div><br><br>
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="item_description"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Item
-                                                Description:</label>
-                                            <input type="text" id="item_description" name="item_description"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
 
 
-                                    <br><br>
+                    @yield('content')
 
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="strength"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Strength:</label>
-                                            <input type="text" id="strength" name="strength" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
 
-                                    <br><br>
 
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="stock_balance"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Stock
-                                                Balance:</label>
-                                            <input type="number" id="stock_balance" name="stock_balance" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="quantity_requested"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Quantity
-                                                Being Requested:</label>
-                                            <input type="number" id="quantity_requested" name="quantity_requested"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-                                    <!--
-<div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-  <div style="display: flex; flex-direction: column;">
-    <label for="quantity_issued_by_pharmacy" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Issued By Pharmacy:</label>
-    <input type="number" id="quantity_issued_by_pharmacy" name="quantity_issued_by_pharmacy" required style="border-radius: 8px; padding: 4px;">
-  </div>
-</div>
-
-<br><br>
-
-<div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-  <div style="display: flex; flex-direction: column;">
-    <label for="quantity_collected_from_pharmacy" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Collected From Pharmacy:</label>
-    <input type="number" id="quantity_collected_from_pharmacy" name="quantity_collected_from_pharmacy" required style="border-radius: 8px; padding: 4px;">
-  </div>
-</div>
-
-<br><br> -->
-                                    <div style="grid-column: span 3;">
-                                        <button type="submit"
-                                            style="margin-left: 0.75rem; background-color: #d1f5d0; font-weight: 800; color: black;  border-radius: 5px;">Save</button>
-
-                                    </div>
-                                    <br>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Content -->
                 </div>
             </div>
 
 
+            <!-- Content -->
 
+        </div>
+    </div>
 
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
-            <!-- Core JS -->
-            <!-- build:js assets/vendor/js/core.js -->
-            <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-            <script src="../assets/vendor/libs/popper/popper.js"></script>
-            <script src="../assets/vendor/js/bootstrap.js"></script>
-            <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
+    <!-- endbuild -->
 
-            <script src="../assets/vendor/js/menu.js"></script>
-            <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 
-            <!-- Vendors JS -->
-            <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <!-- Main JS -->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
-            <!-- Main JS -->
-            <script src="../assets/js/main.js"></script>
+    <!-- Page JS -->
+    <script src="{{ asset('assets/js/dashboards-analytics.js') }}"></script>
 
-            <!-- Page JS -->
-            <script src="../assets/js/dashboards-analytics.js"></script>
-
-            <!-- Place this tag in your head or just before your close body tag. -->
-            <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </div>
 </body>
 
 </html>

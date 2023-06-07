@@ -47,14 +47,19 @@ class InventoryController extends Controller
 
     }
 
-    public function displayQuantity($id){
-        $medicine = Medicine::findorFail($id);
-
+    public function displayQuantity(Medicine $medicine){
+      
+        
         return view('quantity', [
-            'id' => $id,
+            'id' => $medicine->id,
             'medicine' => $medicine,
         ]);
 
+    }
+
+    public function dis() {
+      
+        return view('stk');
     }
 
     public function displayData($id)
