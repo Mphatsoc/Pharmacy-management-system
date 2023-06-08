@@ -9,4 +9,6 @@ class StockCard extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $table = 'stock_cards';
+
 }

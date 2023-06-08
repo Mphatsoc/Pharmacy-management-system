@@ -35,7 +35,8 @@ Route::view('/stock/{id}/add', ('quantity'))->name('stock.add'); // quantity lis
 Route::post('/stock/{id}/add', [InventoryController::class, 'addData'])->name('stock.add'); // important
 Route::get('/stock/add/{medicine}', [InventoryController::class, 'displayQuantity'])->name('stock.show'); // you will change this and give it a name of stock.card
 Route::get('quantity-list/{id}', [InventoryController::class, 'displayData'])->name('stock.card');
-Route::get('cancel/{id}', [InventoryController::class, 'cancelData'])->name('cancel'); // you will change this and give it a name of stock.card
+Route::get('cancel/{id}', [InventoryController::class, 'cancelData'])->name('cancel');
+Route::get('/report', [NotificationsController::class, 'generate'])->name('report'); // report 
 
 
 
@@ -55,6 +56,7 @@ require __DIR__.'/auth.php';
 Route::middleware(['auth','role:admin'])->group(function(){
 
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+    
 
 });
 

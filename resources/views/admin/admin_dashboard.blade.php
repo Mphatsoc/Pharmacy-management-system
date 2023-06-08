@@ -50,6 +50,42 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <style> 
+  .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+  border-radius: 0.375rem; 
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: 9rem; 
+  padding-bottom: 2rem; 
+  margin-bottom: 1rem;
+  margin-right: auto;
+
+}
+
+.card {
+  flex-basis: calc(34.33% - 1rem); /* Adjust the width of the cards as needed */
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 4px;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+  order: -1; /* Move the first two cards to the beginning */
+}
+
+.card:nth-child(3) {
+  order: 2; /* Move the third card to the bottom */
+}
+
+</style>
   </head>
 
   <body>
@@ -160,7 +196,13 @@
                 <div data-i18n="Boxicons">Check Rivs</div>
               </a>
             </li>
-
+  
+            <li class="menu-item">
+              <a href="/report" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-crown"></i>
+                <div data-i18n="Boxicons">Check Report</div>
+              </a>
+            </li>
           
             <li class="menu-item">
               <a
@@ -226,15 +268,15 @@
 
         <!-- Layout container -->
         <div class="layout-page">
-  <div class="content-wrapper">
+  <div >
             <!-- Content -->
-            <div style="margin-top: 5rem; margin-left: 1xa0rem;">
-  <div class="row">
-    <div class="col-lg-8 mb-4 order-0">
-     <a href="/show_notifications"> <div style="background-color: #d1f5d0; width: 75%;" class="card">
-        <div class="d-flex align-items-end row">
-          <div class="col-sm-7">
-            <div class="card-body">
+            <div class="card-container" >
+
+    <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
+     <a href="/show_notifications"> <div>
+        <div >
+          <div>
+            <div >
               <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
               <p class="mb-4 block text-black font-bold">
                 Approve/Decline RIVs
@@ -244,11 +286,12 @@
         </div>
       </div></a>
     </div>
-    <div class="col-lg-8 mb-4 order-0">
-      <a href = "/show_stock"><div style="background-color: #d4e9ff; width: 75%;" class="card">
-        <div class="d-flex align-items-end row">
-          <div class="col-sm-7">
-            <div class="card-body">
+
+    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;">
+      <a href = "/show_stock"><div >
+        <div>
+          <div >
+            <div>
               <h5 style="font-weight: 800; color: black;">View Stock</h5>
               <p class="mb-4 block text-black font-bold">
                 Check/Delete Stock
@@ -258,11 +301,12 @@
         </div>
       </div></a>
     </div>
-    <div class="col-lg-8 mb-4 order-0">
-      <a href = "/stock"><div style="background-color: #d1f5d0; width: 75%;" class="card">
-        <div class="d-flex align-items-end row">
-          <div class="col-sm-7">
-            <div class="card-body">
+
+    <div class="card"  style="background-color: #d1f5d0; width: 75%; order: 3;" >
+      <a href = "/stock"><div>
+        <div >
+          <div>
+            <div >
               <h5 style="font-weight: 800; color: black;">Update Stock</h5>
               <p class="mb-4 block text-black font-bold">
                 Enter new Stock
@@ -272,10 +316,26 @@
         </div>
       </div></a>
     </div>
+    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 4;" >
+      <a href = "/report"><div>
+        <div >
+          <div>
+            <div >
+              <h5 style="font-weight: 800; color: black;">Report</h5>
+              <p class="mb-4 block text-black font-bold">
+                View Monthly Report
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></a>
+    </div>
+
   </div>
 </div>
-</div></div>
-                </div>
+
+</div>
+</div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

@@ -123,7 +123,7 @@
                     <!-- Components -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
                     <!-- Cards -->
-                    <li class="menu-item active">
+                    <li class="menu-item">
                         <a href="/stock" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
                             <div data-i18n="Basic">Medicines</div>
@@ -142,8 +142,8 @@
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="/reports" class="menu-link">
+                    <li class="menu-item active">
+                        <a href="/report" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Boxicons">Check Report</div>
                         </a>

@@ -90,7 +90,7 @@ class InventoryController extends Controller
     return redirect()->back();
     }
 
-
+    
     
 
 }
