@@ -295,54 +295,6 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script>
-  // Get the select element
-  const departmentSelect = document.getElementById('department');
-  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Get the CSRF token from the meta tag
-
-  // Add an event listener for when the value changes
-  departmentSelect.addEventListener('change', function() {
-    // Get the selected department
-    const selectedDepartment = departmentSelect.value;
-
-    // Send an AJAX request to update the user's selected department
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/update-selected-department', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-    // Set the CSRF token header
-    xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        if (response.success) {
-          // Department selection updated successfully
-          window.location.href = "/riv";
-        } else {
-          // Error updating department selection
-          alert(response.message);
-        }
-      }
-    };
-    xhr.send('department=' + encodeURIComponent(selectedDepartment));
-  });
-
-  // Fetch the user's selected department from the server when the page finishes loading
-  window.onload = function() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '/fetch-selected-department', true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        if (response.success && response.department) {
-          // Department has been selected
-          departmentSelect.value = response.department;
-          departmentSelect.disabled = true;
-        }
-      }
-    };
-    xhr.send();
-  };
-</script>
+ 
   </body>
 </html>
