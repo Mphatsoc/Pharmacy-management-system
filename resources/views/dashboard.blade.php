@@ -50,6 +50,33 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <style>
+      .card-container{
+        padding-top: 2rem;
+      }
+  .card {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  padding-top: 6rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.card:nth-child(n+2) {
+  margin-top: 1rem; /* Add margin to separate the cards vertically */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Adjust the width of the cards for smaller screens */
+  }
+}
+
+
+      </style>
   </head>
 
   <body>
@@ -222,75 +249,55 @@
 
         <!-- Layout container -->
         <div class="layout-page">
+          <div>
 
           <!-- Content wrapper -->
-          <div class="content-wrapper">
+          <div class="card-container">
             <!-- Content -->
 
-            <div  style = "margin-top: 5rem; margin-left: 1xa0rem;">
-              <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div   style="background-color: #d4e9ff; width: 75%;" class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div  class="card-body">
-                        <a href="/riv"><h3 class="text-lg font-medium mb-2"></h3></a>
-    <form >
-      <div class="mb-4">
-        <label class="block text-black font-bold mb-4"  for="department">
-         <h5 style="font-weight: 800; color: black;">Hospital Department:</h5> 
-        </label>
-        <select id="department" name="department" class="form-select block w-full mt-1">
-          <option value="">Choose department</option>
-          <?php
-            // Connect to the database
-            $mysqli = new mysqli("localhost", "root", "", "loginpage");
-
-            // Check for errors
-            if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: " . $mysqli->connect_error;
-              exit();
-            }
-
-            // Query the departments table to get the department names
-            $result = $mysqli->query("SELECT name FROM departments");
-
-            // Loop through the results and add options to the select element
-            while ($row = $result->fetch_assoc()) {
-              echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-            }
-
-            // Close the database connection
-            $mysqli->close();
-          ?>
-        </select>
-      </div>
-    </form>
-                        </div>
-                      </div>
+           
+            <div class="card" style="background-color: lightblue; width: 40%;">
+     <a href="/riv"> <div>
+        <div >
+          <div>
+            <div >
+              <h5 style="font-weight: 800; color: black;">Department</h5>
+              <h5 style="font-weight: 400; color: black;">{{ Auth::user()->department }}</h5>
+            </div>
+          </div>
+        </div>
+      </div></a>
+    </div>
+                        <div class="card" style="background-color: #d1f5d0; width: 40%;">
+     <a href="/riv"> <div>
+        <div >
+          <div>
+            <div >
+              <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">
+                 RIV Form
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></a>
+    </div>
                       
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-8 mb-4 order-0">
-                  <a href="/riv-list">
-                  <div  style="background-color: #d1f5d0; width: 75%;" class="card" >
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 style="font-weight: 800; color: black;">Requisitions</h5>
-                          <p class="mb-4 block text-black font-bold">
-                            Check/Update RIV
-                          </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                   </a>
-                </div>
-                </div>
-                </div>
+    <div class="card" style="background-color: lightblue; width: 40%;">
+     <a href="/riv-list"> <div>
+        <div >
+          <div>
+            <div >
+              <h5 style="font-weight: 800; color: black;">Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">
+                Check RIVs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></a>
+    </div>
+                </div></div></div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -314,53 +321,60 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
-  // Get the select element
-  const departmentSelect = document.getElementById('department');
-  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Get the CSRF token from the meta tag
+// Get the select element
+const departmentSelect = document.getElementById('department');
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Get the CSRF token from the meta tag
 
-  // Add an event listener for when the value changes
-  departmentSelect.addEventListener('change', function() {
-    // Get the selected department
-    const selectedDepartment = departmentSelect.value;
+// Add an event listener for when the value changes
+departmentSelect.addEventListener('change', function() {
+  // Get the selected department ID
+  const selectedDepartmentId = departmentSelect.value;
 
-    // Send an AJAX request to update the user's selected department
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/update-selected-department', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  // Send an AJAX request to update the user's selected department
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/update-selected-department', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    // Set the CSRF token header
-    xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        if (response.success) {
-          // Department selection updated successfully
-          window.location.href = "/riv";
-        } else {
-          // Error updating department selection
-          alert(response.message);
-        }
+  // Set the CSRF token header
+  xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      if (response.success) {
+        // Department selection updated successfully
+        window.location.href = "/riv";
+      } else {
+        // Error updating department selection
+        alert(response.message);
       }
-    };
-    xhr.send('department=' + encodeURIComponent(selectedDepartment));
-  });
-
-  // Fetch the user's selected department from the server when the page finishes loading
-  window.onload = function() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '/fetch-selected-department', true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        if (response.success && response.department) {
-          // Department has been selected
-          departmentSelect.value = response.department;
-          departmentSelect.disabled = true;
-        }
-      }
-    };
-    xhr.send();
+    }
   };
+  xhr.send('department_id=' + encodeURIComponent(selectedDepartmentId));
+});
+
+// Fetch the user's selected department from the server when the page finishes loading
+window.onload = function() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', '/fetch-selected-department', true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      if (response.success && response.department_id) {
+        // Department has been selected
+        departmentSelect.value = response.department_id;
+        departmentSelect.disabled = true;
+      }
+    }
+  };
+  xhr.send();
+};
+if (response.success && response.department) {
+    departmentSelect.disabled = true;
+    for (let i = 0; i < form.elements.length; i++) {
+      form.elements[i].disabled = true;
+    }
+  }
+
 </script>
   </body>
 </html>

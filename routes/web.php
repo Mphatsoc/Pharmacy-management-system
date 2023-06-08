@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\RivController;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\DepartmentController;
+
 
 
 /*
@@ -72,10 +74,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
 
-//Routes for stock cards and adding and deleting of data.
 
 // Route::view('add','quantity');
 // Route::post('add/{id}',[InventoryController::class, 'addData']);
@@ -103,8 +105,10 @@ Route::get('/declined/{id}',[NotificationsController::class, 'declined']);
 
 
 //departments
-Route::post('/update-selected-department', [UserController::class, 'updateSelectedDepartment']);
-Route::get('/fetch-selected-department', [UserController::class, 'fetchSelectedDepartment']);
+// Route::post('/update-selected-department', [UserController::class, 'updateSelectedDepartment']);
+// Route::get('/fetch-selected-department', [UserController::class, 'fetchSelectedDepartment']);
+
+
 
 
 

@@ -208,6 +208,7 @@
                     <div style="padding-top: 3rem; padding-bottom: 3rem;">
                         <div style="width: 100%; margin: 0 auto; ">
                             <div>
+                                <h3 class="btn btn-primary" style="font-size: 25px;">{{ Auth::user()->department }}</h3>
 
                                 <form method="POST" action="riv"
                                     style="width: 80%; margin: auto; background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
