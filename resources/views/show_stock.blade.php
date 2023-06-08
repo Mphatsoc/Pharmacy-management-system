@@ -230,16 +230,16 @@
         </aside>
         <!-- / Menu -->
 <!-- Layout container -->
-
+<!-- 
 <?php
 // Assuming you have an array of medicines
-$medicines = [
-    ['id' => 1, 'medicine_name' => 'Albendazole'],
-    ['id' => 2, 'medicine_name' => 'Ampicillin (Principen)'],
-    ['id' => 3, 'medicine_name' => 'Lumefantrine Artemether (LA)'],
-    ['id' => 4, 'medicine_name' => 'Paracetamol'],
-];
-?>
+// $medicines = [
+//     ['id' => 1, 'medicine_name' => 'Albendazole'],
+//     ['id' => 2, 'medicine_name' => 'Ampicillin (Principen)'],
+//     ['id' => 3, 'medicine_name' => 'Lumefantrine Artemether (LA)'],
+//     ['id' => 4, 'medicine_name' => 'Paracetamol'],
+// ];
+?> -->
 <div style="padding-top: 10rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 

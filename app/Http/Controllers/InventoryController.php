@@ -80,8 +80,7 @@ class InventoryController extends Controller
     return redirect()->back();
     }
 
-    public function cancelData($id)
-    {
+    public function cancelData($id)  {
     $StockCard = StockCard::findOrFail($id);
     $StockCard->delete();
 
@@ -89,6 +88,10 @@ class InventoryController extends Controller
 
     return redirect()->back();
     }
+     
+
+    
+
 
     
     
