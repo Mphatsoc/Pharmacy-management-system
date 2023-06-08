@@ -231,32 +231,46 @@
             <div style="margin-top: 5rem; margin-left: 1xa0rem;">
   <div class="row">
     <div class="col-lg-8 mb-4 order-0">
-      <div style="background-color: #d1f5d0; width: 75%;" class="card">
+     <a href="/show_notifications"> <div style="background-color: #d1f5d0; width: 75%;" class="card">
         <div class="d-flex align-items-end row">
           <div class="col-sm-7">
             <div class="card-body">
-              <h5 style="font-weight: 800; color: black;">Requisitions</h5>
+              <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
               <p class="mb-4 block text-black font-bold">
-                Check/Update RIV
+                Approve/Decline RIVs
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col-lg-8 mb-4 order-0">
-      <div style="background-color: #d4e9ff; width: 75%;" class="card">
+      <a href = "/show_stock"><div style="background-color: #d4e9ff; width: 75%;" class="card">
         <div class="d-flex align-items-end row">
           <div class="col-sm-7">
             <div class="card-body">
-              <h5 style="font-weight: 800; color: black;">Stock</h5>
+              <h5 style="font-weight: 800; color: black;">View Stock</h5>
               <p class="mb-4 block text-black font-bold">
-                Check/Update Stock
+                Check/Delete Stock
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </div></a>
+    </div>
+    <div class="col-lg-8 mb-4 order-0">
+      <a href = "/stock"><div style="background-color: #d1f5d0; width: 75%;" class="card">
+        <div class="d-flex align-items-end row">
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 style="font-weight: 800; color: black;">Update Stock</h5>
+              <p class="mb-4 block text-black font-bold">
+                Enter new Stock
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></a>
     </div>
   </div>
 </div>
