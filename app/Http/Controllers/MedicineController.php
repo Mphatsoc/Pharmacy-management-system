@@ -16,5 +16,18 @@ class MedicineController extends Controller
         $medicines = Medicine::all();
         return view('stock', compact('medicines'));
     }
+    public function store(Request $request)
+{
+    $medicine = new Medicine();
+    $medicine->medicine_name = $request->input('medicine_name');
+    $medicine->quantity_on_hand = $request->input('quantity_on_hand');
+    $medicine->save();
+
+    // Add the new medicine to the $medicines array
+    $medicines[] = $medicine;
+
+    return redirect()->back();
+}
+
 
 }

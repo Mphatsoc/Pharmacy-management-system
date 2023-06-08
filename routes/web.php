@@ -45,6 +45,7 @@ Route::get('/show_stock', [StockController::class, 'show'])->name('show_stock');
 Route::get('/card', [StockController::class, 'drugs'])->name('card');
 Route::post('/inventory', [StockController::class, 'store'])->name('inventory.store');
 
+Route::post('/stock',[MedicineController::class, 'store'])->name('stock');
 
 
 Route::get('/departments', function () {
