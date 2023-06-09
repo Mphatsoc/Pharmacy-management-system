@@ -174,7 +174,8 @@
             <!-- Layouts -->
             
             <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text"><span style="font-weight: 700; color: black;">{{ Auth::user()->user }}</span> </span></li>
+
             <!-- Cards -->
             <li class="menu-item ">
               <a href="/stock" class="menu-link">

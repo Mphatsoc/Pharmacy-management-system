@@ -42,6 +42,42 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <style> 
+  .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+  border-radius: 0.375rem; 
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: 9rem; 
+  padding-bottom: 2rem; 
+  margin-bottom: 1rem;
+  margin-right: auto;
+
+}
+
+.card {
+  flex-basis: calc(34.33% - 1rem); /* Adjust the width of the cards as needed */
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 4px;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+  order: -1; /* Move the first two cards to the beginning */
+}
+
+.card:nth-child(3) {
+  order: 2; /* Move the third card to the bottom */
+}
+
+</style>
   </head>
 
 <body>
@@ -202,49 +238,48 @@
             </aside>
             <!-- / Menu -->
 
+       
         <!-- Layout container -->
         <div class="layout-page">
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
+  <div >
             <!-- Content -->
+            <div class="card-container" >
 
-            <div style="display: flex; flex-direction: column; align-items: center;">
-  <div style="padding-top: 10rem;" class="col-lg-8 mb-4 order-0">
-    <a href="/riv">
-      <div style="background-color: #d1f5d0; width: 75%;" class="card">
-        <div class="d-flex align-items-end row">
-          <div class="col-sm-7">
-            <div class="card-body">
+    <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
+     <a href="/show_notifications"> <div>
+        <div >
+          <div>
+            <div >
               <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
-              <p class="mb-4 block text-black font-bold">Fill RIV</p>
+              <p class="mb-4 block text-black font-bold">
+                Go to Form
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </a>
-  </div>
-  <div style="padding-top: 10rem;" class="col-lg-8 mb-4 order-0">
-    <a href="/riv-list">
-      <div style="background-color: lightblue; width: 75%;" class="card">
-        <div class="d-flex align-items-end row">
-          <div class="col-sm-7">
-            <div class="card-body">
-              <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
-              <p class="mb-4 block text-black font-bold">Check RIV</p>
+      </div></a>
+    </div>
+
+    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;">
+      <a href = "/show_stock"><div >
+        <div>
+          <div >
+            <div>
+              <h5 style="font-weight: 800; color: black;">View Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">
+                Check if Riv is Approved or Declined
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </div></a>
+    </div>
+
   </div>
 </div>
 
 </div>
-
-                <!-- Content -->
-                </div>
-                </div>
+</div>
 
                             <!-- Core JS -->
                             <!-- build:js assets/vendor/js/core.js -->
