@@ -100,6 +100,7 @@ Route::get('remove/{id}', [RivController::class, 'removeData'])->name('remove');
 Route::get('/report', [NotificationsController::class, 'generate'])->name('report');
 Route::get('/notify', [NotificationsController::class, 'decline'])->name('notify');
 Route::get('/show_notifications', [NotificationsController::class, 'note'])->name('show_notifications');
+// Route::get('/show_notifications', [NotificationsController::class, 'notifications'])->name('show_notifications');
 Route::get('/approved/{id}',[NotificationsController::class, 'approved']);
 Route::get('/declined/{id}',[NotificationsController::class, 'declined']);
 
@@ -108,6 +109,7 @@ Route::get('/declined/{id}',[NotificationsController::class, 'declined']);
 //departments
 // Route::post('/update-selected-department', [UserController::class, 'updateSelectedDepartment']);
 // Route::get('/fetch-selected-department', [UserController::class, 'fetchSelectedDepartment']);
+
 
 
 

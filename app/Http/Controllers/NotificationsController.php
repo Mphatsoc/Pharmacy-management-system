@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Riv;
+use App\Models\User;
 use App\Models\StockCard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -17,7 +18,9 @@ class NotificationsController extends Controller
     public function note(){
 
         $rivs = Riv::all();
-        return view('show_notifications',  compact('rivs'));
+        $Users = User::where('role', 'user')->get(['department']);
+
+        return view('show_notifications', compact('Users', 'rivs'));
     }
     public function approved($id)
     {
@@ -35,6 +38,10 @@ class NotificationsController extends Controller
 
     return redirect()->back();
     }
+
+
+
+
    
 
 }
