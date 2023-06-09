@@ -1,4 +1,8 @@
 <x-guest-layout>
+<div style="max-width: 28rem; margin-left: auto; margin-right: auto; margin-top: 2rem; margin-bottom: 2rem;">
+    <a style="color: #9b7cd6; font-weight: bold; font-family: 'Lato', sans-serif; font-size: 34px;">
+                              Pharmacy
+                            </a>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -51,11 +55,15 @@
             <a class="underline text-sm text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
+            <x-primary-button  style="background-color: white;">
+                {{ __('Regi') }}
+            </x-primary-button>
 
-            <x-primary-button class="ml-4 bg-blue-500 hover:bg-green-600">
+            <x-primary-button  style="background-color: #9b7cd6;">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
     </form>
+</div>
 </x-guest-layout>
 

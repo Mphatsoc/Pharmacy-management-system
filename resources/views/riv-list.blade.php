@@ -253,6 +253,9 @@
             <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
               Operation
             </th>
+            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
+              Department
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -315,8 +318,14 @@
                 style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">
                          Delete</a>
                    </td>
+                   <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
+              <div style="margin-left: 0.5rem;">
+              {{ Auth::user()->department }}
+              </div>
+            </td>
           </tr>
           @endforeach
+          
         </tbody>
       </table>
     </div>

@@ -273,6 +273,9 @@
               <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
                 Operation
               </th>
+              <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+               Department
+              </th>
             </tr>
           </thead>
           <tbody style="background-color: #fff;">
@@ -303,6 +306,19 @@
               <td style="padding: 0.5rem 0.75rem;">
                 <a onclick="return confirm('Are You Sure You want to Decline?')" href="{{ url('declined', $riv->id) }}" style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Decline</a>
               </td>
+              <td style="padding: 1rem 0.75rem;">
+    @foreach ($Users as $user)
+        @if ($user->id === $riv->userdepartment)
+           {{ $user->department }}
+        @endif
+    @endforeach
+</td>
+
+
+
+
+
+
             </tr>
             @endforeach
           </tbody>
