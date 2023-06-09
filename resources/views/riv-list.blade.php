@@ -131,14 +131,15 @@
             <li class="menu-item ">
               <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div data-i18n="Analytics">Home</div>
               </a>
             </li>
 
             <!-- Layouts -->
             
             <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Department: <span style="font-weight: 700; color: black;">{{ Auth::user()->department }}</span> </span></li>
+
             <!-- Cards -->
             <li class="menu-item">
               <a href="/riv" class="menu-link">

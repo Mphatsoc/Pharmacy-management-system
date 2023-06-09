@@ -138,7 +138,8 @@
             <!-- Layouts -->
             
             <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Department: <span style="font-weight: 700; color: black;">{{ Auth::user()->department }}</span> </span></li>
+
             <!-- Cards -->
             <li class="menu-item">
               <a href="/riv" class="menu-link">

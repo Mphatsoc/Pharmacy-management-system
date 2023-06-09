@@ -113,14 +113,14 @@
                     <li class="menu-item active">
                         <a href="/dashboard" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Dashboard</div>
+                            <div data-i18n="Analytics">Home</div>
                         </a>
                     </li>
 
                     <!-- Layouts -->
 
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Department: <span style="font-weight: 700; color: black;">{{ Auth::user()->department }}</span> </span></li>
                     <!-- Cards -->
                     <li class="menu-item">
                         <a href="/riv" class="menu-link">
@@ -209,68 +209,40 @@
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div  style = "margin-top: 5rem; margin-left: 1xa0rem;">
-              <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div   style="background-color: #d4e9ff; width: 75%;" class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div  class="card-body">
-                        <a href="/riv"><h3 class="text-lg font-medium mb-2"></h3></a>
-    <form >
-      <div class="mb-4">
-        <label class="block text-black font-bold mb-4"  for="department">
-         <h5 style="font-weight: 800; color: black;">Hospital Department:</h5> 
-        </label>
-        <select id="department" name="department" class="form-select block w-full mt-1">
-          <option value="">Choose department</option>
-          <?php
-            // Connect to the database
-            $mysqli = new mysqli("localhost", "root", "", "loginpage");
-
-            // Check for errors
-            if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: " . $mysqli->connect_error;
-              exit();
-            }
-
-            // Query the departments table to get the department names
-            $result = $mysqli->query("SELECT name FROM departments");
-
-            // Loop through the results and add options to the select element
-            while ($row = $result->fetch_assoc()) {
-              echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-            }
-
-            // Close the database connection
-            $mysqli->close();
-          ?>
-        </select>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+  <div style="padding-top: 10rem;" class="col-lg-8 mb-4 order-0">
+    <a href="/riv">
+      <div style="background-color: #d1f5d0; width: 75%;" class="card">
+        <div class="d-flex align-items-end row">
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">Fill RIV</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </form>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-8 mb-4 order-0">
-                  <a href="/riv-list">
-                  <div  style="background-color: #d1f5d0; width: 75%;" class="card" >
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 style="font-weight: 800; color: black;">Requisitions</h5>
-                          <p class="mb-4 block text-black font-bold">
-                            Check/Update RIV
-                          </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                   </a>
-                </div>
+    </a>
+  </div>
+  <div style="padding-top: 10rem;" class="col-lg-8 mb-4 order-0">
+    <a href="/riv-list">
+      <div style="background-color: lightblue; width: 75%;" class="card">
+        <div class="d-flex align-items-end row">
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
+              <p class="mb-4 block text-black font-bold">Check RIV</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+</div>
+
+                <!-- Content -->
                 </div>
                 </div>
 
