@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+ 
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -207,82 +211,52 @@
                     <div style="padding-top: 3rem; padding-bottom: 3rem;">
                         <div style="width: 100%; margin: 0 auto;">
                             <div>
-                                <form method="POST" action="riv"
-                                    style="width: 80%; margin: auto; background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
-
-                                    @csrf
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="date"
-                                                style="font-size: 1.125rem; font-weight: bold; color: black; margin-bottom: 0.5rem;">Date:</label>
-                                            <input type="date" id="date" name="date" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="item_description"
-                                                style="font-size: 1.125rem; font-weight: bold; color: black; margin-bottom: 0.5rem;">Item
-                                                Description:</label>
-                                            <input type="text" id="item_description" name="item_description"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; padding: 20px; border-radius: 10px">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="strength"
-                                                style="font-size: 1.125rem; font-weight: bold; color: black; margin-bottom: 0.5rem;">Strength:</label>
-                                            <input type="text" id="strength" name="strength" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="stock_balance"
-                                                style="font-size: 1.125rem; font-weight: bold; color: black; margin-bottom: 0.5rem;">Stock
-                                                Balance:</label>
-                                            <input type="number" id="stock_balance" name="stock_balance" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="quantity_requested"
-                                                style="font-size: 1.125rem; font-weight: bold; color: black; margin-bottom: 0.5rem;">Quantity
-                                                Being Requested:</label>
-                                            <input type="number" id="quantity_requested" name="quantity_requested"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div style="display: flex; justify-content: space-between">
-                                        <button type="submit"
-                                            style="background-color: #d1f5d0; color: black; font-weight: bold; font-size: 1rem; padding: 1rem 2rem; border-radius: 0.375rem;">Save
-                                            and Continue</button>
-                                    </div>
-                                    <br>
+                            <form method="POST" action="riv" class="row g-3">
+                            @csrf
+  <div class="col-md-6">
+    <label for="date" class="form-label fw-bold">Date:</label>
+    <input type="date" class="form-control" id="date" name="date" required value="<?php echo date('Y-m-d'); ?>" readonly>
+  </div>
+  <div class="col-md-6">
+  <label for="medicine_name" class="form-label fw-bold">Medicine Name:</label>
+  <select class="form-select" id="medicine_name" name="medicine_name" required>
+    <option value="">Select Medicine</option>
+    <?php
+    $medicines = DB::table('loginpage.medicines')->get();
+    foreach ($medicines as $medicine) {
+        echo "<option value='" . $medicine->medicine_name . "'>" . $medicine->medicine_name . "</option>";
+    }
+    ?>
+  </select>
+</div>
 
 
-                                </form>
+  <div class="col-md-6">
+    <label for="strength" class="form-label fw-bold">Strength:</label>
+    <input type="text" class="form-control" id="strength" name="strength" required>
+  </div>
+  <div class="col-md-6">
+    <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
+    <input type="number" class="form-control" id="stock_balance" name="stock_balance" required>
+  </div>
+  <div class="col-12">
+    <label for="quantity_requested" class="form-label fw-bold">Quantity Being Requested:</label>
+    <input type="number" class="form-control" id="quantity_requested" name="quantity_requested" required>
+  </div>
+  <div class="col-md-6">
+    <label for="department" class="form-label fw-bold">Department:</label>
+    <input type="text" class="form-control" id="department" name="department" required value="{{ Auth::user()->department }}" readonly>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+  @if (Session::has('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
+    </div>
+@endif
+</form>
+
                             </div>
                         </div>
                     </div>
@@ -290,110 +264,6 @@
             </div>
 
 
-
-            {{-- <div style="padding-top: 3rem;">
-                <div style="width: 500%; margin: auto;">
-                    <!-- Content -->
-                    <div style="padding-top: 3rem; padding-bottom: 3rem;">
-                        <div style="width: 100%; margin: 0 auto; ">
-                            <div>
-                                
-
-                                <form method="POST" action="riv"
-                                    style="width: 80%; margin: auto; background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding-left: 1rem; padding-right: 1rem; padding-top: 1rem; padding-bottom: 2rem; margin-bottom: 1rem;">
-
-                                    @csrf
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="date"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Date:</label>
-                                            <input type="date" id="date" name="date" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div><br><br>
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="item_description"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Item
-                                                Description:</label>
-                                            <input type="text" id="item_description" name="item_description"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto;  padding: 20px; border-radius: 10px">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="strength"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Strength:</label>
-                                            <input type="text" id="strength" name="strength" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d1f5d0; margin: 0 auto;  padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="stock_balance"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Stock
-                                                Balance:</label>
-                                            <input type="number" id="stock_balance" name="stock_balance" required
-                                                style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div
-                                        style="background-color: #d4e9ff; margin: 0 auto; padding: 20px; border-radius: 10px;">
-                                        <div style="display: flex; flex-direction: column;">
-                                            <label for="quantity_requested"
-                                                style="font-size: 1.125rem; font-weight: 800; color: black; margin-bottom: 0.5rem;">Quantity
-                                                Being Requested:</label>
-                                            <input type="number" id="quantity_requested" name="quantity_requested"
-                                                required style="border-radius: 8px; padding: 4px;">
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-                                    <!--
-<div style="background-color: #d4e9ff; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-  <div style="display: flex; flex-direction: column;">
-    <label for="quantity_issued_by_pharmacy" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Issued By Pharmacy:</label>
-    <input type="number" id="quantity_issued_by_pharmacy" name="quantity_issued_by_pharmacy" required style="border-radius: 8px; padding: 4px;">
-  </div>
-</div>
-
-<br><br>
-
-<div style="background-color: #d1f5d0; margin: 0 auto; max-width: 400px; padding: 20px; border-radius: 10px;">
-  <div style="display: flex; flex-direction: column;">
-    <label for="quantity_collected_from_pharmacy" style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Quantity Collected From Pharmacy:</label>
-    <input type="number" id="quantity_collected_from_pharmacy" name="quantity_collected_from_pharmacy" required style="border-radius: 8px; padding: 4px;">
-  </div>
-</div>
-
-<br><br> -->
-                                    <div style="grid-column: span 3;">
-                                        <button type="submit"
-                                            style="margin-left: 0.75rem; background-color: #d1f5d0; font-weight: 800; color: black;  border-radius: 5px;">Save</button>
-
-                                    </div>
-                                    <br>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div> --}}
             <!-- Content -->
         </div>
     </div>

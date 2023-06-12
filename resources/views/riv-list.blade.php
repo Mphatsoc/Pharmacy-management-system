@@ -36,6 +36,10 @@
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -223,111 +227,48 @@
   <div style="max-width: 80rem; margin-left: 15rem; margin-right: auto;">
     <!-- Content -->
     <div style="padding: 6rem; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid #e5e7eb;">
-      <table style="width: 100%; border-collapse: collapse;">
-        <thead style="background-color: #deeeff;">
-        <tr>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Date
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Item Description
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Strength
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Stock Balance
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Quantity Requested
-            </th>
-            <!-- <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Quantity Issued By Pharmacy
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Quantity Collected From Pharmacy
-            </th> -->
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Status
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Operation
-            </th>
-            <th style="padding: 1.5rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase;  letter-spacing: 0.05em; border-bottom: 1px solid #d1d5db;">
-              Department
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($rivs as $riv)
-          <tr>
-          <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->date }}
-              </div>
-            </td>
-            
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->item_description }}
-              </div>
-            </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->strength }}
-              </div>
-            </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->stock_balance }}
-              </div>
-            </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->quantity_requested }}
-              </div>
-            </td>
-            <!-- <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->quantity_issued_by_pharmacy }}
-              </div>
-            </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->quantity_collected_from_pharmacy }}
-              </div>
-            </td> -->
-            <td style="  border-radius: 10px; background-color:
-    <?php
-    if ($riv->status === 'In Progress') {
-        echo '#bcecf5';
-    } elseif ($riv->status === 'Approved') {
-        echo '#cdfade';
-    } elseif ($riv->status === 'Declined') {
-        echo '#f2a5a5';
-    }
-    ?>;
-    color: black;">
-              <div style="margin-left: 0.5rem;">
-                {{ $riv->status }}
-              </div>
-            </td>
-            <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-                <a onclick="return confirm('Are You Sure You want to Delete?')"
-                 href="{{ route('remove', ['id' => $riv->id]) }}" 
-                style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">
-                         Delete</a>
-                   </td>
-                   <td style="padding: 1.5rem; text-align: left; font-size: 0.875rem; color: #4b5563; border-bottom: 1px solid #d1d5db;">
-              <div style="margin-left: 0.5rem;">
-              {{ Auth::user()->department }}
-              </div>
-            </td>
-          </tr>
-          @endforeach
-          
-        </tbody>
-      </table>
+    <table  class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" style="font-weight: bold;  color: black;">Date</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Medicine name</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Strength</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Stock Balance</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Quantity Requested</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Status</th>
+      <th scope="col" style="font-weight: bold; color: black;">Department</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    @foreach($rivs as $riv)
+    <tr>
+      <td>{{ $riv->date }}</td>
+      <td>{{ $riv->medicine_name}}</td>
+      <td>{{ $riv->strength }}</td>
+      <td>{{ $riv->stock_balance }}</td>
+      <td>{{ $riv->quantity_requested }}</td>
+      <td style="background-color:
+        @if ($riv->status === 'In Progress')
+          #bcecf5
+        @elseif ($riv->status === 'Approved')
+          #cdfade
+        @elseif ($riv->status === 'Declined')
+          #f2a5a5
+        @endif;
+        color: black;">
+        {{ $riv->status }}
+      </td>
+      <!-- <td>
+        <a onclick="return confirm('Are You Sure You want to Delete?')" href="{{ route('remove', ['id' => $riv->id]) }}" style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">
+          Delete
+        </a>
+      </td> -->
+      <td>{{ $riv->department}}</td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+
     </div>
     <!-- Content -->
   </div>
