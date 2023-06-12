@@ -153,12 +153,6 @@
                 <div data-i18n="Boxicons">View Stock</div>
               </a>
             </li>
-            <li class="menu-item">
-                        <a href="/report" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-crown"></i>
-                            <div data-i18n="Boxicons">Check Report</div>
-                        </a>
-                    </li>
            
            
             <li class="menu-item">
@@ -167,6 +161,12 @@
                 <div data-i18n="Boxicons">Check Rivs</div>
               </a>
             </li>
+             <li class="menu-item">
+                        <a href="/report" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Boxicons">Check Report</div>
+                        </a>
+                    </li>
 
           
             <li class="menu-item active">

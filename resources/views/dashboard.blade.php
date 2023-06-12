@@ -246,7 +246,7 @@
             <div class="card-container" >
 
     <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
-     <a href="/show_notifications"> <div>
+     <a href="/riv"> <div>
         <div >
           <div>
             <div >
@@ -261,7 +261,7 @@
     </div>
 
     <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;">
-      <a href = "/show_stock"><div >
+      <a href = "/riv-list"><div >
         <div>
           <div >
             <div>
