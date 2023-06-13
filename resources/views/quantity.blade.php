@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- Content -->
+    <h3 style="font-weight: 800; color: black; ">{{ $medicine->medicine_name }}</h3>
     <div style="padding-top: 3rem;">
+   
 
         <div style="width: 100%; margin: 0 auto; ">
             <form method="POST" action="{{route('stock.add', $id)}}" class="row g-3">
