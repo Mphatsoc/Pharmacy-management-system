@@ -251,9 +251,9 @@
       <th scope="col" style="font-weight: bold;  color: black;">Stock Balance</th>
       <th scope="col" style="font-weight: bold;  color: black;">Quantity Requested</th>
       <th scope="col" style="font-weight: bold;  color: black;">Status</th>
+      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
+      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
       <th scope="col" style="font-weight: bold; color: black;">Department</th>
-      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
-      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
