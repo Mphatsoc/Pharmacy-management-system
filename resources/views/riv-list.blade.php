@@ -227,7 +227,7 @@
   <div style="max-width: 80rem; margin-left: 15rem; margin-right: auto;">
     <!-- Content -->
     <div style="padding: 6rem; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid #e5e7eb;">
-    <table  class="table table-striped">
+    <table  class="table  table-bordered border-secondary">
   <thead>
     <tr>
       <th scope="col" style="font-weight: bold;  color: black;">Date</th>
