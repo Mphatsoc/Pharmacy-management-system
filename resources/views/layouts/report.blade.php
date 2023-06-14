@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ asset('assests/vendor/libs/apex-charts/apex-charts.css') }}" />
 
     <!-- Page CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 
 
     <!-- Helpers -->

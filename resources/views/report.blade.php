@@ -21,7 +21,7 @@ td {
 @section('content')
     <!-- Content -->
     <!-- report.blade.php -->
-<div class="row">
+<div  class="row">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">Monthly Report</h2>
 
@@ -38,7 +38,7 @@ td {
             </div>
         </div>
 
-        <div id="monthlyReportSection">
+        <div  id="monthlyReportSection">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -71,12 +71,12 @@ td {
 
                             @endif
 
-                            <button  type="button" class="btn btn-outline-primary" disabled style="font-weight: 800; ">{{ $medicineName }}</button>
+                            <button style="margin-left: 1rem;"  type="button" class="btn btn-outline-primary" disabled style="font-weight: 800; ">{{ $medicineName }}</button>
 
                             <div class="container my-4">
                                 <div class="table-responsive">
-                                    <table class="table  table-bordered border-secondary">
-                                        <thead>
+                                    <table class="table  table-bordered border-secondary table-striped">
+                                        <thead s >
                                             <tr>
                                                 <th scope="col">Date</th>
                                                 <th scope="col">Medicine Name</th>
@@ -139,7 +139,7 @@ td {
                 <button  type="button" class="btn btn-outline-primary" disabled style="font-weight: 800;">{{ $medicineName }}</button>
 
                 <table class="table table-bordered border-secondary">
-                    <thead>
+                    <thead  >
                         <tr>
                             <th scope="col" style="font-weight: bold; color: black;">Date</th>
                             <th scope="col" style="font-weight: bold; color: black;">Medicine name</th>

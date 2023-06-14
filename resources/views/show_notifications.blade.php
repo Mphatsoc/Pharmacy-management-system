@@ -42,7 +42,7 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 
     <!-- Page CSS -->
 
@@ -239,7 +239,7 @@
 
             <!-- Content -->
             <div style="padding-top: 1.5rem;">
-  <div style="max-width: 64rem; margin: 0 auto;">
+  <div style="max-width: auto; margin: 0 auto;">
     <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
       <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
          <table  class="table  table-bordered border-secondary">
