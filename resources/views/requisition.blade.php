@@ -28,10 +28,10 @@
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
- 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -213,51 +213,57 @@
                     <div style="padding-top: 3rem; padding-bottom: 3rem;">
                         <div style="width: 100%; margin: 0 auto;">
                             <div>
-                            <form method="POST" action="riv" class="row g-3">
-                            @csrf
-  <div class="col-md-6">
-    <label for="date" class="form-label fw-bold">Date:</label>
-    <input type="date" class="form-control" id="date" name="date" required value="<?php echo date('Y-m-d'); ?>" readonly>
-  </div>
-  <div class="col-md-6">
-  <label for="medicine_name" class="form-label fw-bold">Medicine Name:</label>
-  <select class="form-select" id="medicine_name" name="medicine_name" required>
-    <option value="">Select Medicine</option>
-    <?php
-    $medicines = DB::table('loginpage.medicines')->get();
-    foreach ($medicines as $medicine) {
-        echo "<option value='" . $medicine->medicine_name . "'>" . $medicine->medicine_name . "</option>";
-    }
-    ?>
-  </select>
-</div>
+                                <form method="POST" action="riv" class="row g-3">
+                                    @csrf
+                                    <div class="col-md-6">
+                                        <label for="date" class="form-label fw-bold">Date:</label>
+                                        <input type="date" class="form-control" id="date" name="date"
+                                            required value="<?php echo date('Y-m-d'); ?>" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="medicine_name" class="form-label fw-bold">Medicine Name:</label>
+                                        <select class="form-select" id="medicine_name" name="medicine_name" required>
+                                            <option value="">Select Medicine</option>
+                                            <?php
+                                            $medicines = DB::table('loginpage.medicines')->get();
+                                            foreach ($medicines as $medicine) {
+                                                echo "<option value='" . $medicine->medicine_name . "'>" . $medicine->medicine_name . '</option>';
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
 
 
-  <div class="col-md-6">
-    <label for="strength" class="form-label fw-bold">Strength:</label>
-    <input type="text" class="form-control" id="strength" name="strength" required>
-  </div>
-  <div class="col-md-6">
-    <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
-    <input type="number" class="form-control" id="stock_balance" name="stock_balance" required>
-  </div>
-  <div class="col-12">
-    <label for="quantity_requested" class="form-label fw-bold">Quantity Being Requested:</label>
-    <input type="number" class="form-control" id="quantity_requested" name="quantity_requested" required>
-  </div>
-  <div class="col-md-6">
-    <label for="department" class="form-label fw-bold">Department:</label>
-    <input type="text" class="form-control" id="department" name="department" required value="{{ Auth::user()->department }}" readonly>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Save</button>
-  </div>
-  @if (Session::has('success'))
-    <div class="alert alert-success">
-        {{ Session::get('success') }}
-    </div>
-@endif
-</form>
+                                    <div class="col-md-6">
+                                        <label for="strength" class="form-label fw-bold">Strength:</label>
+                                        <input type="text" class="form-control" id="strength" name="strength"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
+                                        <input type="number" class="form-control" id="stock_balance"
+                                            name="stock_balance" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="quantity_requested" class="form-label fw-bold">Quantity Being
+                                            Requested:</label>
+                                        <input type="number" class="form-control" id="quantity_requested"
+                                            name="quantity_requested" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="department" class="form-label fw-bold">Department:</label>
+                                        <input type="text" class="form-control" id="department" name="department"
+                                            required value="{{ Auth::user()->department }}" readonly>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                    @if (Session::has('success'))
+                                        <div class="alert alert-success">
+                                            {{ Session::get('success') }}
+                                        </div>
+                                    @endif
+                                </form>
 
                             </div>
                         </div>
