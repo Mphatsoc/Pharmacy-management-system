@@ -245,7 +245,7 @@
   <div style="max-width: 64rem; margin: 0 auto;">
     <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
       <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
-                    <table style="width: 100%; border-collapse: collapse;">
+                    <table  class="table  table-bordered border-secondary">
                         <thead style="background-color: #deeeff;">
                             <tr>
                                 <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
