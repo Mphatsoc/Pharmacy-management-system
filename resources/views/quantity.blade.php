@@ -23,7 +23,7 @@
   </div>
   <div class="col-md-6">
     <label for="quantity_on_hand" class="form-label fw-bold">Quantity On Hand:</label>
-    <input type="number" class="form-control" id="quantity_on_hand" value="{{ $medicine->quantity_on_hand }}" name="quantity_on_hand">
+    <input type="number" class="form-control" id="quantity_on_hand" value="{{ $medicine->quantity_on_hand }}" name="quantity_on_hand" readonly>
   </div>
   <div class="col-md-6">
     <label for="losses" class="form-label fw-bold">Losses:</label>
