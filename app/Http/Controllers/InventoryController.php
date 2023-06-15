@@ -76,7 +76,10 @@ class InventoryController extends Controller
         $medicine = Medicine::findorFail($id);
         
         $StockCard = StockCard::where('medicine_name', $medicine->medicine_name)->get();
-        return view('quantity-list', compact('StockCard'));
+        return view('quantity-list', [
+            'id' => $medicine->id,
+            'medicine' => $medicine,
+        ], compact('StockCard'));
     }
 
     public function deleteData($id)
