@@ -233,11 +233,18 @@
         </aside>
         <!-- / Menu -->
 
+    
         <!-- Layout container -->
         <div style="padding-top: 3rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 
             <!-- Content -->
+            @if ($errors->has('error'))
+    <div class="alert alert-danger">
+        {{ $errors->first('error') }}
+    </div>
+@endif
+
             <div style="padding-top: 1.5rem;">
   <div style="max-width: auto; margin: 0 auto;">
     <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
@@ -291,6 +298,9 @@
     </div>
   </div>
 </div>
+
+
+
 
             
             <!-- Content -->
