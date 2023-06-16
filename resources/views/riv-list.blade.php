@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
      <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
 
@@ -227,23 +227,24 @@
   <div style="max-width: 80rem; margin-left: 15rem; margin-right: auto;">
     <!-- Content -->
     <div style="padding: 6rem; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid #e5e7eb;">
-    <table  class="table table-striped">
+    <table class="table table-bordered border-secondary">
   <thead>
     <tr>
-      <th scope="col" style="font-weight: bold;  color: black;">Date</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Medicine name</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Strength</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Stock Balance</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Quantity Requested</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Status</th>
+      <th scope="col" style="font-weight: bold; color: black;">Date</th>
+      <th scope="col" style="font-weight: bold; color: black;">Medicine name</th>
+      <th scope="col" style="font-weight: bold; color: black;">Strength</th>
+      <th scope="col" style="font-weight: bold; color: black;">Stock Balance</th>
+      <th scope="col" style="font-weight: bold; color: black;">Quantity Requested</th>
+      <th scope="col" style="font-weight: bold; color: black;">Status</th>
       <th scope="col" style="font-weight: bold; color: black;">Department</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
     @foreach($rivs as $riv)
+    @if($riv->department === Auth::user()->department) <!-- Add this line to check if the riv belongs to the logged-in user -->
     <tr>
       <td>{{ $riv->date }}</td>
-      <td>{{ $riv->medicine_name}}</td>
+      <td>{{ $riv->medicine_name }}</td>
       <td>{{ $riv->strength }}</td>
       <td>{{ $riv->stock_balance }}</td>
       <td>{{ $riv->quantity_requested }}</td>
@@ -258,16 +259,13 @@
         color: black;">
         {{ $riv->status }}
       </td>
-      <!-- <td>
-        <a onclick="return confirm('Are You Sure You want to Delete?')" href="{{ route('remove', ['id' => $riv->id]) }}" style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">
-          Delete
-        </a>
-      </td> -->
-      <td>{{ $riv->department}}</td>
+      <td>{{ $riv->department }}</td>
     </tr>
+    @endif
     @endforeach
   </tbody>
 </table>
+
 
     </div>
     <!-- Content -->

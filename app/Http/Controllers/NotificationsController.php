@@ -10,9 +10,10 @@ class NotificationsController extends Controller
 {
     public function generate()
     {
-        $stockCards = StockCard::all(['id', 'medicine_name', 'quantity_received', 'quantity_issued','quantity_on_hand', 'losses']);
+        $stockCards = StockCard::all(['id','date', 'medicine_name', 'quantity_received', 'quantity_issued','quantity_on_hand', 'losses']);
+        $rivs = Riv::all();
     
-        return view('report', compact('stockCards'));
+        return view('report', compact('stockCards','rivs'));
     }
 
     public function note(){

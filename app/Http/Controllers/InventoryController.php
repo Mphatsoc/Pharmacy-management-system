@@ -41,9 +41,9 @@ class InventoryController extends Controller
         $StockCard->save();
 
    
-     Session::flash('success', 'Stock Updated!');
+     Session::flash('success', 'Stock Updated Successfully!');
 
-     return redirect()->back()->with('success', 'Stock Updated');
+     return redirect()->back()->with('success', 'Stock Updated Successfully');
     }
 
     public function displayQuantity(Medicine $medicine){

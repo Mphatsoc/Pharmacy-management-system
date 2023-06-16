@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="{{ asset('assests/vendor/libs/apex-charts/apex-charts.css') }}" />
 
     <!-- Page CSS -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+
 
     <!-- Helpers -->
     <script src="{{ asset('assets/js/helpers.js') }}"></script>
@@ -252,6 +254,22 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+    const monthlyReportBtn = document.getElementById('monthlyReportBtn');
+    const otherSectionBtn = document.getElementById('otherSectionBtn');
+    const monthlyReportSection = document.getElementById('monthlyReportSection');
+    const otherSection = document.getElementById('otherSection');
+
+    monthlyReportBtn.addEventListener('click', () => {
+        monthlyReportSection.style.display = 'block';
+        otherSection.style.display = 'none';
+    });
+
+    otherSectionBtn.addEventListener('click', () => {
+        monthlyReportSection.style.display = 'none';
+        otherSection.style.display = 'block';
+    });
+</script>
     </div>
 </body>
 

@@ -33,17 +33,21 @@
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <<<<<<< HEAD <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        =======
+        <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+        >>>>>>> a752947ba83afa10581cc15ca44cb0dfaefa4080
 
-    <!-- Page CSS -->
+        <!-- Page CSS -->
 
-    <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
+        <!-- Helpers -->
+        <script src="../assets/vendor/js/helpers.js"></script>
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
+        <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+        <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+        <script src="../assets/js/config.js"></script>
 </head>
 
 <body>
@@ -210,7 +214,9 @@
                             </li>
                         </ul>
                     </li>
-                    <!--/ User -->
+                </ul>
+                </li>
+                <!--/ User -->
                 </ul>
             </aside>
             <!-- / Menu -->
@@ -222,12 +228,12 @@
 
                     <!-- Content -->
                     <div style="padding-top: 1.5rem;">
-                        <div style="max-width: 64rem; margin: 0 auto;">
+                        <div style="max-width: auto; margin: 0 auto;">
                             <div
                                 style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
                                 <div
                                     style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
-                                    <table class="table table-striped">
+                                    <table class="table  table-bordered border-secondary">
                                         <thead>
                                             <tr>
                                                 <th scope="col" style="font-weight: bold;  color: black;">Date</th>
