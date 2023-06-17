@@ -105,25 +105,23 @@ td {
                 </div>
             </div>
         </div>
-        <div  id="graph">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div id="section-buttons">
-    <button onclick="showMedicinesSection()">Medicines</button>
-    <button onclick="showRIVsSection()">RIVs</button>
-</div>
-                <div >
-                    <!-- Section 1: Medicines Graph -->
-        <div id="medicines-chart">
-            <div id="chart"></div>
-        </div>
 
-        <!-- Section 2: RIVs Graph -->
-        <div id="rivs-chart">
-            <div id="rivs-status-chart"></div>
-        </div>
-          </div>
-            </div>
-        </div>
+     <div  id="graph">
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Section 1: Medicines Graph -->
+                    <h3>Stock</h3>
+                 <div id="medicines-chart">
+                    <div id="chart"></div>
+                 </div>
+<br><br>  
+                 <h3>Approved/Declined RIVs</h3>      
+                  <!-- Section 2: RIVs Graph -->
+                 <div id="rivs-chart">
+                   <div id="rivs-status-chart"></div>
+                 </div>
+        
+         </div>
+     </div>
 
 
         <div id="otherSection" style="display: none;">
