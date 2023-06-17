@@ -34,6 +34,7 @@ td {
             <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200" style = "color: white;">Monthly Report</h2>
             <div class="btn-group mt-2" role="group" aria-label="Report Sections">
                 <button type="button" class="btn btn-outline-secondary" id="monthlyReportBtn">Stock</button> 
+                <button type="button" class="btn btn-outline-warning" id="graphBtn">Graph</button> 
                 <button  type="button" class="btn btn-outline-info"  id="otherSectionBtn">Requisition</button>
             </div>
         </div>
@@ -104,6 +105,26 @@ td {
                 </div>
             </div>
         </div>
+        <div  id="graph">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div id="section-buttons">
+    <button onclick="showMedicinesSection()">Medicines</button>
+    <button onclick="showRIVsSection()">RIVs</button>
+</div>
+                <div >
+                    <!-- Section 1: Medicines Graph -->
+        <div id="medicines-chart">
+            <div id="chart"></div>
+        </div>
+
+        <!-- Section 2: RIVs Graph -->
+        <div id="rivs-chart">
+            <div id="rivs-status-chart"></div>
+        </div>
+          </div>
+            </div>
+        </div>
+
 
         <div id="otherSection" style="display: none;">
     <div class="container my-4">
