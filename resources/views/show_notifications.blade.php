@@ -225,65 +225,81 @@
                 <div
                     style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 
-            <!-- Content -->
-            @if ($errors->has('error'))
-    <div class="alert alert-danger">
-        {{ $errors->first('error') }}
-    </div>
-@endif
+                    <!-- Content -->
+                    @if ($errors->has('error'))
+                        <div class="alert alert-danger">
+                            {{ $errors->first('error') }}
+                        </div>
+                    @endif
 
-            <div style="padding-top: 1.5rem;">
-  <div style="max-width: auto; margin: 0 auto;">
-    <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-      <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
-         <table  class="table  table-bordered border-secondary">
-  <thead>
-    <tr>
-      <th scope="col" style="font-weight: bold;  color: black;">Date</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Medicine name</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Strength</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Stock Balance</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Quantity Requested</th>
-      <th scope="col" style="font-weight: bold;  color: black;">Status</th>
-      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
-      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
-      <th scope="col" style="font-weight: bold; color: black;">Department</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    @foreach($rivs as $riv)
-    <tr>
-      <td>{{ $riv->date }}</td>
-      <td>{{ $riv->medicine_name}}</td>
-      <td>{{ $riv->strength }}</td>
-      <td>{{ $riv->stock_balance }}</td>
-      <td>{{ $riv->quantity_requested }}</td>
-      <td style="background-color:
-        @if ($riv->status === 'In Progress')
-          #bcecf5
+                    <div style="padding-top: 1.5rem;">
+                        <div style="max-width: auto; margin: 0 auto;">
+                            <div
+                                style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
+                                <div
+                                    style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
+                                    <table class="table  table-bordered border-secondary">
+                                        <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200"
+                                            style="color: ;">Check Requisition</h2>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Date</th>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Medicine
+                                                    name</th>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Strength
+                                                </th>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Stock
+                                                    Balance</th>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Quantity
+                                                    Requested</th>
+                                                <th scope="col" style="font-weight: bold;  color: black;">Status
+                                                </th>
+                                                <th scope="col" style="font-weight: bold; color: black;">Operation
+                                                </th>
+                                                <th scope="col" style="font-weight: bold; color: black;">Operation
+                                                </th>
+                                                <th scope="col" style="font-weight: bold; color: black;">Department
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider">
+                                            @foreach ($rivs as $riv)
+                                                <tr>
+                                                    <td>{{ $riv->date }}</td>
+                                                    <td>{{ $riv->medicine_name }}</td>
+                                                    <td>{{ $riv->strength }}</td>
+                                                    <td>{{ $riv->stock_balance }}</td>
+                                                    <td>{{ $riv->quantity_requested }}</td>
+                                                    <td
+                                                        style="background-color:
+        @if ($riv->status === 'In Progress') #bcecf5
         @elseif ($riv->status === 'Approved')
           #cdfade
         @elseif ($riv->status === 'Declined')
           #f2a5a5 @endif;
         color: black;">
-        {{ $riv->status }}
-      </td>
-      <td style="padding: 0.5rem 0.75rem;">
-                <a onclick="return confirm('Are You Sure You want to approve?')" href="{{ url('approved', $riv->id) }}" style="background-color: #10B981; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Approve</a>
-              </td>
-              <td style="padding: 0.5rem 0.75rem;">
-                <a onclick="return confirm('Are You Sure You want to Decline?')" href="{{ url('declined', $riv->id) }}" style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Decline</a>
-              </td>
-      <td>{{ $riv->department}}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
+                                                        {{ $riv->status }}
+                                                    </td>
+                                                    <td style="padding: 0.5rem 0.75rem;">
+                                                        <a onclick="return confirm('Are You Sure You want to approve?')"
+                                                            href="{{ url('approved', $riv->id) }}"
+                                                            style="background-color: #10B981; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Approve</a>
+                                                    </td>
+                                                    <td style="padding: 0.5rem 0.75rem;">
+                                                        <a onclick="return confirm('Are You Sure You want to Decline?')"
+                                                            href="{{ url('declined', $riv->id) }}"
+                                                            style="background-color: #EF4444; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Decline</a>
+                                                    </td>
+                                                    <td>{{ $riv->department }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
 
-      </div>
-    </div>
-  </div>
-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <!-- Content -->
