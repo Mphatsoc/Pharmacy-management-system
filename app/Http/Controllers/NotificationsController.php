@@ -12,6 +12,7 @@ use Carbon\Carbon;
 
 class NotificationsController extends Controller
 {
+    //This method is responsible for generating a report by fetching data from the StockCard and Riv models and passing it to the 'report' view
     public function generate()
     {
         $stockCards = StockCard::all(['id','date', 'medicine_name', 'quantity_received', 'quantity_issued','quantity_on_hand', 'losses']);
@@ -19,6 +20,7 @@ class NotificationsController extends Controller
     
         return view('report', compact('stockCards','rivs'));
     }
+    //This method is responsible for displaying notifications by fetching data from the Riv and User models and passing it to the 'show_notifications' view
 
     public function note(){
 
@@ -27,6 +29,7 @@ class NotificationsController extends Controller
 
         return view('show_notifications', compact('Users', 'rivs'));
     }
+    //handle the approval of a specific RIV 
     public function approved($id)
     {
         $riv = Riv::find($id);

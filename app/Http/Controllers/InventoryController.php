@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
 
+//This method is responsible for adding data related to a medicine in the inventory
+
 
 class InventoryController extends Controller
 {
@@ -55,6 +57,7 @@ class InventoryController extends Controller
         return redirect()->back()->with('success', 'Stock Updated Successfully');
     }
     
+    //This method is used to display the quantity of a specific medicine.
 
     public function displayQuantity(Medicine $medicine){
       
@@ -70,6 +73,7 @@ class InventoryController extends Controller
       
         return view('stk');
     }
+    //This method is responsible for displaying the updated medicine information in the stock card
 
     public function displayData($id)
     { 
@@ -81,6 +85,7 @@ class InventoryController extends Controller
             'medicine' => $medicine,
         ], compact('StockCard'));
     }
+    //This method is used to delete data related to a quantity entry.
 
     public function deleteData($id)
     {
@@ -91,6 +96,8 @@ class InventoryController extends Controller
 
     return redirect()->back();
     }
+
+    //This method is used to delete data related to a stock card entry
 
     public function cancelData($id)  {
     $StockCard = StockCard::findOrFail($id);

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 
 class RivController extends Controller
 {
+    //This method handles the logic for storing a new RIV
     function storeData(Request $request){
 
         // $medicine = Medicine::where('medicine_name', $request->medicine_name)->first();
@@ -35,6 +36,7 @@ class RivController extends Controller
 
 
     }
+    //This method retrieves all the RIVs from the Riv model and passes them to the 'riv-list' view
     public function showData()
     {
         $rivs = Riv::all();
@@ -44,6 +46,7 @@ class RivController extends Controller
         $riv = Riv::find($id);
         return view('edit', ['riv'=>$riv]);
     }
+    //This method handles the deletion of a specific RIV with the given ID
     public function removeData($id)
     {
     $Riv = Riv::findOrFail($id);

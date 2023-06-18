@@ -213,9 +213,13 @@
                     <div style="padding-top: 3rem; padding-bottom: 3rem;">
                         <div style="width: 100%; margin: 0 auto;">
                             <div>
+                                <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200"
+                                    style="color: class=aqua;">
+                                    Fill Requisition</h2>
                                 <form method="POST" action="riv" class="row g-3">
                                     @csrf
                                     <div class="col-md-6">
+
                                         <label for="date" class="form-label fw-bold">Date:</label>
                                         <input type="date" class="form-control" id="date" name="date"
                                             required value="<?php echo date('Y-m-d'); ?>" readonly>
@@ -258,6 +262,7 @@
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary">Save</button>
                                     </div>
+
                                     @if (Session::has('success'))
                                         <div class="alert alert-success">
                                             {{ Session::get('success') }}

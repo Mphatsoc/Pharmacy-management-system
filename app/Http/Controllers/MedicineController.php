@@ -10,12 +10,13 @@ use Illuminate\Support\Facades\Session;
 
 class MedicineController extends Controller
 {
-
+//This method retrieves all the medicines from the Medicine model and passes them to the 'stock' view
     public function displayData()
     {
         $medicines = Medicine::all();
         return view('stock', compact('medicines'));
     }
+    //This method handles the logic for storing a new medicine in the database.
     public function store(Request $request)
 {
     $medicine = new Medicine();

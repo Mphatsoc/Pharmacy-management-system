@@ -4,7 +4,7 @@
     <!-- Content -->
     <h3 style="font-weight: 800; color: black; ">{{ $medicine->medicine_name }}</h3>
     <div style="padding-top: 3rem;">
-   
+
 
         <div style="width: 100%; margin: 0 auto; ">
             <form method="POST" action="{{ route('stock.add', $id) }}" class="row g-3">
@@ -24,8 +24,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="quantity_on_hand" class="form-label fw-bold">Quantity On Hand:</label>
-                    <input type="number" class="form-control" id="quantity_on_hand"
-                        name="quantity_on_hand" >
+                    <input type="number" class="form-control" id="quantity_on_hand" name="quantity_on_hand">
                 </div>
                 <div class="col-md-6">
                     <label for="losses" class="form-label fw-bold">Losses:</label>
