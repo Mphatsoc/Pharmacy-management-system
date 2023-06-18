@@ -205,94 +205,80 @@
                             </li>
                         </ul>
                     </li>
-                    <!--/ User -->
-                </ul>
-            </aside>
-            <!-- / Menu -->
+                  </ul>
+                </li>
+                <!--/ User -->
+          </ul>
+        </aside>
+        <!-- / Menu -->
 
-            <!-- Layout container -->
-            <div style="padding-top: 3rem; padding-bottom: 3rem;">
-                <div
-                    style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+        <!-- Layout container -->
+        <div style="padding-top: 3rem; padding-bottom: 3rem;">
+  <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+           
+  
+  
+  
+  
+  
+  <!-- Content -->
+  <h3 style="font-weight: 800; color: black; ">{{ $medicine->medicine_name }}</h3>
+            <div style="padding-top: 1.5rem;">
+  <div style="max-width: 64rem; margin: 0 auto;">
+    <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
+      <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
+                    <table  class="table  table-bordered border-secondary">
+                        <thead style="background-color: #deeeff;">
+                            <tr>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    Date
+                                </th>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    quantity_received
+                                </th>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    Quantity Issued
+                                </th>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    quantity_on_hand
+                                </th>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    Losses
+                                </th>
+                                <th scope="col" style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
+                                    Operation
+                                </th>
 
-
-
-
-
-
-                    <!-- Content -->
-
-                    <div style="padding-top: 1.5rem;">
-                        <div style="max-width: 64rem; margin: 0 auto;">
-                            <div
-                                style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-                                <div
-                                    style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
-                                    <table style="width: 100%; border-collapse: collapse;">
-                                        <thead style="background-color: #deeeff;">
-                                            <tr>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    Date
-                                                </th>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    quantity_received
-                                                </th>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    Quantity Issued
-                                                </th>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    quantity_on_hand
-                                                </th>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    Losses
-                                                </th>
-                                                <th scope="col"
-                                                    style="padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB;">
-                                                    Operation
-                                                </th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody style="background-color: #fff;">
-                                            @foreach ($StockCard as $StockCard)
-                                                <tr>
-                                                    <td style="padding: 1rem 0.75rem;">
-                                                        {{ $StockCard->date }}
-                                                    </td>
-                                                    <td style="padding: 1rem 0.75rem;">
-                                                        {{ $StockCard->quantity_received }}
-                                                    </td>
-                                                    <td style="padding: 1rem 0.75rem;">
-                                                        {{ $StockCard->quantity_issued }}
-                                                    </td>
-                                                    <td style="padding: 1rem 0.75rem;">
-                                                        {{ $StockCard->quantity_on_hand }}
-                                                    </td>
-                                                    <td style="padding: 1rem 0.75rem;">
-                                                        {{ $StockCard->losses }}
-                                                    </td>
-                                                    <td style="padding: 0.5rem 0.75rem;">
-                                                        <a onclick="return confirm('Are You Sure You want to Delete?')"
-                                                            href="{{ route('cancel', ['id' => $StockCard->id]) }}"
-                                                            style="background-color: red; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content -->
-
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: #fff;">
+                            @foreach($StockCard as $StockCard)
+                                <tr>
+                                    <td style="padding: 1rem 0.75rem;">
+                                        {{ $StockCard->date }}
+                                    </td>
+                                    <td style="padding: 1rem 0.75rem;">
+                                        {{ $StockCard->quantity_received }}
+                                    </td>
+                                    <td style="padding: 1rem 0.75rem;">
+                                        {{ $StockCard->quantity_issued }}
+                                    </td>
+                                    <td style="padding: 1rem 0.75rem;">
+                                        {{ $StockCard->quantity_on_hand }}
+                                    </td>
+                                    <td style="padding: 1rem 0.75rem;">
+                                        {{ $StockCard->losses }}
+                                    </td>
+                                    <td style="padding: 0.5rem 0.75rem;">
+                <a onclick="return confirm('Are You Sure You want to Delete?')" 
+                href="{{ route('cancel', ['id' => $StockCard->id]) }}" 
+                style="background-color: red; color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none;">Delete</a>
+              </td>
+                                </tr>        
+                            @endforeach
+                        </tbody>
+                    </table>
+             
                 </div>
             </div>
 

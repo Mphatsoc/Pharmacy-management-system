@@ -217,55 +217,44 @@
                 </ul>
                 </li>
                 <!--/ User -->
-                </ul>
-            </aside>
-            <!-- / Menu -->
+          </ul>
+        </aside>
+        <!-- / Menu -->
 
-            <!-- Layout container -->
-            <div style="padding-top: 3rem; padding-bottom: 3rem;">
-                <div
-                    style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+        <!-- Layout container -->
+        <div style="padding-top: 3rem; padding-bottom: 3rem;">
+  <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 
-                    <!-- Content -->
-                    <div style="padding-top: 1.5rem;">
-                        <div style="max-width: auto; margin: 0 auto;">
-                            <div
-                                style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-                                <div
-                                    style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
-                                    <table class="table  table-bordered border-secondary">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Date</th>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Medicine
-                                                    name</th>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Strength
-                                                </th>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Stock
-                                                    Balance</th>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Quantity
-                                                    Requested</th>
-                                                <th scope="col" style="font-weight: bold;  color: black;">Status
-                                                </th>
-                                                <th scope="col" style="font-weight: bold; color: black;">Operation
-                                                </th>
-                                                <th scope="col" style="font-weight: bold; color: black;">Operation
-                                                </th>
-                                                <th scope="col" style="font-weight: bold; color: black;">Department
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-group-divider">
-                                            @foreach ($rivs as $riv)
-                                                <tr>
-                                                    <td>{{ $riv->date }}</td>
-                                                    <td>{{ $riv->medicine_name }}</td>
-                                                    <td>{{ $riv->strength }}</td>
-                                                    <td>{{ $riv->stock_balance }}</td>
-                                                    <td>{{ $riv->quantity_requested }}</td>
-                                                    <td
-                                                        style="background-color:
-        @if ($riv->status === 'In Progress') #bcecf5
+            <!-- Content -->
+            <div style="padding-top: 1.5rem;">
+  <div style="max-width: auto; margin: 0 auto;">
+    <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
+      <div style="padding: 1.5rem; background-color: #fff; border-bottom: 1px solid #E5E7EB;">
+         <table  class="table  table-bordered border-secondary">
+  <thead>
+    <tr>
+      <th scope="col" style="font-weight: bold;  color: black;">Date</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Medicine name</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Strength</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Stock Balance</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Quantity Requested</th>
+      <th scope="col" style="font-weight: bold;  color: black;">Status</th>
+      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
+      <th scope="col" style="font-weight: bold; color: black;">Operation</th>
+      <th scope="col" style="font-weight: bold; color: black;">Department</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    @foreach($rivs as $riv)
+    <tr>
+      <td>{{ $riv->date }}</td>
+      <td>{{ $riv->medicine_name}}</td>
+      <td>{{ $riv->strength }}</td>
+      <td>{{ $riv->stock_balance }}</td>
+      <td>{{ $riv->quantity_requested }}</td>
+      <td style="background-color:
+        @if ($riv->status === 'In Progress')
+          #bcecf5
         @elseif ($riv->status === 'Approved')
           #cdfade
         @elseif ($riv->status === 'Declined')
@@ -294,8 +283,8 @@
                         </div>
                     </div>
 
-
-                    <!-- Content -->
+            
+            <!-- Content -->
 
                 </div>
             </div>
