@@ -17,8 +17,9 @@ class NotificationsController extends Controller
     {
         $stockCards = StockCard::all(['id','date', 'medicine_name', 'quantity_received', 'quantity_issued','quantity_on_hand', 'losses']);
         $rivs = Riv::all();
+        $medicines = Medicine::all();
     
-        return view('report', compact('stockCards','rivs'));
+        return view('report', compact('stockCards','rivs','medicines'));
     }
     //This method is responsible for displaying notifications by fetching data from the Riv and User models and passing it to the 'show_notifications' view
 

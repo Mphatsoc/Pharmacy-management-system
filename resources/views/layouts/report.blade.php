@@ -45,6 +45,10 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/js/config.js') }}"></script>
+
+    <!-- chart js and css -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.js"></script>
 </head>
 
 <body>
@@ -257,18 +261,127 @@
     <script>
     const monthlyReportBtn = document.getElementById('monthlyReportBtn');
     const otherSectionBtn = document.getElementById('otherSectionBtn');
+    const graphBtn = document.getElementById('graphBtn');
     const monthlyReportSection = document.getElementById('monthlyReportSection');
     const otherSection = document.getElementById('otherSection');
+    const graph = document.getElementById('graph');
+
+
 
     monthlyReportBtn.addEventListener('click', () => {
         monthlyReportSection.style.display = 'block';
         otherSection.style.display = 'none';
+        graph.style.display = 'none';
     });
 
     otherSectionBtn.addEventListener('click', () => {
         monthlyReportSection.style.display = 'none';
         otherSection.style.display = 'block';
+        graph.style.display = 'none';
+
     });
+    graphBtn.addEventListener('click', () => {
+        monthlyReportSection.style.display = 'none';
+        otherSection.style.display = 'none';
+        graph.style.display = 'block';
+
+    });
+</script>
+
+<script>
+        // Retrieve the medicine data from the PHP variable
+        var medicineData = @json($medicines);
+
+        // Prepare the data for the graph
+        var chartData = medicineData.map(function(medicine) {
+            return {
+                x: medicine.medicine_name,
+                y: medicine.quantity_on_hand
+            };
+        });
+
+        // Create the graph using ApexCharts library
+        var options = {
+            chart: {
+                type: 'bar'
+            },
+            series: [{
+                name: 'Quantity on Hand',
+                data: chartData
+            }],
+            xaxis: {
+                type: 'category'
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+</script>
+
+
+<script>
+    // Retrieve the RIVs data from the PHP variable
+    var rivsData = @json($rivs);
+
+    // Prepare the data for the graph
+    var approvedCount = 0;
+    var declinedCount = 0;
+
+    rivsData.forEach(function(riv) {
+        if (riv.status === 'Approved') {
+            approvedCount++;
+        } else if (riv.status === 'Declined') {
+            declinedCount++;
+        }
+    });
+
+    var rivsStatusData = [{
+        x: 'Approved',
+        y: approvedCount
+    }, {
+        x: 'Declined',
+        y: declinedCount
+    }];
+
+    // Create the graph for RIVs status using ApexCharts library
+    var rivsStatusOptions = {
+        chart: {
+            type: 'bar',
+            height: 350
+        },
+        series: [{
+            name: 'Status',
+            data: rivsStatusData
+        }],
+        labels: ['Approved', 'Declined'],
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+
+    var rivsStatusChart = new ApexCharts(document.querySelector("#rivs-status-chart"), rivsStatusOptions);
+    rivsStatusChart.render();
+</script>
+
+<script>
+    function showMedicinesSection() {
+        document.getElementById('medicines-chart').style.display = 'block';
+        document.getElementById('rivs-chart').style.display = 'none';
+    }
+
+    function showRIVsSection() {
+        document.getElementById('medicines-chart').style.display = 'none';
+        document.getElementById('rivs-chart').style.display = 'block';
+    }
 </script>
     </div>
 </body>

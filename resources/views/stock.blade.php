@@ -37,16 +37,17 @@
             <!--adding new stock of meicine by the admin in a case where new medicine has been brought in-->
             <h3>Add New Medicine</h3>
             <form action="{{ route('stock') }}" method="POST">
-                @csrf
-                <div style="margin-bottom: 1rem;">
-                    <label for="medicine_name">Medicine Name</label>
-                    <input type="text" id="medicine_name" name="medicine_name" required>
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <label for="quantity_on_hand">Quantity on Hand</label>
-                    <input type="number" id="quantity_on_hand" name="quantity_on_hand" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Medicine</button>
-            </form>
+    @csrf
+    <div class="form-group">
+        <label for="medicine_name" style="font-weight: 800;">Medicine Name</label>
+        <input type="text" id="medicine_name" name="medicine_name" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="quantity_on_hand" style="font-weight: 800;">Quantity on Hand</label>
+        <input type="number" id="quantity_on_hand" name="quantity_on_hand" class="form-control" required>
+    </div><br>
+    <button type="submit" class="btn btn-primary">Add Medicine</button>
+</form>
+
         </div>
     @endsection
