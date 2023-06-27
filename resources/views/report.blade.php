@@ -33,6 +33,8 @@
                                     <div class="btn-group mt-2" role="group" aria-label="Report Sections">
                                         <button type="button" class="btn btn-outline-secondary"
                                             id="monthlyReportBtn">Stock</button>
+                                            <button type="button" class="btn btn-outline-warning"
+                                            id="graphBtn">Graph</button>
                                         <button type="button" class="btn btn-outline-info"
                                             id="otherSectionBtn">Requisition</button>
                                     </div>
