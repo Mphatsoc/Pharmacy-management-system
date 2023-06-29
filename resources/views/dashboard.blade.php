@@ -176,19 +176,19 @@
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
                     </li>
-
-                </ul>
-
+                    
                 <li class="menu-item" style="display: flex;">
                     <a href="/user" class="menu-link" style="flex: 1;">
-                        <i></i>
+                    <i class="menu-icon tf-icons bx bx-crown"></i>
                         <div data-i18n="Support">About</div>
                     </a>
                     <a href="/" class="menu-link" style="flex: 1;">
-                        <i></i>
+                    <i class="menu-icon tf-icons bx bx-crown"></i>
                         <div data-i18n="Support">Contact</div>
                     </a>
                 </li>
+
+    </ul>
 
             </aside>
             <!-- / Menu -->
