@@ -296,11 +296,11 @@
             <!-- Place this tag in your head or just before your close body tag. -->
             <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<script>
+<!-- <script>
     var stockOnHand = 10;
     if (stockOnHand == 10){
-    alert('stock is low');
-}
+    alert('stock is low'); -->
+
 </script>      
     
 </body>
