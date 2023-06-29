@@ -22,18 +22,22 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">Monthly Report</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                <div class="row">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="mb-4">
-            <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200" style = "color: white;">Monthly Report</h2>
-            <div class="btn-group mt-2" role="group" aria-label="Report Sections">
-                <button type="button" class="btn btn-outline-secondary" id="monthlyReportBtn">Stock</button> 
-                <button  type="button" class="btn btn-outline-info"  id="otherSectionBtn">Requisition</button>
-            </div>
-        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                        <div class="row">
+                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                                <div class="mb-4">
+                                    <h2 class="text-2xl font-medium text-gray-800 dark:text-gray-200" style="color: white;">
+                                        Monthly Report</h2>
+                                    <div class="btn-group mt-2" role="group" aria-label="Report Sections">
+                                        <button type="button" class="btn btn-outline-secondary"
+                                            id="monthlyReportBtn">Stock</button>
+                                            <button type="button" class="btn btn-outline-warning"
+                                            id="graphBtn">Graph</button>
+                                        <button type="button" class="btn btn-outline-info"
+                                            id="otherSectionBtn">Requisition</button>
+                                </div>
 
                                 <div id="monthlyReportSection">
                                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -104,18 +108,18 @@
                                     </div>
                                 </div>
 
-        <div id="otherSection" style="display: none;">
-    <div class="container my-4">
-        <div class="table-responsive">
-            @php
-                $groupedRivs = $rivs->groupBy(function ($riv) {
-                    $date = \Carbon\Carbon::parse($riv->date)->format('Y-m');
-                    return $date . '_' . $riv->medicine_name;
-                });
-
-                // Sort the grouped rivs by date and medicine name
-                $sortedGroupedRivs = $groupedRivs->sortKeys();
-            @endphp
+                                <div id="otherSection" style="display: none;">
+                                    <div class="container my-4">
+                                        <div class="table-responsive">
+                                            @php
+                                                $groupedRivs = $rivs->groupBy(function ($riv) {
+                                                    $date = \Carbon\Carbon::parse($riv->date)->format('Y-m');
+                                                    return $date . '_' . $riv->medicine_name;
+                                                });
+                                                
+                                                // Sort the grouped rivs by date and medicine name
+                                                $sortedGroupedRivs = $groupedRivs->sortKeys();
+                                            @endphp
 
                                             @php
                                                 $prevFormattedDate = '';

@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
-    <title>About</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Admin Dashboard</title>
 
     <meta name="description" content="" />
 
@@ -25,9 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
@@ -42,7 +34,8 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
-    <!-- Page CSS -->
+    <!-- bottstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -50,6 +43,48 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <!-- tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <style> 
+  .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+  border-radius: 0.375rem; 
+  justify-content: space-between; /* Distribute cards evenly across the container */
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: 9rem; 
+  padding-bottom: 2rem; 
+  margin-bottom: 1rem;
+  margin-right: auto;
+
+}
+
+.card {
+  flex-basis: calc(34.33% - 1rem); /* Adjust the width of the cards as needed */
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 4px;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+  order: -1; /* Move the first two cards to the beginning */
+}
+
+.card:nth-child(3) {
+  order: 2; /* Move the third card to the bottom */
+}
+
+
+
+</style>
   </head>
 
   <body>
@@ -128,162 +163,152 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
-            </li>
             <!-- Cards -->
             <li class="menu-item ">
               <a href="/stock" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Medicines</div>
+                <div data-i18n="Basic">Update Stock</div>
               </a>
             </li>
-            
+           
+           
             <li class="menu-item">
               <a href="/show_stock" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">View Stock</div>
               </a>
             </li>
-           
-           
             <li class="menu-item">
               <a href="/show_notifications" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">Check Rivs</div>
               </a>
             </li>
-             <li class="menu-item">
-                        <a href="/report" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-crown"></i>
-                            <div data-i18n="Boxicons">Check Report</div>
-                        </a>
-                    </li>
-
-          
-                    <li class="menu-item Active">
+  
+            <li class="menu-item">
+              <a href="/report" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-crown"></i>
+                <div data-i18n="Boxicons">Check Report</div>
+              </a>
+            </li>
+            <li class="menu-item">
                         <a href="/about" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
-                        </a></li>
-                        <li  class="menu-item Active">
+                        </a>
                         <a href="" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                            <div data-i18n="Support">Contact</div>
+                            <div data-i18n="Support">Contact Us</div>
                         </a>
                     </li>
           </ul>
+         
         </aside>
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div style="padding-top: 3rem; padding-bottom: 3rem;">
-  <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
-  <ul class="nav">
-                <li class="nav-item" style="position: absolute; top: 0; right: 0;">
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                            <div class="avatar avatar-online">
-                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <div class="d-flex">
-                                        <div class="flex-shrink-0 me-3">
-                                            <div class="avatar avatar-online">
-                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                                            </div>
+        <div class="layout-page">
+  <div >
+            <!-- Content -->
+            <div class="card-container" >
+
+                        <ul class="nav">
+                            <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                        data-bs-toggle="dropdown">
+                                        <div class="avatar avatar-online">
+                                            <img src="../assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle" />
                                         </div>
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
-                                    {{ __('Profile') }}
-                                </x-responsive-nav-link>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
-                                        {{ __('Log Out') }}
-                                    </x-responsive-nav-link>
-                                </form>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar avatar-online">
+                                                            <img src="../assets/img/avatars/1.png" alt
+                                                                class="w-px-40 h-auto rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <span
+                                                            class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
+                                                {{ __('Profile') }}
+                                            </x-responsive-nav-link>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-responsive-nav-link :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                                    class="dropdown-item">
+                                                    {{ __('Log Out') }}
+                                                </x-responsive-nav-link>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-                </li>
-            </ul>
-            <!-- Content -->
-            <div style="padding: 3rem 0;">
-  <div style="max-width: 64rem; margin: 0 auto; padding: 0 1.5rem;">
-    <div style="background-color: #fff; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.5rem;">
-      <div style="padding: 1.5rem; color: #111827;">
-        <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">Stock Management System</h2>
-        <p style="margin-bottom: 1rem;">Our stock management system is a powerful tool for keeping track of your medicine inventory. With features like real-time updates, automated restocking, and detailed analytics, you can stay on top of your stock levels and make informed decisions about your business.</p>
+ <!-- Content -->
 
-        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Features</h3>
-        <ul style="list-style-type: disc; list-style-position: inside; margin-bottom: 1rem;">
-          <li>Seamless workflow</li>
-          <li>Better stock organization</li>
-          <li>Detailed analytics</li>
-          <li>User-friendly interface</li>
-          <li>Customizable settings</li>
-        </ul>
 
-        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">How It Works</h3>
-        <p style="margin-bottom: 1rem;">Our stock management system works by connecting to your existing inventory and monitoring it in real-time. As medicines are sold or used, the system updates the stock levels automatically and alerts you when a reorder is necessary. With detailed analytics, you can track sales trends, monitor inventory turnover, and optimize your ordering process for maximum efficiency.</p>
+ @yield('content')
 
-        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Why Choose Us</h3>
-        <p style="margin-bottom: 1rem;">Our stock management system is designed with your needs in mind. Whether you're a small pharmacy or a large hospital, our software can help you keep track of your medicine inventory and make informed decisions about your business. With user-friendly features and customizable settings, our system is easy to use and adaptable to your unique needs.</p>
+ </div>
 
-        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Get Started</h3>
-        <p>Ready to take control of your medicine inventory? Contact us today to learn more about our stock management system and how it can help your business.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-            
-            <!-- Content -->
+                        
+</body>
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-                </div>
-                </div>
+        <script src="../assets/vendor/js/menu.js"></script>
+        <!-- endbuild -->
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <!-- Vendors JS -->
+        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
+        <!-- Main JS -->
+        <script src="../assets/js/main.js"></script>
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <!-- Page JS -->
+        <script src="../assets/js/dashboards-analytics.js"></script>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </body>
+    <!-- tooltips -->
+    <script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+  
 </html>

@@ -121,11 +121,6 @@
                             <div data-i18n="Analytics">Home</div>
                         </a>
                     </li>
-
-                    <!-- Layouts -->
-
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
                     <!-- Cards -->
                     <li class="menu-item ">
                         <a href="/stock" class="menu-link">
@@ -154,19 +149,29 @@
                             <div data-i18n="Boxicons">Check Report</div>
                         </a>
                     </li>
-
-
                     <li class="menu-item">
                         <a href="/about" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-support"></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
+                        <a href="" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact</div>
+                        </a>
                     </li>
+                </ul>
+                
+            </aside>
+            <!-- / Menu -->
 
-                    <!-- User -->
-                    <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
-                            data-bs-toggle="dropdown">
+            <!-- Layout container -->
+            <div style="padding-top: 3rem; padding-bottom: 3rem;">
+                <div
+                    style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+                    <ul class="nav">
+                <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                             <div class="avatar avatar-online">
                                 <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
@@ -177,8 +182,7 @@
                                     <div class="d-flex">
                                         <div class="flex-shrink-0 me-3">
                                             <div class="avatar avatar-online">
-                                                <img src="../assets/img/avatars/1.png" alt
-                                                    class="w-px-40 h-auto rounded-circle" />
+                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
@@ -195,35 +199,22 @@
                                     {{ __('Profile') }}
                                 </x-responsive-nav-link>
                             </li>
-
                             <li>
                                 <div class="dropdown-divider"></div>
                             </li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-
-                                    <x-responsive-nav-link :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                        this.closest('form').submit();"
-                                        class="dropdown-item">
+                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
                                         {{ __('Log Out') }}
                                     </x-responsive-nav-link>
                                 </form>
                             </li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
                 </li>
-                <!--/ User -->
-                </ul>
-            </aside>
-            <!-- / Menu -->
+            </ul>
 
-            <!-- Layout container -->
-            <div style="padding-top: 3rem; padding-bottom: 3rem;">
-                <div
-                    style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
 
                     <!-- Content -->
                     @if ($errors->has('error'))
