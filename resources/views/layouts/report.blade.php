@@ -277,102 +277,63 @@
 
     });
 </script>
-
 <script>
-        // Retrieve the medicine data from the PHP variable
-        var medicineData = @json($medicines);
+    // Wait for the page to load before rendering the graph
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Retrieve the RIVs data from the PHP variable
+        var rivsData = @json($rivs);
 
         // Prepare the data for the graph
-        var chartData = medicineData.map(function(medicine) {
-            return {
-                x: medicine.medicine_name,
-                y: medicine.quantity_on_hand
-            };
+        var approvedCount = 0;
+        var declinedCount = 0;
+
+        rivsData.forEach(function(riv) {
+            if (riv.status === 'Approved') {
+                approvedCount++;
+            } else if (riv.status === 'Declined') {
+                declinedCount++;
+            }
         });
 
-        // Create the graph using ApexCharts library
-        var options = {
+        var rivsStatusData = [{
+            x: 'Approved',
+            y: approvedCount
+        }, {
+            x: 'Declined',
+            y: declinedCount
+        }];
+
+        // Create the graph for RIVs status using ApexCharts library
+        var rivsStatusOptions = {
             chart: {
-                type: 'bar'
+                type: 'bar',
+                height: 350
             },
             series: [{
-                name: 'Quantity on Hand',
-                data: chartData
+                name: 'Status',
+                data: rivsStatusData
             }],
-            xaxis: {
-                type: 'category'
-            }
+            labels: ['Approved', 'Declined'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
         };
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-
-</script>
-
-
-<script>
-    // Retrieve the RIVs data from the PHP variable
-    var rivsData = @json($rivs);
-
-    // Prepare the data for the graph
-    var approvedCount = 0;
-    var declinedCount = 0;
-
-    rivsData.forEach(function(riv) {
-        if (riv.status === 'Approved') {
-            approvedCount++;
-        } else if (riv.status === 'Declined') {
-            declinedCount++;
-        }
+        var rivsStatusChart = new ApexCharts(document.querySelector("#rivs-status-chart"), rivsStatusOptions);
+        rivsStatusChart.render();
     });
-
-    var rivsStatusData = [{
-        x: 'Approved',
-        y: approvedCount
-    }, {
-        x: 'Declined',
-        y: declinedCount
-    }];
-
-    // Create the graph for RIVs status using ApexCharts library
-    var rivsStatusOptions = {
-        chart: {
-            type: 'bar',
-            height: 350
-        },
-        series: [{
-            name: 'Status',
-            data: rivsStatusData
-        }],
-        labels: ['Approved', 'Declined'],
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }]
-    };
-
-    var rivsStatusChart = new ApexCharts(document.querySelector("#rivs-status-chart"), rivsStatusOptions);
-    rivsStatusChart.render();
 </script>
 
-<script>
-    function showMedicinesSection() {
-        document.getElementById('medicines-chart').style.display = 'block';
-        document.getElementById('rivs-chart').style.display = 'none';
-    }
 
-    function showRIVsSection() {
-        document.getElementById('medicines-chart').style.display = 'none';
-        document.getElementById('rivs-chart').style.display = 'block';
-    }
-</script>
+
     </div>
 </body>
 
