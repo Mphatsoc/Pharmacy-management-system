@@ -134,11 +134,6 @@
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-
-            <!-- Layouts -->
-            
-            <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
             <!-- Cards -->
             <li class="menu-item ">
               <a href="/stock" class="menu-link">
@@ -169,64 +164,17 @@
                     </li>
 
           
-            <li class="menu-item active">
-              <a
-                href="/about"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Support">About</div>
-              </a>
-            </li>
-
-              <!-- User -->
-              <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                          </div>
-                        </div>
-                      </a>
+                    <li class="menu-item Active">
+                        <a href="/about" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">About</div>
+                        </a></li>
+                        <li  class="menu-item Active">
+                        <a href="" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact</div>
+                        </a>
                     </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                    <x-responsive-nav-link :href="route('profile.edit')"  class="dropdown-item">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-                    </li>
-                   
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                    <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();"  class="dropdown-item">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
           </ul>
         </aside>
         <!-- / Menu -->
@@ -234,6 +182,52 @@
         <!-- Layout container -->
         <div style="padding-top: 3rem; padding-bottom: 3rem;">
   <div style="max-width: 80rem; margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+  <ul class="nav">
+                <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <div class="avatar avatar-online">
+                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div class="avatar avatar-online">
+                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                                <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
+                                    {{ __('Profile') }}
+                                </x-responsive-nav-link>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
+                                        {{ __('Log Out') }}
+                                    </x-responsive-nav-link>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
             <!-- Content -->
             <div style="padding: 3rem 0;">
   <div style="max-width: 64rem; margin: 0 auto; padding: 0 1.5rem;">

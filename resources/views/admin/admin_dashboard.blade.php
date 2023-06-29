@@ -176,13 +176,6 @@
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
-            </li>
-
-            <!-- Layouts -->
-            
-            <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text"><span style="font-weight: 700; color: black;">{{ Auth::user()->user }}</span> </span></li>
-
             <!-- Cards -->
             <li class="menu-item ">
               <a href="/stock" class="menu-link">
@@ -218,7 +211,7 @@
                         </a>
                         <a href="" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                            <div data-i18n="Support">Contact</div>
+                            <div data-i18n="Support">Contact Us</div>
                         </a>
                     </li>
           </ul>

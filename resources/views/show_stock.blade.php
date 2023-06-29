@@ -116,16 +116,11 @@
                             <div data-i18n="Analytics">Home</div>
                         </a>
                     </li>
-
-                    <!-- Layouts -->
-
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
                     <!-- Cards -->
                     <li class="menu-item ">
                         <a href="/stock" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Medicines</div>
+                            <div data-i18n="Basic">Update Stock</div>
                         </a>
                     </li>
                     <li class="menu-item active">
@@ -148,17 +143,17 @@
                             <div data-i18n="Boxicons">Check Report</div>
                         </a>
                     </li>
-                </ul>
-                <li class="menu-item">
+                    <li class="menu-item">
                         <a href="/about" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
                         <a href="" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">Contact</div>
                         </a>
                     </li>
+                </ul>
             </aside>
             <!-- / Menu -->
             <!-- Layout container -->

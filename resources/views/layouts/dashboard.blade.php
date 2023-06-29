@@ -118,18 +118,11 @@
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Home</div>
                         </a>
-                    </li>
-
-                    <!-- Layouts -->
-
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text"><span style="font-weight: 700; color: black;">{{ Auth::user()->user }}</span> </span></li>
-
                     <!-- Cards -->
                     <li class="menu-item active">
                         <a href="/stock" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Medicines</div>
+                            <div data-i18n="Basic">Update Stock</div>
                         </a>
                     </li>
                     <li class="menu-item">
@@ -151,20 +144,18 @@
                             <div data-i18n="Boxicons">Check Report</div>
                         </a>
                     </li>
-                </ul>
-                <li class="menu-item">
+                    <li class="menu-item">
                         <a href="/about" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
                         <a href="" class="menu-link">
-                            <i></i>
-                            <div data-i18n="Support">Contact</div>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact Us</div>
                         </a>
                     </li>
+                </ul>
             </aside>
-            <!-- / Menu -->
-            <!-- Layout container -->
             <div style="padding-top: 3rem; padding-bottom: 3rem; width: 100%">
                 <div style=" margin-left: 19rem; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem;">
                 <ul class="nav">
