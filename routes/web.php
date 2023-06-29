@@ -11,6 +11,7 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\RivController;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\SearchController;
 
 
 
@@ -103,6 +104,10 @@ Route::get('/show_notifications', [NotificationsController::class, 'note'])->nam
 // Route::get('/show_notifications', [NotificationsController::class, 'notifications'])->name('show_notifications');
 Route::get('/approved/{id}',[NotificationsController::class, 'approved']);
 Route::get('/declined/{id}',[NotificationsController::class, 'declined']);
+
+
+//Search Routes
+Route::get('/search', [SearchController::class, 'index'])->name('search');
 
 
 
