@@ -260,7 +260,7 @@
                                     <div class="col-md-6">
                                         <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
                                         <input type="number" class="form-control" id="stock_balance"
-                                            name="stock_balance" required >
+                                            name="stock_balance" required>
                                     </div>
                                     <div class="col-12">
                                         <label for="quantity_requested" class="form-label fw-bold">Quantity Being
