@@ -144,73 +144,79 @@
                         </a>
                     </li>
                     <li class="menu-item" style="display: flex;">
-                    <a href="/user" class="menu-link" style="flex: 1;">
-                    <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Support">About</div>
-                    </a>
-                    <a href="/" class="menu-link" style="flex: 1;">
-                    <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Support">Contact</div>
-                    </a>
-                </li>
+                        <a href="/user" class="menu-link" style="flex: 1;">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">About</div>
+                        </a>
+                        <a href="/" class="menu-link" style="flex: 1;">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact</div>
+                        </a>
+                    </li>
 
                 </ul>
-                
-               
+
+
 
             </aside>
             <!-- / Menu -->
 
             <div class="layout container" style="text-align:center; display: flex; justify-content: flex-end;">
-    <div style="padding-top: 3rem; width: 80%; margin-left: auto;">
-        <!-- Content -->
-        <div style="padding-top: 3rem; padding-bottom: 3rem;">
-            <ul class="nav">
-                <li class="nav-item" style="position: absolute; top: 0; right: 0;">
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                            <div class="avatar avatar-online">
-                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <div class="d-flex">
-                                        <div class="flex-shrink-0 me-3">
-                                            <div class="avatar avatar-online">
-                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                                            </div>
+                <div style="padding-top: 3rem; width: 80%; margin-left: auto;">
+                    <!-- Content -->
+                    <div style="padding-top: 3rem; padding-bottom: 3rem;">
+                        <ul class="nav">
+                            <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                        data-bs-toggle="dropdown">
+                                        <div class="avatar avatar-online">
+                                            <img src="../assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle" />
                                         </div>
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
-                                    {{ __('Profile') }}
-                                </x-responsive-nav-link>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
-                                        {{ __('Log Out') }}
-                                    </x-responsive-nav-link>
-                                </form>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar avatar-online">
+                                                            <img src="../assets/img/avatars/1.png" alt
+                                                                class="w-px-40 h-auto rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <span
+                                                            class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
+                                                {{ __('Profile') }}
+                                            </x-responsive-nav-link>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-responsive-nav-link :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                                    class="dropdown-item">
+                                                    {{ __('Log Out') }}
+                                                </x-responsive-nav-link>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-                </li>
-            </ul>
 
                         <div style="width: 100%; margin: 0 auto;">
                             <div>
@@ -249,18 +255,19 @@
                                                 echo "<option value='" . $strength->strength . "'>" . $strength->strength . '</option>';
                                             }
                                             ?>
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
                                         <input type="number" class="form-control" id="stock_balance"
-                                            name="stock_balance" required>
+                                            name="stock_balance" required >
                                     </div>
                                     <div class="col-12">
                                         <label for="quantity_requested" class="form-label fw-bold">Quantity Being
                                             Requested:</label>
                                         <input type="number" class="form-control" id="quantity_requested"
-                                            name="quantity_requested" required>
+                                            name="quantity_requested" required
+                                            style="border-color: blue;>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="department" class="form-label fw-bold">Department:</label>
