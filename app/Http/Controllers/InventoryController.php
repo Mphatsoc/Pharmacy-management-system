@@ -101,6 +101,12 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     $StockCard = StockCard::findOrFail($id);
     $StockCard->delete();
 
+
+
+    
+    
+
+
     Session::flash('success', 'Data deleted successfully!');
 
     return redirect()->back();

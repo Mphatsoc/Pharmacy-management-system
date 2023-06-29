@@ -298,19 +298,19 @@
 
 
            
+            <script src="../assets/vendor/js/helpers.js"></script>
+   
+            <script>
+    // Get the stock on hand value
+    var stockOnHand = parseInt("{{ $medicine->stock_on_hand }}");
 
-    <script>
-        // Get the stock on hand element
-        const stockElement = document.getElementById('stockOnHand');
-        
-        // Get the current stock on hand value
-        const stockValue = parseInt(stockElement.innerText.replace(/\D/g, ''));
-        
-        // Check if the stock is low (equal to or less than 10)
-        if (stockValue <= 10) {
-            alert('Stock is low!');
-        }
-    </script>
+    // Check if stock on hand is less than or equal to 10
+    if (stockOnHand <= 10) {
+        // Show an alert to the user
+        alert("Stock on hand is low");
+    }
+  </script>
+    
 </body>
 
 </html>
