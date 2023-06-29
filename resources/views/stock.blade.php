@@ -46,6 +46,7 @@
         <label for="quantity_on_hand" style="font-weight: 800;">Quantity on Hand</label>
         <input type="number" id="quantity_on_hand" name="quantity_on_hand" class="form-control" required>
     </div><br>
+    
     <button type="submit" class="btn btn-primary">Add Medicine</button>
 </form>
 
