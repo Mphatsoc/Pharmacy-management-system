@@ -225,7 +225,7 @@
                             style="background-color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-radius: 0.375rem; padding: 2rem; margin-bottom: 2rem; display: flex; justify-content: center; align-items: center; margin-left: 8rem;">
                             <!--display various kinds of medicine available-->
                             <div style="display: flex; flex-wrap: wrap; margin: -0.5rem;">
-                                @foreach ($medicines as $medicine)
+                            @foreach (\App\Models\Medicine::orderBy('medicine_name')->get() as $medicine)
                                     <div
                                         style="flex: 0 0 calc(33.33% - 1rem); background-color: lightblue; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; margin: 0.5rem;">
                                         <a href="{{ route('stock.card', ['id' => $medicine['id']]) }}"
