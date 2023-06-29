@@ -55,8 +55,14 @@
 
     <!-- Display the search results -->
     @while($row = $result->fetch_assoc())
-        <p>Medicine Name: {{ $row['medicine_name'] }}</p>
-        <p>Quantity on Hand: {{ $row['quantity_on_hand'] }}</p><br>
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ $row['medicine_name'] }}</h5>
+        <p class="card-text">Quantity on Hand: {{ $row['quantity_on_hand'] }}</p>
+       
+    </div>
+</div>
+
     @endwhile
 
     <?php
