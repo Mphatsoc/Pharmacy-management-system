@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="../assets/" data-template="vertical-menu-template-free">
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>Admin Dashboard</title>
 
@@ -25,9 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
@@ -232,41 +224,147 @@
                                 <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <div class="d-flex">
-                                        <div class="flex-shrink-0 me-3">
-                                            <div class="avatar avatar-online">
-                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                                            </div>
+                    </li>
+
+                </ul>
+                <li class="menu-item">
+                    <a href="/about" class="menu-link">
+                        <i></i>
+                        <div data-i18n="Support">About</div>
+                    </a>
+                    <a href="" class="menu-link">
+                        <i></i>
+                        <div data-i18n="Support">Contact</div>
+                    </a>
+                </li>
+            </aside>
+            <!-- / Menu -->
+
+            <!-- Layout container -->
+            <div class="layout-page">
+                <div>
+                    <!-- Content -->
+                    <div class="card-container">
+                        <ul class="nav">
+                            <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                        data-bs-toggle="dropdown">
+                                        <div class="avatar avatar-online">
+                                            <img src="../assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle" />
                                         </div>
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
-                                    {{ __('Profile') }}
-                                </x-responsive-nav-link>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
-                                        {{ __('Log Out') }}
-                                    </x-responsive-nav-link>
-                                </form>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar avatar-online">
+                                                            <img src="../assets/img/avatars/1.png" alt
+                                                                class="w-px-40 h-auto rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <span
+                                                            class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
+                                                {{ __('Profile') }}
+                                            </x-responsive-nav-link>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-responsive-nav-link :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                                    class="dropdown-item">
+                                                    {{ __('Log Out') }}
+                                                </x-responsive-nav-link>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
+
+                        <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
+                            <a href="/show_notifications">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    Approve/Decline RIVs
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card" style="background-color: #d4e9ff; width: 75%; order: 2;">
+                            <a href="/show_stock">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">View Stock</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    Check/Delete Stock
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card" style="background-color: #d1f5d0; width: 75%; order: 3;">
+                            <a href="/stock">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">Update Stock</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    Enter new Stock
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" style="background-color: #d4e9ff; width: 75%; order: 4;">
+                            <a href="/report">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">Report</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    View Monthly Report
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </li>
             </ul>
@@ -313,35 +411,30 @@
             <div >
               <h5 style="font-weight: 800; color: black; font-size: 25px;">Report</h5>
             </div>
-          </div>
         </div>
-      </div></a>
-    </div>
 
-  </div>
-</div>
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-</div>
-</div>
+        <script src="../assets/vendor/js/menu.js"></script>
+        <!-- endbuild -->
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <!-- Vendors JS -->
+        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
+        <!-- Main JS -->
+        <script src="../assets/js/main.js"></script>
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <!-- Page JS -->
+        <script src="../assets/js/dashboards-analytics.js"></script>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
