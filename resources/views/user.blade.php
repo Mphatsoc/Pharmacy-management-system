@@ -155,20 +155,22 @@
                 <div data-i18n="Boxicons">Check Rivs</div>
               </a>
             </li>
+            <li class="menu-item active">
+                        <a href="/user" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">About</div>
+                        </a>
+                        <li class="menu-item">
+                        <a href="/" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact</div>
+                        </a>
+                    </li>
 
           
 
           </ul>
-          <li class="menu-item">
-                        <a href="/user" class="menu-link">
-                            <i></i>
-                            <div data-i18n="Support">About</div>
-                        </a>
-                        <a href="/" class="menu-link">
-                            <i ></i>
-                            <div data-i18n="Support">Contact</div>
-                        </a>
-                    </li>
+          
         </aside>
         <!-- / Menu -->
 

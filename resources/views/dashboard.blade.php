@@ -181,7 +181,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="/about" class="menu-link">
+                        <a href="/user" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
@@ -261,7 +261,7 @@
                                 style="background-color: white; height: 100vh; display: flex; align-items: top; justify-content: center;">
                                 <div style="padding: 20px;">
                                     <div class="card"
-                                        style="background-color: #d1f5d0; width: 125%; order: 1; padding: 30px 30px;"
+                                        style="background-color: #d1f5d0; width: 135%; order: 1; padding: 30px 30px;"
                                         data-toggle="tooltip" title="Go To Form">
                                         <a href="/riv" title="Click to fill requisitions">
                                             <div>
@@ -280,7 +280,7 @@
                                     </div>
 
                                     <div class="card"
-                                        style="background-color: #d4e9ff; width: 125%; order: 2; padding: 30px 30px;"
+                                        style="background-color: #d4e9ff; width: 135%; order: 2; padding: 30px 30px;"
                                         data-toggle="tooltip" title="Check if Riv is Approved or Declined">
                                         <a href="/riv-list" title="Click to view requisitions">
                                             <div>
