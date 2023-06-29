@@ -298,19 +298,7 @@
 
 
            
-
-    <script>
-        // Get the stock on hand element
-        const stockElement = document.getElementById('stockOnHand');
-        
-        // Get the current stock on hand value
-        const stockValue = parseInt(stockElement.innerText.replace(/\D/g, ''));
-        
-        // Check if the stock is low (equal to or less than 10)
-        if (stockValue <= 10) {
-            alert('Stock is low!');
-        }
-    </script>
+    
 </body>
 
 </html>
