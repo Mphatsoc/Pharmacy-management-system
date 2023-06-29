@@ -90,17 +90,17 @@ https://templatemo.com/tm-566-medic-care
                         <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.jpg"
+                                    <img src="images/samkov.jpg"
                                         class="img-fluid" alt="">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg"
+                                    <img src="images/photo.jpg"
                                         class="img-fluid" alt="">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg"
+                                    <img src="images/nurse.jpg"
                                         class="img-fluid" alt="">
                                 </div>
                             </div>
