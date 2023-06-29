@@ -18,7 +18,9 @@
                                         <h3
                                             style="font-size: 1.125rem; font-weight: 800; margin-bottom: 0.5rem; color: black;">
                                             {{ $medicine->medicine_name }}</h3>
+                                            
                                         <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand }}</p>
+                                        
                                         <a href="{{ route('stock.show', $medicine) }}" class="btn btn-primary"
                                             style="margin-top: 0.5rem; color:white;">update
                                             stockcard</a>
@@ -46,6 +48,10 @@
         <label for="quantity_on_hand" style="font-weight: 800;">Quantity on Hand</label>
         <input type="number" id="quantity_on_hand" name="quantity_on_hand" class="form-control" required>
     </div><br>
+    <div class="form-group">
+        <label for="strength" style="font-weight: 800;">strength</label>
+        <input type="text" id="strength" name="strength" class="form-control" required>
+    </div>
     
     <button type="submit" class="btn btn-primary">Add Medicine</button>
 </form>

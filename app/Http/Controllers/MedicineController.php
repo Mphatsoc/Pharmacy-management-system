@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Medicine;
+use App\Models\Strength;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -14,7 +15,8 @@ class MedicineController extends Controller
     public function displayData()
     {
         $medicines = Medicine::all();
-        return view('stock', compact('medicines'));
+        $strengths = Strength::all();
+        return view('stock', compact('medicines','strengths'));
     }
     //This method handles the logic for storing a new medicine in the database.
     public function store(Request $request)

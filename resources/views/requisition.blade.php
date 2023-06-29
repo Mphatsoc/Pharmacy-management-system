@@ -241,8 +241,15 @@
 
                                     <div class="col-md-6">
                                         <label for="strength" class="form-label fw-bold">Strength:</label>
-                                        <input type="text" class="form-control" id="strength" name="strength"
-                                            required>
+                                        <select class="form-select" id="strength" name="strength" required>
+                                            <option value="">Select Strength</option>
+                                            <?php
+                                            $strengths = DB::table('loginpage.strengths')->get();
+                                            foreach ($strengths as $strength) {
+                                                echo "<option value='" . $strength->strength . "'>" . $strength->strength . '</option>';
+                                            }
+                                            ?>
+                                            </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="stock_balance" class="form-label fw-bold">Stock Balance:</label>
