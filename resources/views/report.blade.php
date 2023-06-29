@@ -108,6 +108,11 @@
                                     </div>
                                 </div>
 
+                                <div id="graph" style="display: none;">
+                          <!-- Add the container for the RIVs status graph -->
+                            <div id="rivs-status-chart"></div>
+                              </div>
+
                                 <div id="otherSection" style="display: none;">
                                     <div class="container my-4">
                                         <div class="table-responsive">

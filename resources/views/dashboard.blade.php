@@ -42,8 +42,8 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
-     <!-- tooltips -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <style>
         .card-container {
@@ -179,19 +179,19 @@
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
                     </li>
-                    
-                <li class="menu-item" style="display: flex;">
-                    <a href="/user" class="menu-link" style="flex: 1;">
-                    <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Support">About</div>
-                    </a>
-                    <a href="/" class="menu-link" style="flex: 1;">
-                    <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Support">Contact</div>
-                    </a>
-                </li>
 
-    </ul>
+                    <li class="menu-item">
+                        <a href="/about" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">About</div>
+                        </a>
+                        <a href="/" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Support">Contact Us</div>
+                        </a>
+                    </li>
+
+                </ul>
 
             </aside>
             <!-- / Menu -->
@@ -255,18 +255,23 @@
                             </li>
                         </ul>
 
-                        <body style="margin: 0; padding: 0; overflow :hidden;">
+                        <body style="margin: 0; padding: 0; overflow: hidden;">
 
                             <div
-                                style="background-color: white; height: 80vh; display: flex; align-items: top; justify-content: center;">
+                                style="background-color: white; height: 100vh; display: flex; align-items: top; justify-content: center;">
                                 <div style="padding: 20px;">
-                                    <div class="card" style="background-color: #d1f5d0; width: 125%; order: 1;"  data-toggle="tooltip" title=" Go To Form">
+                                    <div class="card"
+                                        style="background-color: #d1f5d0; width: 125%; order: 1; padding: 30px 30px;"
+                                        data-toggle="tooltip" title="Go To Form">
                                         <a href="/riv" title="Click to fill requisitions">
                                             <div>
                                                 <div>
                                                     <div>
                                                         <div>
-                                                            <h5 style="font-weight: 800; color: black;  font-size: 25px;">Fill Requisition form
+                                                            <h5
+                                                                style="font-weight: 200; color: black; font-size: 30px;">
+                                                                Fill Requisition form
+                                                            </h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -274,14 +279,17 @@
                                         </a>
                                     </div>
 
-                                    <div class="card" style="background-color: #d4e9ff; width: 125%; order: 2;"  data-toggle="tooltip" title=" Check if Riv is Approved or Declined  ">
+                                    <div class="card"
+                                        style="background-color: #d4e9ff; width: 125%; order: 2; padding: 30px 30px;"
+                                        data-toggle="tooltip" title="Check if Riv is Approved or Declined">
                                         <a href="/riv-list" title="Click to view requisitions">
                                             <div>
                                                 <div>
                                                     <div>
                                                         <div>
-                                                            <h5 style="font-weight: 800; color: black;  font-size: 25px;">View
-                                                                Requisitions</h5>
+                                                            <h5
+                                                                style="font-weight: 200; color: black; font-size: 30px;">
+                                                                View Requisitions</h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -294,7 +302,6 @@
                         </body>
 
 
-                        
                         <!-- Core JS -->
                         <!-- build:js assets/vendor/js/core.js -->
                         <script src="../assets/vendor/libs/jquery/jquery.js"></script>
@@ -316,13 +323,13 @@
 
                         <!-- Place this tag in your head or just before your close body tag. -->
                         <script async defer src="https://buttons.github.io/buttons.js"></script>
-                         <!-- tooltips -->
-    <script>
-    $(document).ready(function() {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
-  
+                        <!-- tooltips -->
+                        <script>
+                            $(document).ready(function() {
+                                $('[data-toggle="tooltip"]').tooltip();
+                            });
+                        </script>
+
 
 </body>
 
