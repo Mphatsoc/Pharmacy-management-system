@@ -181,7 +181,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="/about" class="menu-link">
+                        <a href="/user" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
