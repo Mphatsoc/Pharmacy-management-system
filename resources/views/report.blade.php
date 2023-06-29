@@ -37,7 +37,6 @@
                                             id="graphBtn">Graph</button>
                                         <button type="button" class="btn btn-outline-info"
                                             id="otherSectionBtn">Requisition</button>
-                                    </div>
                                 </div>
 
                                 <div id="monthlyReportSection">

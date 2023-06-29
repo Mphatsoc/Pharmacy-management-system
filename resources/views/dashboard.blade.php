@@ -42,43 +42,45 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
-    <style> 
-  .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: white; 
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
-  border-radius: 0.375rem; 
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  padding-top: 9rem; 
-  padding-bottom: 2rem; 
-  margin-bottom: 1rem;
-  margin-right: auto;
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.375rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 9rem;
+            padding-bottom: 2rem;
+            margin-bottom: 1rem;
+            margin-right: auto;
 
-}
+        }
 
-.card {
-  flex-basis: calc(34.33% - 1rem); /* Adjust the width of the cards as needed */
-  background-color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  border-radius: 0.375rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  width: 4px;
-}
+        .card {
+            flex-basis: calc(34.33% - 1rem);
+            /* Adjust the width of the cards as needed */
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            width: 4px;
+        }
 
-.card:nth-child(1),
-.card:nth-child(2) {
-  order: -1; /* Move the first two cards to the beginning */
-}
+        .card:nth-child(1),
+        .card:nth-child(2) {
+            order: -1;
+            /* Move the first two cards to the beginning */
+        }
 
-.card:nth-child(3) {
-  order: 2; /* Move the third card to the bottom */
-}
-
-</style>
-  </head>
+        .card:nth-child(3) {
+            order: 2;
+            /* Move the third card to the bottom */
+        }
+    </style>
+</head>
 
 <body>
     <!-- Layout wrapper -->
@@ -156,7 +158,9 @@
                     <!-- Layouts -->
 
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Department: <span style="font-weight: 700; color: black;">{{ Auth::user()->department }}</span> </span></li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Department: <span
+                                style="font-weight: 700; color: black;">{{ Auth::user()->department }}</span> </span>
+                    </li>
                     <!-- Cards -->
                     <li class="menu-item">
                         <a href="/riv" class="menu-link">
@@ -174,131 +178,188 @@
                     </li>
 
                 </ul>
-                 
+
                 <li class="menu-item" style="display: flex;">
-    <a href="/user" class="menu-link" style="flex: 1;">
-        <i></i>
-        <div data-i18n="Support">About</div>
-    </a>
-    <a href="/" class="menu-link" style="flex: 1;">
-        <i></i>
-        <div data-i18n="Support">Contact</div>
-    </a>
-</li>
+                    <a href="/user" class="menu-link" style="flex: 1;">
+                        <i></i>
+                        <div data-i18n="Support">About</div>
+                    </a>
+                    <a href="/" class="menu-link" style="flex: 1;">
+                        <i></i>
+                        <div data-i18n="Support">Contact</div>
+                    </a>
+                </li>
 
             </aside>
             <!-- / Menu -->
 
-       
-        <!-- Layout container -->
-        <div class="layout-page">
-  <div >
-            <!-- Content -->
-            <div class="card-container" >
-            <ul class="nav">
-                <li class="nav-item" style="position: absolute; top: 0; right: 0;">
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                            <div class="avatar avatar-online">
-                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <div class="d-flex">
-                                        <div class="flex-shrink-0 me-3">
-                                            <div class="avatar avatar-online">
-                                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                                            </div>
+
+            <!-- Layout container -->
+            <div class="layout-page">
+                <div>
+                    <!-- Content -->
+                    <div class="card-container">
+                        <ul class="nav">
+                            <li class="nav-item" style="position: absolute; top: 0; right: 0;">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                        data-bs-toggle="dropdown">
+                                        <div class="avatar avatar-online">
+                                            <img src="../assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle" />
                                         </div>
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
-                                    {{ __('Profile') }}
-                                </x-responsive-nav-link>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
-                                        {{ __('Log Out') }}
-                                    </x-responsive-nav-link>
-                                </form>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar avatar-online">
+                                                            <img src="../assets/img/avatars/1.png" alt
+                                                                class="w-px-40 h-auto rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <span
+                                                            class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <x-responsive-nav-link :href="route('profile.edit')" class="dropdown-item">
+                                                {{ __('Profile') }}
+                                            </x-responsive-nav-link>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                        </li>
+                                        <li>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-responsive-nav-link :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                                    class="dropdown-item">
+                                                    {{ __('Log Out') }}
+                                                </x-responsive-nav-link>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
+
+                        <body style="margin: 0; padding: 0; overflow :hidden;">
+
+                            <div
+                                style="background-color: white; height: 80vh; display: flex; align-items: top; justify-content: center;">
+                                <div style="padding: 20px;">
+                                    <div class="card" style="background-color: #d1f5d0; width: 125%; order: 1;">
+                                        <a href="/riv" title="Click to fill requisitions">
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <h5 style="font-weight: 800; color: black;">Fill
+                                                                Requisitions</h5>
+                                                            <p class="mb-4 block text-black font-bold">
+                                                                Go to Form
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card" style="background-color: #d4e9ff; width: 125%; order: 2;">
+                                        <a href="/riv-list" title="Click to view requisitions">
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <h5 style="font-weight: 800; color: black;">View
+                                                                Requisitions</h5>
+                                                            <p class="mb-4 block text-black font-bold">
+                                                                Check if Riv is Approved or Declined
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </body>
+
+
+                        {{-- <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
+                            <a href="/riv">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    Go to Form
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card" style="background-color: #d4e9ff; width: 75%; order: 2;">
+                            <a href="/riv-list">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h5 style="font-weight: 800; color: black;">View Requisitions</h5>
+                                                <p class="mb-4 block text-black font-bold">
+                                                    Check if Riv is Approved or Declined
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
-                </li>
-            </ul>
+                </div>
 
-    <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
-     <a href="/riv"> <div>
-        <div >
-          <div>
-            <div >
-              <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
-              <p class="mb-4 block text-black font-bold">
-                Go to Form
-              </p>
             </div>
-          </div>
-        </div>
-      </div></a>
-    </div>
+        </div> --}}
 
-    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;">
-      <a href = "/riv-list"><div >
-        <div>
-          <div >
-            <div>
-              <h5 style="font-weight: 800; color: black;">View Requisitions</h5>
-              <p class="mb-4 block text-black font-bold">
-                Check if Riv is Approved or Declined
-              </p>
-            </div>
-          </div>
-        </div>
-      </div></a>
-    </div>
+                        <!-- Core JS -->
+                        <!-- build:js assets/vendor/js/core.js -->
+                        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+                        <script src="../assets/vendor/libs/popper/popper.js"></script>
+                        <script src="../assets/vendor/js/bootstrap.js"></script>
+                        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-  </div>
-</div>
+                        <script src="../assets/vendor/js/menu.js"></script>
+                        <!-- endbuild -->
 
-</div>
-</div>
+                        <!-- Vendors JS -->
+                        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-                            <!-- Core JS -->
-                            <!-- build:js assets/vendor/js/core.js -->
-                            <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-                            <script src="../assets/vendor/libs/popper/popper.js"></script>
-                            <script src="../assets/vendor/js/bootstrap.js"></script>
-                            <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+                        <!-- Main JS -->
+                        <script src="../assets/js/main.js"></script>
 
-                            <script src="../assets/vendor/js/menu.js"></script>
-                            <!-- endbuild -->
+                        <!-- Page JS -->
+                        <script src="../assets/js/dashboards-analytics.js"></script>
 
-                            <!-- Vendors JS -->
-                            <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+                        <!-- Place this tag in your head or just before your close body tag. -->
+                        <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-                            <!-- Main JS -->
-                            <script src="../assets/js/main.js"></script>
+</body>
 
-                            <!-- Page JS -->
-                            <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
- 
-  </body>
 </html>
