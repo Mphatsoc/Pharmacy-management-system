@@ -176,19 +176,19 @@
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
                     </li>
-
-                </ul>
-
+                    
                 <li class="menu-item" style="display: flex;">
                     <a href="/user" class="menu-link" style="flex: 1;">
-                        <i></i>
+                    <i class="menu-icon tf-icons bx bx-crown"></i>
                         <div data-i18n="Support">About</div>
                     </a>
                     <a href="/" class="menu-link" style="flex: 1;">
-                        <i></i>
+                    <i class="menu-icon tf-icons bx bx-crown"></i>
                         <div data-i18n="Support">Contact</div>
                     </a>
                 </li>
+
+    </ul>
 
             </aside>
             <!-- / Menu -->
@@ -298,46 +298,7 @@
                         </body>
 
 
-                        {{-- <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
-                            <a href="/riv">
-                                <div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <h5 style="font-weight: 800; color: black;">Fill Requisitions</h5>
-                                                <p class="mb-4 block text-black font-bold">
-                                                    Go to Form
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="card" style="background-color: #d4e9ff; width: 75%; order: 2;">
-                            <a href="/riv-list">
-                                <div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <h5 style="font-weight: 800; color: black;">View Requisitions</h5>
-                                                <p class="mb-4 block text-black font-bold">
-                                                    Check if Riv is Approved or Declined
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div> --}}
-
+                        
                         <!-- Core JS -->
                         <!-- build:js assets/vendor/js/core.js -->
                         <script src="../assets/vendor/libs/jquery/jquery.js"></script>

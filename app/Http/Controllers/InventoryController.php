@@ -104,13 +104,6 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     Session::flash('success', 'Data deleted successfully!');
 
     return redirect()->back();
-    }
-     
-
-    
-
-
-    
-    
+    }   
 
 }

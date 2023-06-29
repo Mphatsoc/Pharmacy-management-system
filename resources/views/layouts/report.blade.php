@@ -57,7 +57,7 @@
         <div class="layout-container">
             <!-- Menu -->
 
-            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="padding-top: 16px;">
                 <div class="app-brand demo">
                     <a href="" class="app-brand-link">
                         <span class="app-brand-logo demo">
@@ -123,12 +123,6 @@
                             <div data-i18n="Analytics">Home</div>
                         </a>
                     </li>
-
-                    <!-- Layouts -->
-
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text"><span style="font-weight: 700; color: black;">{{ Auth::user()->user }}</span> </span></li>
-
                     <!-- Cards -->
                     <li class="menu-item">
                         <a href="/stock" class="menu-link">
@@ -155,17 +149,17 @@
                             <div data-i18n="Boxicons">Check Report</div>
                         </a>
                     </li>
-                </ul>
-                <li class="menu-item">
+                    <li class="menu-item">
                         <a href="/about" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
                         <a href="" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">Contact</div>
                         </a>
                     </li>
+                </ul>
             </aside>
             <!-- / Menu -->
             <!-- Layout container -->
