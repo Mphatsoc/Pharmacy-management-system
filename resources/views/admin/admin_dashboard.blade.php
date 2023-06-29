@@ -51,6 +51,9 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <!-- tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <style> 
   .card-container {
   display: flex;
@@ -184,7 +187,7 @@
             <li class="menu-item ">
               <a href="/stock" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Medicines</div>
+                <div data-i18n="Basic">Update Stock</div>
               </a>
             </li>
            
@@ -208,18 +211,18 @@
                 <div data-i18n="Boxicons">Check Report</div>
               </a>
             </li>
-          
-          </ul>
-          <li class="menu-item">
+            <li class="menu-item">
                         <a href="/about" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">About</div>
                         </a>
                         <a href="" class="menu-link">
-                            <i></i>
+                        <i class="menu-icon tf-icons bx bx-crown"></i>
                             <div data-i18n="Support">Contact</div>
                         </a>
                     </li>
+          </ul>
+         
         </aside>
         <!-- / Menu -->
 
@@ -275,59 +278,47 @@
                 </li>
             </ul>
 
-    <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;">
+    <div class="card" style="background-color: #d1f5d0; width: 75%; order: 1;" data-toggle="tooltip" title=" Approve/Decline RIVs ">
      <a href="/show_notifications"> <div>
         <div >
           <div>
             <div >
-              <h5 style="font-weight: 800; color: black;">Check Requisitions</h5>
-              <p class="mb-4 block text-black font-bold">
-                Approve/Decline RIVs
-              </p>
+              <h5 style="font-weight: 800; color: black; font-size: 25px;">Check Requisitions</h5>
             </div>
           </div>
         </div>
       </div></a>
     </div>
 
-    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;">
+    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 2;" data-toggle="tooltip" title=" Check/Delete Stock">
       <a href = "/show_stock"><div >
         <div>
           <div >
             <div>
-              <h5 style="font-weight: 800; color: black;">View Stock</h5>
-              <p class="mb-4 block text-black font-bold">
-                Check/Delete Stock
-              </p>
+              <h5 style="font-weight: 800; color: black; font-size: 25px;">View Stock</h5>
             </div>
           </div>
         </div>
       </div></a>
     </div>
 
-    <div class="card"  style="background-color: #d1f5d0; width: 75%; order: 3;" >
+    <div class="card"  style="background-color: #d1f5d0; width: 75%; order: 3;" data-toggle="tooltip" title=" Enter new Stock">
       <a href = "/stock"><div>
         <div >
           <div>
             <div >
-              <h5 style="font-weight: 800; color: black;">Update Stock</h5>
-              <p class="mb-4 block text-black font-bold">
-                Enter new Stock
-              </p>
+              <h5 style="font-weight: 800; color: black; font-size: 25px;">Update Stock</h5>
             </div>
           </div>
         </div>
       </div></a>
     </div>
-    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 4;" >
+    <div class="card"  style="background-color: #d4e9ff; width: 75%; order: 4;" data-toggle="tooltip" title="View Monthly Report">
       <a href = "/report"><div>
         <div >
           <div>
             <div >
-              <h5 style="font-weight: 800; color: black;">Report</h5>
-              <p class="mb-4 block text-black font-bold">
-                View Monthly Report
-              </p>
+              <h5 style="font-weight: 800; color: black; font-size: 25px;">Report</h5>
             </div>
           </div>
         </div>
@@ -361,5 +352,11 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- tooltips -->
+    <script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
   </body>
 </html>
