@@ -27,13 +27,7 @@
                                             style="font-size: 1.125rem; font-weight: 800; margin-bottom: 0.5rem; color: black;">
                                             {{ $medicine->medicine_name }}</h3>
                                         <p style="margin-bottom: 0;">Quantity: {{ $medicine->quantity_on_hand }}</p>
-<<<<<<< Updated upstream
-                                        <a href="{{ route('stock.show', $medicine) }}" class="btn btn-primary"
-                                            style="margin-top: 0.5rem; color:white;">update
-                                            stockcard</a>
-=======
                                         <a href="{{ route('stock.show', $medicine) }}" class="btn btn-primary" style="margin-top: 0.5rem; color:white">update stockcard</a>
->>>>>>> Stashed changes
                                     </div>
                                 </a>
                             </div>
