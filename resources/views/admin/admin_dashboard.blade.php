@@ -3,7 +3,8 @@
 @section('content')
 
     <body style="margin: 0; padding: 0; overflow: hidden;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; padding-left: 20px;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: flex-start; padding-left: 30px; margin-top: 20px; margin-bottom: 150px;">
             <div class="card"
                 style="background-color: #d1f5d0; width: 80%; order: 1; padding: 20px; box-sizing: border-box;">
                 <a href="/show_notifications" data-toggle="tooltip" title="Approve/Decline RIVs">
@@ -64,7 +65,6 @@
                 </a>
             </div>
         </div>
-
     </body>
 @endsection
 
