@@ -95,7 +95,7 @@ https://templatemo.com/tm-566-medic-care
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg"
+                                    <img src="images/photo.jpg"
                                         class="img-fluid" alt="">
                                 </div>
 
