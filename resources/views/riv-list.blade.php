@@ -143,6 +143,12 @@
                             <div data-i18n="Boxicons">Check Rivs</div>
                         </a>
                     </li>
+                    <li class="menu-item active">
+                        <a href="/riv-list" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-crown"></i>
+                            <div data-i18n="Basic">Add Medicine</div>
+                        </a>
+                    </li>
                     <li class="menu-item" style="display: flex;">
                     <a href="/user" class="menu-link" style="flex: 1;">
                     <i class="menu-icon tf-icons bx bx-crown"></i>
