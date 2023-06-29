@@ -42,6 +42,9 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+     <!-- tooltips -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <style>
         .card-container {
             display: flex;
@@ -257,17 +260,13 @@
                             <div
                                 style="background-color: white; height: 80vh; display: flex; align-items: top; justify-content: center;">
                                 <div style="padding: 20px;">
-                                    <div class="card" style="background-color: #d1f5d0; width: 125%; order: 1;">
+                                    <div class="card" style="background-color: #d1f5d0; width: 125%; order: 1;"  data-toggle="tooltip" title=" Go To Form">
                                         <a href="/riv" title="Click to fill requisitions">
                                             <div>
                                                 <div>
                                                     <div>
                                                         <div>
-                                                            <h5 style="font-weight: 800; color: black;">Fill
-                                                                Requisitions</h5>
-                                                            <p class="mb-4 block text-black font-bold">
-                                                                Go to Form
-                                                            </p>
+                                                            <h5 style="font-weight: 800; color: black;  font-size: 25px;">Fill Requisition form
                                                         </div>
                                                     </div>
                                                 </div>
@@ -275,17 +274,14 @@
                                         </a>
                                     </div>
 
-                                    <div class="card" style="background-color: #d4e9ff; width: 125%; order: 2;">
+                                    <div class="card" style="background-color: #d4e9ff; width: 125%; order: 2;"  data-toggle="tooltip" title=" Check if Riv is Approved or Declined  ">
                                         <a href="/riv-list" title="Click to view requisitions">
                                             <div>
                                                 <div>
                                                     <div>
                                                         <div>
-                                                            <h5 style="font-weight: 800; color: black;">View
+                                                            <h5 style="font-weight: 800; color: black;  font-size: 25px;">View
                                                                 Requisitions</h5>
-                                                            <p class="mb-4 block text-black font-bold">
-                                                                Check if Riv is Approved or Declined
-                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -320,6 +316,13 @@
 
                         <!-- Place this tag in your head or just before your close body tag. -->
                         <script async defer src="https://buttons.github.io/buttons.js"></script>
+                         <!-- tooltips -->
+    <script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+  
 
 </body>
 
