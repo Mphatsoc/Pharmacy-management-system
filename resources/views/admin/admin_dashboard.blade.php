@@ -4,9 +4,9 @@
 
     <body style="margin: 0; padding: 0; overflow: hidden;">
         <div
-            style="display: flex; flex-wrap: wrap; justify-content: flex-start; padding-left: 30px; margin-top: 20px; margin-bottom: 150px;">
+            style="display: flex; flex-wrap: wrap; justify-content: flex-start; padding-left: 0px; margin-top: 20px; margin-bottom: 150px;">
             <div class="card"
-                style="background-color: #d1f5d0; width: 80%; order: 1; padding: 20px; box-sizing: border-box;">
+                style="background-color: #d1f5d0; width: 80%; order: 1; padding: 30px; box-sizing: border-box; margin-right: 10px; margin-bottom: 10px;">
                 <a href="/show_notifications" data-toggle="tooltip" title="Approve/Decline RIVs">
                     <div>
                         <div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="card"
-                style="background-color: #d4e9ff; width: 80%; order: 2; padding: 20px; box-sizing: border-box;">
+                style="background-color: #d4e9ff; width: 80%; order: 2; padding: 4 0px; padding-left: 0px; box-sizing: border-box; margin-right: 10px; margin-bottom: 10px;">
                 <a href="/show_stock" data-toggle="tooltip" title="Check/Delete Stock">
                     <div>
                         <div>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="card"
-                style="background-color: #d1f5d0; width: 80%; order: 3; padding: 20px; box-sizing: border-box;">
+                style="background-color: #d1f5d0; width: 80%; order: 3; padding: 20px; box-sizing: border-box; margin-right: 10px; margin-bottom: 10px;">
                 <a href="/stock" data-toggle="tooltip" title="Enter new Stock">
                     <div>
                         <div>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="card"
-                style="background-color: #d4e9ff; width: 80%; order: 4; padding: 30px; box-sizing: border-box;">
+                style="background-color: #d4e9ff; width: 80%; order: 4; padding: 30px; box-sizing: border-box; margin-right: 10px; margin-bottom: 10px;">
                 <a href="/report" data-toggle="tooltip" title="View Monthly Report">
                     <div>
                         <div>
@@ -67,7 +67,6 @@
         </div>
     </body>
 @endsection
-
 
 
 
