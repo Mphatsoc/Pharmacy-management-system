@@ -257,8 +257,7 @@
 
                         <body style="margin: 0; padding: 0; overflow: hidden;">
 
-                            <div
-                                style="background-color: white; height: 100vh; display: flex; align-items: top; justify-content: center;">
+                            <div style="height: 100vh; display: flex; align-items: top; justify-content: center;">
                                 <div style="padding: 20px;">
                                     <div class="card"
                                         style="background-color: #d1f5d0; width: 135%; order: 1; padding: 30px 30px;"
