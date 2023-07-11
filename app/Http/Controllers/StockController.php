@@ -36,8 +36,8 @@ class StockController extends Controller
 
     /**
      * @return Application|Factory|View
-     * return view stock
-     * display data from medicines table
+     * return view show_stock
+     * display data from medicines table in database
      */
     public function show()
     {

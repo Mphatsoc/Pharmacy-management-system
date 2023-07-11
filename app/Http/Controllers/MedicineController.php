@@ -19,6 +19,7 @@ class MedicineController extends Controller
     /**
      * @return Application|Factory|View
      * pass data from database to view
+     * return view stock
      */
     public function displayData()
     {

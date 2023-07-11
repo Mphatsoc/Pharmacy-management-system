@@ -20,6 +20,7 @@ class NotificationsController extends Controller
     /**
      * @return Application|Factory|View
      * aggregate various data from database and display it
+     * return view report
      */
     public function generate()
     {
@@ -33,7 +34,9 @@ class NotificationsController extends Controller
 
     /**
      * @return Application|Factory|View
+     * return view show_notifications
      * display data from database as notifications
+     *
      */
     public function note(){
 

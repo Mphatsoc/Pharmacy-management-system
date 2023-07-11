@@ -15,6 +15,7 @@ class SearchController extends Controller
      * @param Request $request
      * @return Application|Factory|View
      * Query medicine table in datatabase
+     * display queried results
      */
     public function index(Request $request)
     {

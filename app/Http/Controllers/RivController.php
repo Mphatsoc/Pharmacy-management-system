@@ -17,6 +17,7 @@ class RivController extends Controller
      * @return RedirectResponse
      * collect data from a form
      * create Riv instance
+     * store data in rivs table in database
      */
     function storeData(Request $request){
 

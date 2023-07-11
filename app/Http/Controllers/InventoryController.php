@@ -71,6 +71,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
      * @param Medicine $medicine
      * @return Application|Factory|View
      * Display quantity of medicine
+     * return view quantity
      */
     public function displayQuantity(Medicine $medicine){
 
@@ -92,6 +93,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
      * @param $id
      * @return Application|Factory|View
      * collect and display medicine data
+     * return view quantity-list
      */
     public function displayData($id)
     {
@@ -108,7 +110,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     /**
      * @param $id
      * @return RedirectResponse
-     * delete medicine entry
+     * delete medicine instance
      */
     public function deleteData($id)
     {
