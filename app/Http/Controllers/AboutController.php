@@ -11,6 +11,7 @@ class AboutController extends Controller
 {
     /**
      * @return Application|Factory|View
+     * Display about page
      */
     public function hello()
     {

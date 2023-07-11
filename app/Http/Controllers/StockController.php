@@ -14,6 +14,7 @@ class StockController extends Controller
 {
     /**
      * @return Application|Factory|View
+     * return view stock
      */
     public function meds()
     {
@@ -35,6 +36,8 @@ class StockController extends Controller
 
     /**
      * @return Application|Factory|View
+     * return view stock
+     * display data from medicines table
      */
     public function show()
     {

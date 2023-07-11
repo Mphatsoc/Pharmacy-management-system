@@ -18,6 +18,7 @@ class MedicineController extends Controller
 //This method retrieves all the medicines from the Medicine model and passes them to the 'stock' view
     /**
      * @return Application|Factory|View
+     * pass data from database to view
      */
     public function displayData()
     {
@@ -30,6 +31,7 @@ class MedicineController extends Controller
     /**
      * @param Request $request
      * @return RedirectResponse
+     * create new medicine instance
      */
     public function store(Request $request)
 {

@@ -25,6 +25,7 @@ class InventoryController extends Controller
      * @param Request $request
      * @param $id
      * @return RedirectResponse
+     * collect data and update database
      */
     function addData(Request $request, $id)
     {
@@ -69,6 +70,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     /**
      * @param Medicine $medicine
      * @return Application|Factory|View
+     * Display quantity of medicine
      */
     public function displayQuantity(Medicine $medicine){
 
@@ -89,6 +91,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     /**
      * @param $id
      * @return Application|Factory|View
+     * collect and display medicine data
      */
     public function displayData($id)
     {
@@ -105,6 +108,7 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     /**
      * @param $id
      * @return RedirectResponse
+     * delete medicine entry
      */
     public function deleteData($id)
     {

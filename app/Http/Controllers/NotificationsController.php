@@ -19,6 +19,7 @@ class NotificationsController extends Controller
     //This method is responsible for generating a report by fetching data from the StockCard and Riv models and passing it to the 'report' view
     /**
      * @return Application|Factory|View
+     * aggregate various data from database and display it
      */
     public function generate()
     {
@@ -32,6 +33,7 @@ class NotificationsController extends Controller
 
     /**
      * @return Application|Factory|View
+     * display data from database as notifications
      */
     public function note(){
 
@@ -45,6 +47,7 @@ class NotificationsController extends Controller
     /**
      * @param $id
      * @return RedirectResponse
+     * approve various notifications
      */
     public function approved($id)
     {
@@ -96,6 +99,7 @@ class NotificationsController extends Controller
     /**
      * @param $id
      * @return RedirectResponse
+     * decline various notifications
      */
     public function declined($id)
     {

@@ -11,6 +11,7 @@ class AdminController extends Controller
 {
     /**
      * @return Application|Factory|View
+     * display admin Dahboard
      */
     public function AdminDashboard(){
         return view('admin.admin_dashboard');

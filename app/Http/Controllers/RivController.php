@@ -15,6 +15,8 @@ class RivController extends Controller
     /**
      * @param Request $request
      * @return RedirectResponse
+     * collect data from a form
+     * create Riv instance
      */
     function storeData(Request $request){
 
@@ -45,6 +47,8 @@ class RivController extends Controller
 
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * show collected data
+     * display Riv instance(S)
      */
     public function showData()
     {
@@ -65,6 +69,7 @@ class RivController extends Controller
     /**
      * @param $id
      * @return RedirectResponse
+     * delete riv instance
      */
     public function removeData($id)
     {
