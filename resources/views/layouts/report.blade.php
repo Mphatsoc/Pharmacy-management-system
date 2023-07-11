@@ -249,33 +249,37 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
-    const monthlyReportBtn = document.getElementById('monthlyReportBtn');
-    const otherSectionBtn = document.getElementById('otherSectionBtn');
-    const graphBtn = document.getElementById('graphBtn');
-    const monthlyReportSection = document.getElementById('monthlyReportSection');
-    const otherSection = document.getElementById('otherSection');
-    const graph = document.getElementById('graph');
+        // Get references to the necessary HTML elements
+        const monthlyReportBtn = document.getElementById('monthlyReportBtn');
+        const otherSectionBtn = document.getElementById('otherSectionBtn');
+        const graphBtn = document.getElementById('graphBtn');
+        const monthlyReportSection = document.getElementById('monthlyReportSection');
+        const otherSection = document.getElementById('otherSection');
+        const graph = document.getElementById('graph');
 
+        // Event listener for monthlyReportBtn
+        monthlyReportBtn.addEventListener('click', () => {
+            // Show monthlyReportSection and hide otherSection and graph
+            monthlyReportSection.style.display = 'block';
+            otherSection.style.display = 'none';
+            graph.style.display = 'none';
+        });
 
+        // Event listener for otherSectionBtn
+        otherSectionBtn.addEventListener('click', () => {
+            // Show otherSection and hide monthlyReportSection and graph
+            monthlyReportSection.style.display = 'none';
+            otherSection.style.display = 'block';
+            graph.style.display = 'none';
+        });
 
-    monthlyReportBtn.addEventListener('click', () => {
-        monthlyReportSection.style.display = 'block';
-        otherSection.style.display = 'none';
-        graph.style.display = 'none';
-    });
-
-    otherSectionBtn.addEventListener('click', () => {
-        monthlyReportSection.style.display = 'none';
-        otherSection.style.display = 'block';
-        graph.style.display = 'none';
-
-    });
-    graphBtn.addEventListener('click', () => {
-        monthlyReportSection.style.display = 'none';
-        otherSection.style.display = 'none';
-        graph.style.display = 'block';
-
-    });
+        // Event listener for graphBtn
+        graphBtn.addEventListener('click', () => {
+            // Show graph and hide monthlyReportSection and otherSection
+            monthlyReportSection.style.display = 'none';
+            otherSection.style.display = 'none';
+            graph.style.display = 'block';
+        });
 </script>
 <script>
     // Wait for the page to load before rendering the graph
