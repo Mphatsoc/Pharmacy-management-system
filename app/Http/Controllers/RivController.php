@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Riv;
 use App\Models\Medicine;
@@ -11,6 +12,10 @@ use Illuminate\Support\Facades\Session;
 class RivController extends Controller
 {
     //This method handles the logic for storing a new RIV
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
     function storeData(Request $request){
 
         // $medicine = Medicine::where('medicine_name', $request->medicine_name)->first();
@@ -29,7 +34,7 @@ class RivController extends Controller
         $riv->status='In Progress';
         $riv->save();
 
-        
+
      Session::flash('success', 'Riv Sent Successfully!');
 
      return redirect()->back()->with('success', 'Riv Sent Successfully');
@@ -37,16 +42,30 @@ class RivController extends Controller
 
     }
     //This method retrieves all the RIVs from the Riv model and passes them to the 'riv-list' view
+
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function showData()
     {
         $rivs = Riv::all();
         return view('riv-list', compact('rivs'));
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function editData($id){
         $riv = Riv::find($id);
         return view('edit', ['riv'=>$riv]);
     }
     //This method handles the deletion of a specific RIV with the given ID
+
+    /**
+     * @param $id
+     * @return RedirectResponse
+     */
     public function removeData($id)
     {
     $Riv = Riv::findOrFail($id);
@@ -56,6 +75,6 @@ class RivController extends Controller
 
     return redirect()->back();
     }
-  
+
 
 }

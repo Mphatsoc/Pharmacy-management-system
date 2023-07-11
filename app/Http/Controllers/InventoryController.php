@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Medicine;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Quantity;
 use App\Models\StockCard;
@@ -15,8 +19,13 @@ use Carbon\Carbon;
 
 class InventoryController extends Controller
 {
-   
 
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return RedirectResponse
+     */
     function addData(Request $request, $id)
     {
         $medicine = Medicine::findOrFail($id);
@@ -54,12 +63,16 @@ Session::flash('success', 'Stock Updated Successfully!');
 return redirect()->back()->with('success', 'Stock Updated Successfully');
 
     }
-    
+
     //This method is used to display the quantity of a specific medicine.
 
+    /**
+     * @param Medicine $medicine
+     * @return Application|Factory|View
+     */
     public function displayQuantity(Medicine $medicine){
-      
-        
+
+
         return view('quantity', [
             'id' => $medicine->id,
             'medicine' => $medicine,
@@ -68,15 +81,19 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     }
 
     public function dis() {
-      
+
         return view('stk');
     }
     //This method is responsible for displaying the updated medicine information in the stock card
 
+    /**
+     * @param $id
+     * @return Application|Factory|View
+     */
     public function displayData($id)
-    { 
+    {
         $medicine = Medicine::findorFail($id);
-        
+
         $StockCard = StockCard::where('medicine_name', $medicine->medicine_name)->get();
         return view('quantity-list', [
             'id' => $medicine->id,
@@ -85,6 +102,10 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
     }
     //This method is used to delete data related to a quantity entry.
 
+    /**
+     * @param $id
+     * @return RedirectResponse
+     */
     public function deleteData($id)
     {
     $quantity = Quantity::findOrFail($id);
@@ -103,13 +124,13 @@ return redirect()->back()->with('success', 'Stock Updated Successfully');
 
 
 
-    
-    
+
+
 
 
     Session::flash('success', 'Data deleted successfully!');
 
     return redirect()->back();
-    }   
+    }
 
 }
